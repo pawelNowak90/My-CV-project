@@ -1,0 +1,61 @@
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    min-height: 10vh;
+    display: flex;
+    justify-content: space-evenly;
+    border-radius: 15px;
+
+
+    div.loading-bar {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: lightblue;
+        height: 2vh;
+        text-align: center;
+        border-radius: 10px;
+        font-size: smaller;
+
+    }
+
+    div.menu {
+        position: absolute;
+        top: 2vh;
+        left: 0;
+        width: 100%;
+        background-color: $clr-main;
+        line-height: 300%;
+        text-align: center;
+        border-radius: 10px;
+
+        a {
+            color: black;
+            text-decoration: none;
+            margin: 20px;
+            text-transform: uppercase;
+            padding: 10px;
+            border-radius: 15px;
+        }
+
+        a:hover {
+            background-color: hotpink;
+        }
+
+        a[id="wykształcenie"] {
+            position: relative;
+        }
+
+        a[id="wykształcenie"]::after {
+            content: "umiejętności";
+            text-transform: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+        }
+    }
+}

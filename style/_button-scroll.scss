@@ -1,0 +1,28 @@
+div.button-scroll {
+    min-width: 35px;
+    min-height: 35px;
+    width: 6vh;
+    height: 6vh;
+
+    background-color: $clr-main;
+    position: fixed;
+    bottom: 3%;
+    right: 3%;
+    z-index: 12;
+    border-radius: 10%;
+    transform: rotate(270deg);
+    transform-origin: center;
+
+
+    a {
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0.6;
+        text-decoration: none;
+        font-weight: bold;
+        // transition: ease-in-out 0.5s;
+    }
+}

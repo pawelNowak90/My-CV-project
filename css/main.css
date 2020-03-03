@@ -1,0 +1,123 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: arial;
+}
+
+body {
+  height: 300vh;
+}
+
+html {
+  scroll-behavior: smooth;
+  /*!nie działa w IE*/
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  min-height: 10vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  border-radius: 15px;
+}
+
+nav div.loading-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: lightblue;
+  height: 2vh;
+  text-align: center;
+  border-radius: 10px;
+  font-size: smaller;
+}
+
+nav div.menu {
+  position: absolute;
+  top: 2vh;
+  left: 0;
+  width: 100%;
+  background-color: pink;
+  line-height: 300%;
+  text-align: center;
+  border-radius: 10px;
+}
+
+nav div.menu a {
+  color: black;
+  text-decoration: none;
+  margin: 20px;
+  text-transform: uppercase;
+  padding: 10px;
+  border-radius: 15px;
+}
+
+nav div.menu a:hover {
+  background-color: hotpink;
+}
+
+nav div.menu a[id="wykształcenie"] {
+  position: relative;
+}
+
+nav div.menu a[id="wykształcenie"]::after {
+  content: "umiejętności";
+  text-transform: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+}
+
+div.wallpaper {
+  height: 100vh;
+  position: absolute;
+  top: 100vh;
+  left: 0;
+  width: 100%;
+}
+
+div.wallpaper img {
+  width: 100%;
+}
+
+div.button-scroll {
+  min-width: 35px;
+  min-height: 35px;
+  width: 6vh;
+  height: 6vh;
+  background-color: pink;
+  position: fixed;
+  bottom: 3%;
+  right: 3%;
+  z-index: 12;
+  border-radius: 10%;
+  -webkit-transform: rotate(270deg);
+          transform: rotate(270deg);
+  -webkit-transform-origin: center;
+          transform-origin: center;
+}
+
+div.button-scroll a {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  opacity: 0.6;
+  text-decoration: none;
+  font-weight: bold;
+}
+/*# sourceMappingURL=main.css.map */
