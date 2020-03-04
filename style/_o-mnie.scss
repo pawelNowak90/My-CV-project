@@ -1,0 +1,12 @@
+article {
+    position: relative;
+    color: red;
+
+    div.o-mnie {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: green;
+    }
+}
