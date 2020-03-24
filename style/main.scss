@@ -1,7 +1,5 @@
-//variables
-$clr-main:pink;
-$clr-bgc:rgb(170, 170, 170);
-
+// @import 'normalize.css'; - normalize CSS jest podpiety w HTMLu bo inaczej nie działa
+@import 'variables';
 @import 'nav';
 @import 'section1-o-mnie';
 @import 'section2-wyksztalcenie';
@@ -13,11 +11,9 @@ $clr-bgc:rgb(170, 170, 170);
     padding: 0;
     box-sizing: border-box;
     font-family: arial;
-    // transition: ease-in-out, 1.5s;
 }
 
 body {
-    // height: 280vh;
     background-color: $clr-bgc;
 }
 
@@ -32,7 +28,6 @@ div.button-scroll {
     min-height: 35px;
     width: 5vh;
     height: 5vh;
-
     background-color: $clr-main;
     position: fixed;
     bottom: 3%;
@@ -57,7 +52,7 @@ div.button-scroll {
         opacity: 0.6;
         text-decoration: none;
         font-weight: bold;
-        // transition: ease-in-out 0.5s;
+        transition: ease-in-out 0.5s;
         border-radius: inherit;
         //DORA - HELP - jak to zrobić prościej
 

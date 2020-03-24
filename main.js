@@ -30,14 +30,15 @@ window.addEventListener('scroll', (e) => {
 
 //sprawdzenie wysokości nawigacji NAV i ustawienie właściwego poddingu na element następny
 function checkNavHeight() {
-    if (window.innerWidth <= 2600) { //DORA - czy ten warunek jest napisany z sensem ? jak zrobić to lepiej ?
+    if (window.innerWidth <= 2600) {
         const navHeight = document.getElementById('nav').offsetHeight + "px";
-        document.getElementById('main').style.padding = `${navHeight} 0 0 0`;
+        // document.getElementById('main').style.padding = `${navHeight} 0 0 0`;
         console.log('nastapil event resize, wartość padding = ' + navHeight);
     }
 }
-window.addEventListener('load', checkNavHeight); //DORA i tutaj też czy wasto głowić się nad lepszy rozwiazaniem czy na tym etapie nie warto
+window.addEventListener('load', checkNavHeight);
 window.addEventListener('resize', checkNavHeight);
+
 
 
 
@@ -45,10 +46,9 @@ window.addEventListener('resize', checkNavHeight);
 
 // efekt fade in/schowania przycisku button przenoszącego na górę strony
 let flag = 0;
-//Dora - za kazdym skrolem ddaje klase active, jak to sprawdzic zeby za kazdym razem nie dodawac ? ustawic flage ktora ma wartość ?
 
 function fadeInButton() {
-    if ((window.scrollY >= 300) && (!flag)) {
+    if ((window.scrollY >= 80) && (!flag)) {
         btnScrollUp.classList.add('active');
         console.log('dla button scrollUp dodano klase active');
         flag = !flag;
@@ -74,4 +74,6 @@ function fadeInButton() {
 // }
 
 
-window.addEventListener('scroll', fadeInButton);
+// window.addEventListener('scroll', fadeInButton);
+
+$(window).on('scroll', fadeInButton);

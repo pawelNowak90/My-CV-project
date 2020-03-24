@@ -1,86 +1,213 @@
 @charset "UTF-8";
-nav {
+header {
+  position: relative;
+}
+
+header div.loading-bar-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #aaaaaa;
+  width: 100%;
+  height: 1vh;
+  z-index: 10;
+}
+
+header div.loading-bar {
+  -webkit-transition: width 0.15s ease-in-out;
+  transition: width 0.15s ease-in-out;
+  width: 100%;
+  background-color: royalblue;
+  height: inherit;
+  border-radius: 10px;
+}
+
+header nav {
   position: fixed;
   top: 0;
   left: 0;
   z-index: 10;
   width: 100%;
-  border-radius: 15px;
-}
-
-nav div.loading-bar-background {
-  background-color: #aaaaaa;
-  width: 100%;
-  height: 1vh;
-}
-
-nav div.loading-bar {
-  -webkit-transition: width 0.15s ease-in-out;
-  transition: width 0.15s ease-in-out;
-  width: 100%;
-  background-color: blue;
-  height: inherit;
-  border-radius: 10px;
-}
-
-nav div.menu {
+  height: 15%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  width: 100%;
-  background-color: pink;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#423a3c), to(transparent));
+  background-image: linear-gradient(#423a3c, transparent);
   text-align: center;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
+  margin-top: 1vh;
 }
 
-nav div.menu a {
-  color: black;
-  text-decoration: none;
+header nav a {
   margin: 5px;
+  padding: 20px;
+  color: white;
+  font-size: 1.75em;
+  letter-spacing: 3px;
+  text-decoration: none;
   text-transform: uppercase;
-  padding: 10px;
-  border-radius: 15px;
+  text-shadow: -2px 0 10px black, 0 2px 10px black, 2px 0 10px black, 0 -2px 10px black;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent));
+  background-image: linear-gradient(transparent, transparent);
 }
 
-nav div.menu a:hover {
-  background-color: hotpink;
-}
-
-nav div.menu a[id="wykształcenie"] {
+header nav a[id="wykształcenie"] {
   position: relative;
 }
 
-article h1 {
-  padding: 50px;
-  font-size: 48px;
-  text-align: center;
+header nav:hover {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#423a3c), to(rgba(66, 58, 60, 0.15)));
+  background-image: linear-gradient(#423a3c, rgba(66, 58, 60, 0.15));
 }
 
-article section.o-mnie {
-  border: solid red 8px;
-  height: 70vh;
+section.o-mnie {
+  position: relative;
+  height: 100vh;
   width: 100%;
-  background-color: #47774e;
-  text-align: center;
-  font-size: 32px;
+  margin: 0;
+  font-size: 28px;
+  background: url("../img/pawel-gory.jpg");
+  background-size: cover;
+  background-position: 0 0;
+  -webkit-filter: grayscale(15%) sepia(15%);
+          filter: grayscale(15%) sepia(15%);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+section.o-mnie div.background-filter {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(20, 20, 20, 0.35);
+}
+
+section.o-mnie div.about-me {
+  position: absolute;
+  top: 25%;
+  left: 55%;
+}
+
+section.o-mnie div.about-me h1,
+section.o-mnie div.about-me h2,
+section.o-mnie div.about-me p {
+  padding: 0 30px;
+  color: white;
+  text-shadow: -2px 0 10px black, 0 2px 10px black, 2px 0 10px black, 0 -2px 10px black;
+}
+
+section.o-mnie div.about-me h1 span,
+section.o-mnie div.about-me h2 span,
+section.o-mnie div.about-me p span {
+  display: inline-block;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
 }
 
 section.wyksztalcenie {
+  border-radius: 35px;
+  border: solid 3px white;
+  min-height: 70vh;
+  width: calc(100% - 2 * 15px);
+  margin: 15px 35px;
+  background-color: rgba(255, 255, 255, 0.76);
+}
+
+section.wyksztalcenie h1 {
+  padding: 50px;
+  font-size: 48px;
+  text-align: center;
   color: white;
   text-shadow: -2px 0 10px black, 0 2px 10px black, 2px 0 10px black, 0 -2px 10px black;
   letter-spacing: 2px;
-  height: 70vh;
-  width: 100%;
-  background-image: url("../img/dzieci.jpg");
+}
+
+section.wyksztalcenie div.skills-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  padding: 30px;
+}
+
+section.wyksztalcenie div.skills-container div.skills-left ul {
+  display: block;
+  background-color: cadetblue;
+}
+
+section.wyksztalcenie div.skills-container div.skills-left ul li {
+  display: block;
+  padding: 10px;
+}
+
+section.wyksztalcenie div.skills-container div.skills-left ul span {
+  display: inline-block;
+  width: 100px;
+}
+
+section.wyksztalcenie div.skills-container div.skills-left ul div.rectangle {
+  display: inline-block;
+  width: 30vw;
+  height: 25px;
+  background-color: gray;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+section.wyksztalcenie div.skills-container div.skills-left ul div.rectangle:last-of-type::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  width: 90%;
+  height: 100%;
+  background-color: green;
+  border-radius: 10px;
+  z-index: 2;
+}
+
+section.wyksztalcenie div.skills-container div.skills-left ul li:nth-of-type(1) div.rectangle::after {
+  width: 80%;
+}
+
+section.wyksztalcenie div.skills-container div.skills-left ul li:nth-of-type(2) div.rectangle::after {
+  content: 'MAŁO !';
+  padding-left: 10px;
+  padding-top: 3px;
+  width: 25%;
+  background-color: rgba(233, 0, 0, 0.877);
+}
+
+section.wyksztalcenie div.skills-container div.skills-left ul li:nth-of-type(3) div.rectangle::after {
+  width: 60%;
+}
+
+section.wyksztalcenie div.skills-container div.skills-left ul li:nth-of-type(4) div.rectangle::after {
+  width: 10%;
+}
+
+section.wyksztalcenie div.skills-container div.skills-left ul li:nth-of-type(5) div.rectangle::after {
+  width: 25%;
+}
+
+section.wyksztalcenie div.skills-container div.skills-right {
+  background-color: red;
 }
 
 section.my-project {
+  border-radius: 35px;
   height: 70vh;
   background-color: brown;
+  width: calc(100% - 2 * 15px);
+  margin: 15px 35px;
 }
 
 * {
@@ -132,6 +259,8 @@ div.button-scroll a {
   opacity: 0.6;
   text-decoration: none;
   font-weight: bold;
+  -webkit-transition: ease-in-out 0.5s;
+  transition: ease-in-out 0.5s;
   border-radius: inherit;
 }
 

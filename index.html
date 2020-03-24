@@ -4,37 +4,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Paweł Nowak - CV</title>
+    <link rel="stylesheet" href="style/normalize.css">
     <link rel="stylesheet" href="css/main.css">
-
-
+    <title>Paweł Nowak - CV</title>
 </head>
 
 <body>
     <div class="container" id="top">
-        <nav id="nav">
+        <header>
             <div class="loading-bar-background">
                 <div class="loading-bar"></div>
             </div>
-
-            <div class="menu" id="menuu">
+            <nav id="nav">
                 <a href=".o-mnie">O MNIE</a>
-                <a href="#wyksztalcenie" id="wykształcenie">WYKSZTAŁCENIE</a>
-                <a href="#moje-projekty">Moje projekty</a>
+                <a href="#wyksztalcenie" id="wykształcenie">MOJE UMIEJĘTNOŚCI</a>
+                <a href="#moje-projekty">Projekty</a>
                 <a href="#HOME">HOME</a>
-            </div>
-        </nav>
-
+            </nav>
+        </header>
         <main id="main">
             <article>
                 <section class="o-mnie">
-                    <h1> To jest sekcja o mnie</h1>
+                    <div class="background-filter"></div>
+                    <div class="about-me">
+                        <h2>Nowak Paweł</h2>
+                        <h1>Junior Front-end Developer</h1>
+                        <p>Jak się pojednam z CSSem to będę uczył się Reacta <span>:-]</span> </p>
+                    </div>
                 </section>
 
                 <section class="wyksztalcenie">
-                    <div>
-                        <h1>To jest sekcja wykształcenie</h1>
+                    <h1>Moje umiejętności</h1>
+                    <div class="skills-container">
+                        <div class="skills-left">
+                            <ul>
+                                <li class="row-html"> <span>HTML</span>
+                                    <div class="rectangle"></div>
+                                </li>
+                                <li class="row-html"> <span>CSS</span>
+                                    <div class="rectangle"></div>
+                                </li>
+                                <li class="row-html"> <span>JavaScript</span>
+                                    <div class="rectangle"></div>
+                                </li>
+                                <li class="row-html"> <span>React</span>
+                                    <div class="rectangle"></div>
+                                </li>
+                                <li class="row-html"> <span>GIT</span>
+                                    <div class="rectangle"></div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="skills-right">
+                            <img src="img/logo/AGH.png" alt="">
+                        </div>
+
                     </div>
+
                 </section>
 
                 <section class="my-project">
@@ -49,6 +75,7 @@
 
 
 
+    <script src="jquery-3.4.1.min.js"></script>
     <script src="main.js"></script>
 </body>
 
