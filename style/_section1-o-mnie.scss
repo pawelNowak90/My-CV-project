@@ -6,7 +6,7 @@ section.o-mnie {
     font-size: 28px;
     background: url("../img/pawel-gory.jpg");
     background-size: cover;
-    background-position: 0 0; // można przesunąć moją twarz na mobilce w lewo ?
+    background-position: 0 0;
     filter: grayscale(15%) sepia(15%);
     background-repeat: no-repeat;
     background-position: center; //DORA - jaka szerokość jest minimalna dla mobilki, czy wartosc CENTER jest ok ?
@@ -15,6 +15,8 @@ section.o-mnie {
         width: 100%;
         height: 100%;
         background-color: rgba(20, 20, 20, 0.35);
+        position: relative;
+        z-index: -1;
     }
 
     div.about-me {

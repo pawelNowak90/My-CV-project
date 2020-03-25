@@ -23,12 +23,11 @@ header div.loading-bar {
 }
 
 header nav {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   z-index: 10;
   width: 100%;
-  height: 15%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -42,6 +41,7 @@ header nav {
 }
 
 header nav a {
+  display: inline-block;
   margin: 5px;
   padding: 20px;
   color: white;
@@ -54,13 +54,35 @@ header nav a {
   background-image: linear-gradient(transparent, transparent);
 }
 
-header nav a[id="wykształcenie"] {
-  position: relative;
+@-webkit-keyframes navigation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
-header nav:hover {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#423a3c), to(rgba(66, 58, 60, 0.15)));
-  background-image: linear-gradient(#423a3c, rgba(66, 58, 60, 0.15));
+@keyframes navigation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+header nav.active {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: black;
+  -webkit-box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.75);
+          box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.75);
+  -webkit-animation-name: navigation;
+          animation-name: navigation;
+  -webkit-animation-duration: .5s;
+          animation-duration: .5s;
 }
 
 section.o-mnie {
@@ -82,6 +104,8 @@ section.o-mnie div.background-filter {
   width: 100%;
   height: 100%;
   background-color: rgba(20, 20, 20, 0.35);
+  position: relative;
+  z-index: -1;
 }
 
 section.o-mnie div.about-me {
@@ -118,8 +142,8 @@ section.wyksztalcenie {
 }
 
 section.wyksztalcenie h1 {
-  padding: 50px;
-  font-size: 48px;
+  padding: 20px;
+  font-size: 28px;
   text-align: center;
   color: white;
   text-shadow: -2px 0 10px black, 0 2px 10px black, 2px 0 10px black, 0 -2px 10px black;
@@ -127,6 +151,7 @@ section.wyksztalcenie h1 {
 }
 
 section.wyksztalcenie div.skills-container {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -134,6 +159,11 @@ section.wyksztalcenie div.skills-container {
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
   padding: 30px;
+}
+
+section.wyksztalcenie div.skills-container div.skills-left {
+  height: 100%;
+  width: 50%;
 }
 
 section.wyksztalcenie div.skills-container div.skills-left ul {
@@ -199,7 +229,11 @@ section.wyksztalcenie div.skills-container div.skills-left ul li:nth-of-type(5) 
 }
 
 section.wyksztalcenie div.skills-container div.skills-right {
-  background-color: red;
+  background-color: #f13e3e;
+  width: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 section.my-project {
@@ -220,6 +254,7 @@ section.my-project {
 
 body {
   background-color: #aaaaaa;
+  overflow-x: hidden;
 }
 
 html {
@@ -237,7 +272,7 @@ div.button-scroll {
   bottom: 3%;
   right: 3%;
   z-index: 12;
-  border-radius: 30%;
+  border-radius: 10%;
   -webkit-transform: rotate(270deg);
           transform: rotate(270deg);
   -webkit-transform-origin: center;
