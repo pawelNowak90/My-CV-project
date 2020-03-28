@@ -1,0 +1,71 @@
+section.technologie {
+    min-height: 100vh;
+    margin: 15px 0;
+    width: 100%;
+
+    h1 {
+        padding: 20px;
+        font-size: 28px;
+        text-align: center;
+        color: white;
+        text-shadow: -2px 0 10px black, 0 2px 10px black, 2px 0 10px black, 0 -2px 10px black;
+        letter-spacing: 2px;
+    }
+
+    div.skills-container {
+        position: relative;
+        // display: flex;
+        // justify-content: space-evenly;
+        // flex-wrap: wrap;
+        background-color: rgb(200, 200, 200);
+        text-transform: uppercase;
+        letter-spacing: 2px;
+
+        div.one-skill {
+            // position: relative;
+            padding: 30px;
+            color: white;
+
+            div.circle-gradient {
+                margin: auto;
+                background: conic-gradient(green 0deg 305deg, transparent 275deg);
+                border-radius: 50%;
+                width: 290px;
+                height: 290px;
+                z-index: 20;
+
+                div.skills {
+                    margin: auto;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    width: 275px;
+                    height: 275px;
+                    border-radius: 50%;
+                    background-color: orangered;
+
+                    i {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        width: 50%;
+                        transform: translate(-50%, -50%);
+                        font-size: 128px;
+                        text-align: center;
+                    }
+                }
+            }
+
+            span {
+                margin: 10px;
+                display: block;
+                position: absolute;
+                bottom: -12%; //DORA help, czy można tak ustawić spana
+                left: 50%;
+                transform: translate(-50%, -50%);
+                font-size: 1.5em;
+            }
+        }
+    }
+}
