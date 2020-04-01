@@ -1,29 +1,29 @@
-//variables
-$clr-main:pink;
-$clr-bgc:rgb(170, 170, 170);
-
+// @import 'normalize.css'; - normalize CSS jest podpiety w HTMLu bo inaczej nie działa
+@import 'variables';
 @import 'nav';
 @import 'section1-o-mnie';
-@import 'section2-wyksztalcenie';
-@import 'section3-my-project';
+@import 'section2-technologie';
+@import 'section3-other-sections';
 
 //-------------------------------------------------------------------------------
 * {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
-    font-family: arial;
-    // transition: ease-in-out, 1.5s;
+    font-family: 'Cabin', 'Arial', sans-serif;
 }
 
 body {
-    // height: 280vh;
     background-color: $clr-bgc;
+    overflow-x: hidden; //zeby to było trzeba zrobic porzadek z marginesami i paddingami left/right
 }
 
 html {
     scroll-behavior: smooth;
     /*!nie działa w IE*/
+}
+
+div.container-fluid {
+    margin: 0;
+    padding: 0;
 }
 
 //button-scroll
@@ -32,13 +32,12 @@ div.button-scroll {
     min-height: 35px;
     width: 5vh;
     height: 5vh;
-
     background-color: $clr-main;
     position: fixed;
     bottom: 3%;
     right: 3%;
     z-index: 12;
-    border-radius: 30%;
+    border-radius: 10%;
     transform: rotate(270deg);
     transform-origin: center;
     transition: opacity ease-in-out 0.5s;
@@ -57,7 +56,7 @@ div.button-scroll {
         opacity: 0.6;
         text-decoration: none;
         font-weight: bold;
-        // transition: ease-in-out 0.5s;
+        transition: ease-in-out 0.5s;
         border-radius: inherit;
         //DORA - HELP - jak to zrobić prościej
 

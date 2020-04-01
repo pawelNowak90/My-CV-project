@@ -1,0 +1,109 @@
+section.technologie {
+    min-height: 100vh;
+    margin: 15px 0;
+    // width: 100%;
+
+    h1 {
+        padding: 20px;
+        font-size: 28px;
+        text-align: center;
+        color: white;
+        text-shadow: -2px 0 10px black, 0 2px 10px black, 2px 0 10px black, 0 -2px 10px black;
+        letter-spacing: 2px;
+
+        &::first-letter {
+            font-size: 150%;
+            color: gray;
+        }
+    }
+
+    div.skills-container {
+        position: relative;
+        background-color: rgb(200, 200, 200);
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        z-index: 5;
+
+        div.one-skill {
+            padding: 30px;
+            color: white;
+            opacity: 0;
+
+
+
+            &.active {
+                transition: opacity 1s linear;
+                opacity: 1;
+
+                &:nth-of-type(1) {
+                    transition-delay: 0.1s;
+                }
+
+                &:nth-of-type(2) {
+                    transition-delay: 0.1s;
+                }
+
+                &:nth-of-type(3) {
+                    transition-delay: 0.2s;
+                }
+
+                &:nth-of-type(4) {
+                    transition-delay: 0.3s;
+                }
+
+                &:nth-of-type(5) {
+                    transition-delay: 0.4s;
+                }
+
+                &:nth-of-type(6) {
+                    transition-delay: 0.5s;
+                }
+            }
+
+            div.circle-gradient {
+                margin: auto;
+                position: relative;
+                background: conic-gradient(green 0deg 5deg, transparent 275deg);
+                border-radius: 50%;
+                width: 262px;
+                height: 262px;
+                z-index: 20;
+
+                &:hover {
+                    background: conic-gradient(green 0deg 305deg, transparent 275deg);
+                }
+
+                div.circle-inside {
+                    // margin: auto;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    width: 250px;
+                    height: 250px;
+                    border-radius: 50%;
+                    background-color: orangered;
+
+
+
+                    i {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        font-size: 128px;
+                        text-align: center;
+                    }
+                }
+            }
+
+            span {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                font-size: 1.5em;
+                text-align: center;
+            }
+        }
+    }
+}
