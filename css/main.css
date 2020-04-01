@@ -147,6 +147,11 @@ section.technologie h1 {
   letter-spacing: 2px;
 }
 
+section.technologie h1::first-letter {
+  font-size: 150%;
+  color: gray;
+}
+
 section.technologie div.skills-container {
   position: relative;
   background-color: #c8c8c8;
@@ -256,38 +261,6 @@ section.each-section p {
   font-size: 1.5em;
 }
 
-@-webkit-keyframes fadeInRight {
-  0% {
-    -webkit-transform: translateX(90%);
-            transform: translateX(90%);
-    opacity: 0;
-  }
-  50% {
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: translateX(0px);
-            transform: translateX(0px);
-    opacity: 1;
-  }
-}
-
-@keyframes fadeInRight {
-  0% {
-    -webkit-transform: translateX(90%);
-            transform: translateX(90%);
-    opacity: 0;
-  }
-  50% {
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: translateX(0px);
-            transform: translateX(0px);
-    opacity: 1;
-  }
-}
-
 section#wyksztalcenie {
   overflow: hidden;
 }
@@ -312,13 +285,20 @@ section#wyksztalcenie div.logo.first.active {
   transition: transform 1.5s, opacity 1.5s 0.75s, -webkit-transform 1.5s;
 }
 
+section#wyksztalcenie div.logo.second {
+  -webkit-transform: translateX(70%);
+          transform: translateX(70%);
+  opacity: 0;
+}
+
 section#wyksztalcenie div.logo.second.active {
-  -webkit-animation-name: fadeInRight;
-          animation-name: fadeInRight;
-  -webkit-animation-duration: 1.5s;
-          animation-duration: 1.5s;
-  -webkit-animation-delay: 0.5s;
-          animation-delay: 0.5s;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  opacity: 1;
+  -webkit-transition: opacity 1.5s 0.75s, -webkit-transform 1.5s;
+  transition: opacity 1.5s 0.75s, -webkit-transform 1.5s;
+  transition: transform 1.5s, opacity 1.5s 0.75s;
+  transition: transform 1.5s, opacity 1.5s 0.75s, -webkit-transform 1.5s;
 }
 
 section#wyksztalcenie div.logo div.AGH,
@@ -335,7 +315,8 @@ section#wyksztalcenie div.logo div.POLLUB {
 section#wyksztalcenie div.logo div.AGH img,
 section#wyksztalcenie div.logo div.POLLUB img {
   padding: 15px;
-  height: 270px;
+  width: 100%;
+  height: auto;
 }
 
 section#wyksztalcenie div.logo div.AGH h3,

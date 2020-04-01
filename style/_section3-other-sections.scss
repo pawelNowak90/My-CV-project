@@ -14,32 +14,12 @@ section.each-section {
     }
 }
 
-
-
 //SECTION WYKSZTAŁCENIE
-
-
-@keyframes fadeInRight {
-    0% {
-        transform: translateX(90%);
-        opacity: 0;
-    }
-
-    50% {
-        opacity: 0
-    }
-
-    100% {
-        transform: translateX(0px);
-        opacity: 1;
-    }
-}
-
 section#wyksztalcenie {
     overflow: hidden;
 
     div.logo {
-        opacity: 1; //DORA - nierozwiązana kwestia z pojawianiem sie i znikaniem przed/po animacji
+        opacity: 1;
 
         &.first {
             transform: translateX(-70%);
@@ -52,10 +32,15 @@ section#wyksztalcenie {
             }
         }
 
-        &.second.active {
-            animation-name: fadeInRight;
-            animation-duration: 1.5s;
-            animation-delay: 0.5s;
+        &.second {
+            transform: translateX(70%);
+            opacity: 0;
+
+            &.active {
+                transform: translateX(0);
+                opacity: 1;
+                transition: transform 1.5s, opacity 1.5s 0.75s;
+            }
         }
 
         div.AGH,
@@ -66,16 +51,13 @@ section#wyksztalcenie {
 
             img {
                 padding: 15px;
-                height: 270px;
+                width: 100%;
+                height: auto;
             }
 
             h3 {
                 padding: 15px;
-
-
             }
         }
-
-
     }
 }
