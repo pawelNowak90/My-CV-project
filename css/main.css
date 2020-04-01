@@ -7,19 +7,18 @@ header div.loading-bar-background {
   position: fixed;
   top: 0;
   left: 0;
-  background-color: #aaaaaa;
   width: 100%;
-  height: 1vh;
+  background: rgba(128, 128, 128, 0.5);
+  height: 0.4vh;
   z-index: 10;
 }
 
-header div.loading-bar {
-  -webkit-transition: width 0.15s ease-in-out;
-  transition: width 0.15s ease-in-out;
-  width: 100%;
+header div.loading-bar-background div.loading-bar {
   background-color: royalblue;
   height: inherit;
-  border-radius: 10px;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  opacity: 1;
 }
 
 header nav {
@@ -37,7 +36,6 @@ header nav {
   background-image: -webkit-gradient(linear, left top, left bottom, from(#423a3c), to(transparent));
   background-image: linear-gradient(#423a3c, transparent);
   text-align: center;
-  margin-top: 1vh;
 }
 
 header nav a {
@@ -45,13 +43,17 @@ header nav a {
   margin: 5px;
   padding: 20px;
   color: white;
-  font-size: 1.75em;
-  letter-spacing: 3px;
+  font-size: 1.2em;
   text-decoration: none;
   text-transform: uppercase;
   text-shadow: -2px 0 10px black, 0 2px 10px black, 2px 0 10px black, 0 -2px 10px black;
   background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent));
   background-image: linear-gradient(transparent, transparent);
+}
+
+header nav a:hover {
+  color: white;
+  text-decoration: none;
 }
 
 @-webkit-keyframes navigation {
@@ -73,16 +75,15 @@ header nav a {
 }
 
 header nav.active {
+  margin-top: 0.4vh;
   position: fixed;
   top: 0;
   left: 0;
   background: black;
   -webkit-box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.75);
           box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.75);
-  -webkit-animation-name: navigation;
-          animation-name: navigation;
-  -webkit-animation-duration: .5s;
-          animation-duration: .5s;
+  -webkit-animation: navigation 0.5s linear;
+          animation: navigation 0.5s linear;
 }
 
 section.o-mnie {
@@ -122,9 +123,9 @@ section.o-mnie div.about-me p {
   text-shadow: -2px 0 10px black, 0 2px 10px black, 2px 0 10px black, 0 -2px 10px black;
 }
 
-section.o-mnie div.about-me h1 span,
-section.o-mnie div.about-me h2 span,
-section.o-mnie div.about-me p span {
+section.o-mnie div.about-me h1 span.emoji,
+section.o-mnie div.about-me h2 span.emoji,
+section.o-mnie div.about-me p span.emoji {
   display: inline-block;
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
@@ -132,16 +133,12 @@ section.o-mnie div.about-me p span {
           transform-origin: center center;
 }
 
-section.wyksztalcenie {
-  border-radius: 35px;
-  border: solid 3px white;
-  min-height: 70vh;
-  width: calc(100% - 2 * 15px);
-  margin: 15px 35px;
-  background-color: rgba(255, 255, 255, 0.76);
+section.technologie {
+  min-height: 100vh;
+  margin: 15px 0;
 }
 
-section.wyksztalcenie h1 {
+section.technologie h1 {
   padding: 20px;
   font-size: 28px;
   text-align: center;
@@ -150,106 +147,206 @@ section.wyksztalcenie h1 {
   letter-spacing: 2px;
 }
 
-section.wyksztalcenie div.skills-container {
+section.technologie div.skills-container {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  background-color: #c8c8c8;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  z-index: 5;
+}
+
+section.technologie div.skills-container div.one-skill {
   padding: 30px;
+  color: white;
+  opacity: 0;
 }
 
-section.wyksztalcenie div.skills-container div.skills-left {
-  height: 100%;
-  width: 50%;
+section.technologie div.skills-container div.one-skill.active {
+  -webkit-transition: opacity 1s linear;
+  transition: opacity 1s linear;
+  opacity: 1;
 }
 
-section.wyksztalcenie div.skills-container div.skills-left ul {
-  display: block;
-  background-color: cadetblue;
+section.technologie div.skills-container div.one-skill.active:nth-of-type(1) {
+  -webkit-transition-delay: 0.1s;
+          transition-delay: 0.1s;
 }
 
-section.wyksztalcenie div.skills-container div.skills-left ul li {
-  display: block;
-  padding: 10px;
+section.technologie div.skills-container div.one-skill.active:nth-of-type(2) {
+  -webkit-transition-delay: 0.1s;
+          transition-delay: 0.1s;
 }
 
-section.wyksztalcenie div.skills-container div.skills-left ul span {
-  display: inline-block;
-  width: 100px;
+section.technologie div.skills-container div.one-skill.active:nth-of-type(3) {
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
 }
 
-section.wyksztalcenie div.skills-container div.skills-left ul div.rectangle {
-  display: inline-block;
-  width: 30vw;
-  height: 25px;
-  background-color: gray;
-  border-radius: 10px;
+section.technologie div.skills-container div.one-skill.active:nth-of-type(4) {
+  -webkit-transition-delay: 0.3s;
+          transition-delay: 0.3s;
+}
+
+section.technologie div.skills-container div.one-skill.active:nth-of-type(5) {
+  -webkit-transition-delay: 0.4s;
+          transition-delay: 0.4s;
+}
+
+section.technologie div.skills-container div.one-skill.active:nth-of-type(6) {
+  -webkit-transition-delay: 0.5s;
+          transition-delay: 0.5s;
+}
+
+section.technologie div.skills-container div.one-skill div.circle-gradient {
+  margin: auto;
   position: relative;
+  background: conic-gradient(green 0deg 5deg, transparent 275deg);
+  border-radius: 50%;
+  width: 262px;
+  height: 262px;
+  z-index: 20;
+}
+
+section.technologie div.skills-container div.one-skill div.circle-gradient:hover {
+  background: conic-gradient(green 0deg 305deg, transparent 275deg);
+}
+
+section.technologie div.skills-container div.one-skill div.circle-gradient div.circle-inside {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  background-color: orangered;
+}
+
+section.technologie div.skills-container div.one-skill div.circle-gradient div.circle-inside i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 128px;
+  text-align: center;
+}
+
+section.technologie div.skills-container div.one-skill span {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+section.each-section {
+  min-height: 50vh;
+  background-color: #c8c8c8;
+}
+
+section.each-section h1 {
+  padding: 10px;
+  text-align: center;
+}
+
+section.each-section p {
+  padding: 10px;
+  font-size: 1.5em;
+}
+
+@-webkit-keyframes fadeInRight {
+  0% {
+    -webkit-transform: translateX(90%);
+            transform: translateX(90%);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInRight {
+  0% {
+    -webkit-transform: translateX(90%);
+            transform: translateX(90%);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+section#wyksztalcenie {
   overflow: hidden;
 }
 
-section.wyksztalcenie div.skills-container div.skills-left ul div.rectangle:last-of-type::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: inline-block;
-  width: 90%;
-  height: 100%;
-  background-color: green;
-  border-radius: 10px;
-  z-index: 2;
+section#wyksztalcenie div.logo {
+  opacity: 1;
 }
 
-section.wyksztalcenie div.skills-container div.skills-left ul li:nth-of-type(1) div.rectangle::after {
-  width: 80%;
+section#wyksztalcenie div.logo.first {
+  -webkit-transform: translateX(-70%);
+          transform: translateX(-70%);
+  opacity: 0;
 }
 
-section.wyksztalcenie div.skills-container div.skills-left ul li:nth-of-type(2) div.rectangle::after {
-  content: 'MAŁO !';
-  padding-left: 10px;
-  padding-top: 3px;
-  width: 25%;
-  background-color: rgba(233, 0, 0, 0.877);
+section#wyksztalcenie div.logo.first.active {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  opacity: 1;
+  -webkit-transition: opacity 1.5s 0.75s, -webkit-transform 1.5s;
+  transition: opacity 1.5s 0.75s, -webkit-transform 1.5s;
+  transition: transform 1.5s, opacity 1.5s 0.75s;
+  transition: transform 1.5s, opacity 1.5s 0.75s, -webkit-transform 1.5s;
 }
 
-section.wyksztalcenie div.skills-container div.skills-left ul li:nth-of-type(3) div.rectangle::after {
-  width: 60%;
+section#wyksztalcenie div.logo.second.active {
+  -webkit-animation-name: fadeInRight;
+          animation-name: fadeInRight;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
 }
 
-section.wyksztalcenie div.skills-container div.skills-left ul li:nth-of-type(4) div.rectangle::after {
-  width: 10%;
+section#wyksztalcenie div.logo div.AGH,
+section#wyksztalcenie div.logo div.POLLUB {
+  padding: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-section.wyksztalcenie div.skills-container div.skills-left ul li:nth-of-type(5) div.rectangle::after {
-  width: 25%;
+section#wyksztalcenie div.logo div.AGH img,
+section#wyksztalcenie div.logo div.POLLUB img {
+  padding: 15px;
+  height: 270px;
 }
 
-section.wyksztalcenie div.skills-container div.skills-right {
-  background-color: #f13e3e;
-  width: 50%;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-section.my-project {
-  border-radius: 35px;
-  height: 70vh;
-  background-color: brown;
-  width: calc(100% - 2 * 15px);
-  margin: 15px 35px;
+section#wyksztalcenie div.logo div.AGH h3,
+section#wyksztalcenie div.logo div.POLLUB h3 {
+  padding: 15px;
 }
 
 * {
-  margin: 0;
-  padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: arial;
+  font-family: 'Cabin', 'Arial', sans-serif;
 }
 
 body {
@@ -260,6 +357,11 @@ body {
 html {
   scroll-behavior: smooth;
   /*!nie działa w IE*/
+}
+
+div.container-fluid {
+  margin: 0;
+  padding: 0;
 }
 
 div.button-scroll {

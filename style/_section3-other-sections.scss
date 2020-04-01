@@ -1,0 +1,81 @@
+section.each-section {
+    min-height: 50vh;
+    background-color: rgb(200, 200, 200);
+
+
+    h1 {
+        padding: 10px;
+        text-align: center;
+    }
+
+    p {
+        padding: 10px;
+        font-size: 1.5em;
+    }
+}
+
+
+
+//SECTION WYKSZTAŁCENIE
+
+
+@keyframes fadeInRight {
+    0% {
+        transform: translateX(90%);
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0
+    }
+
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+section#wyksztalcenie {
+    overflow: hidden;
+
+    div.logo {
+        opacity: 1; //DORA - nierozwiązana kwestia z pojawianiem sie i znikaniem przed/po animacji
+
+        &.first {
+            transform: translateX(-70%);
+            opacity: 0;
+
+            &.active {
+                transform: translateX(0);
+                opacity: 1;
+                transition: transform 1.5s, opacity 1.5s 0.75s;
+            }
+        }
+
+        &.second.active {
+            animation-name: fadeInRight;
+            animation-duration: 1.5s;
+            animation-delay: 0.5s;
+        }
+
+        div.AGH,
+        div.POLLUB {
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+
+            img {
+                padding: 15px;
+                height: 270px;
+            }
+
+            h3 {
+                padding: 15px;
+
+
+            }
+        }
+
+
+    }
+}

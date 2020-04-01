@@ -2,6 +2,10 @@ const btnScrollUp = document.querySelector('div.button-scroll');
 const nav = document.getElementById('menu');
 // const sectionAboutMe = document.getElementsByClassName('o-mnie'); - pobieram w ten sposób HTML collections i .offsetHeight zwraca undefined !
 const sectionAboutMe = document.querySelector('section.o-mnie');
+const sectionTechnologies = document.querySelector('section.technologie');
+const educationRight = document.getElementById('education-POLLUB');
+const educationLeft = document.getElementById('education-AGH');
+const techCircSkills = [...document.querySelectorAll('div.one-skill')];
 
 // function scrollToUp(e) {
 //     e.preventDefault();
@@ -28,10 +32,10 @@ window.addEventListener('scroll', (e) => {
 
 // MENU dodanie .active po przewinięciu 100vh
 window.addEventListener('scroll', () => {
-    if (window.scrollY >= sectionAboutMe.offsetHeight) {
+    if (window.scrollY >= sectionAboutMe.offsetHeight * 0.90) {
         nav.classList.add("active");
-        console.log(window.scrollY);
-        console.log('Teraz dodaję klasę .active do nav-MENU');
+        // console.log(window.scrollY);
+        // console.log('Teraz dodaję klasę .active do nav-MENU');
     } else if (window.scrollY <= sectionAboutMe.offsetHeight) {
         nav.classList.remove("active");
     }
@@ -47,6 +51,61 @@ function checkNavHeight() {
 }
 window.addEventListener('load', checkNavHeight);
 window.addEventListener('resize', checkNavHeight);
+
+
+//sekcja TECHNOLOGIE, - add .active - zalaczenia OPACITY dla kółeczek
+window.addEventListener('scroll', () => {
+
+    if (window.scrollY >= (sectionAboutMe.offsetHeight * 0.75)) {
+        techCircSkills.forEach(techCircSkill => techCircSkill.classList.add("active"));
+    }
+});
+
+//sekcja wyksztalcenie, - add .active - zalaczenia animacji wjazdu z boku
+window.addEventListener('scroll', () => {
+    console.log(window.scrollY);
+
+    if (window.scrollY >= (sectionTechnologies.offsetHeight + sectionAboutMe.offsetHeight * 0.25)) {
+        educationRight.classList.add("active");
+        educationLeft.classList.add("active");
+        console.log('TO JEST WARTOSC:');
+
+        console.log(sectionTechnologies.offsetHeight + sectionAboutMe.offsetHeight * 0.10);
+
+    }
+});
+
+//DODAĆ FLAGĘ ŻEBY TO SIĘ W KÓŁKO NIE WŁĄCZAŁO ...
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 // efekt fade in/schowania przycisku button przenoszącego na górę strony
@@ -80,3 +139,5 @@ function fadeInButton() {
 
 // window.addEventListener('scroll', fadeInButton);
 $(window).on('scroll', fadeInButton);
+
+$(window).on

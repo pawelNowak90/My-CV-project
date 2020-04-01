@@ -1,80 +1,188 @@
-<!DOCTYPE html>
-<html lang="en">
+ <!DOCTYPE html>
+ <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style/normalize.css">
-    <link rel="stylesheet" href="css/main.css">
-    <title>Paweł Nowak - CV</title>
-</head>
+ <head>
+     <meta charset="UTF-8">
+     <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+     <!-- Font Awesome is here -->
+     <script src="https://kit.fontawesome.com/8d7badb3f4.js" crossorigin="anonymous"></script>
+     <!-- Bootstrap CSS -->
+     <link href="https://fonts.googleapis.com/css2?family=Cabin&display=swap" rel="stylesheet">
+     <link rel="stylesheet" href="style/normalize.css">
+     <link rel="stylesheet" href="css/css_bootstrap/bootstrap.min.css">
+     <link rel="stylesheet" href="css/main.css">
+     <title>Paweł Nowak - CV</title>
+ </head>
 
-<body>
-    <div class="container" id="top">
-        <header>
-            <div class="loading-bar-background">
-                <div class="loading-bar"></div>
-            </div>
-            <nav id="menu">
-                <a href=".o-mnie">O MNIE</a>
-                <a href="#wyksztalcenie" id="wykształcenie">MOJE UMIEJĘTNOŚCI</a>
-                <a href="#moje-projekty">Projekty</a>
-                <a href="#HOME">HOME</a>
-            </nav>
-        </header>
-        <main id="main">
-            <article>
-                <section class="o-mnie">
-                    <div class="background-filter"></div>
-                    <div class="about-me">
-                        <h2>Nowak Paweł</h2>
-                        <h1>Junior Front-end Developer</h1>
-                        <p>Jak się pojednam z CSSem to będę uczył się Reacta <span>:-]</span> </p>
-                    </div>
-                </section>
+ <body>
+     <div id="top">
+         <header>
+             <div class="loading-bar-background">
+                 <div class="loading-bar"></div>
+             </div>
+             <nav id="menu" class="container-fluid">
+                 <!-- nie wiem czy klasa container-fluid jest tu dobrze zaimplementowana -->
+                 <!-- <div class="row"> -->
+                 <a href=".o-mnie">O MNIE</a>
+                 <a href="#wyksztalcenie" id="technologie">TECHNOLOGIE</a>
+                 <a href="#moje-projekty">Wykształcenie</a>
+                 <a href="#">Doświadczenie zawodowe</a>
+                 <a href="#">Inne umiejętności</a>
+                 <a href="#">Moje Zainteresowania</a>
+                 <a href="#">Kontakt</a>
+                 <!-- </div> -->
+             </nav>
+         </header>
+         <main id="main">
+             <article>
+                 <section class="o-mnie">
+                     <div class="background-filter"></div>
+                     <div class="about-me">
+                         <h2>Nowak Paweł</h2>
+                         <h1>Junior Front-end Developer</h1>
+                         <p>Jak się pojednam z CSSem to będę uczył się Reacta <span class="emoji">:-]</span> </p>
+                     </div>
+                 </section>
 
-                <section class="wyksztalcenie">
-                    <h1>Moje umiejętności</h1>
-                    <div class="skills-container">
-                        <div class="skills-left">
-                            <ul>
-                                <li class="row-html"> <span>HTML</span>
-                                    <div class="rectangle"></div>
-                                </li>
-                                <li class="row-html"> <span>CSS</span>
-                                    <div class="rectangle"></div>
-                                </li>
-                                <li class="row-html"> <span>JavaScript</span>
-                                    <div class="rectangle"></div>
-                                </li>
-                                <li class="row-html"> <span>React</span>
-                                    <div class="rectangle"></div>
-                                </li>
-                                <li class="row-html"> <span>GIT</span>
-                                    <div class="rectangle"></div>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="skills-right">
-                            <img src="img/logo/AGH.png" alt="">
-                        </div>
-                    </div>
-                </section>
+                 <section class="technologie">
+                     <h1>Moje umiejętności</i></h1>
+                     <div class="skills-container container-fluid">
 
-                <section class="my-project">
-                    <h1>To jest sekcja my-project</h1>
-                </section>
+                         <div class="row">
+                             <div class="one-skill col-12 col-sm-6 col-md-4">
+                                 <div class="circle-gradient">
+                                     <div class="circle-inside"><i class="fab fa-html5"></i>
+                                     </div>
+                                 </div>
+                                 <span>HTML 5</span>
+                             </div>
 
-            </article>
-        </main>
+                             <div class="one-skill col-12 col-sm-6 col-lg-4">
+                                 <div class="circle-gradient">
+                                     <div class="circle-inside"><i class="fab fa-css3-alt"></i>
+                                     </div>
+                                 </div>
+                                 <span>CSS 3</span>
+                             </div>
 
-        <div class="button-scroll"> <a href="#"> <span> >></span> </a> </div>
-    </div>
+                             <div class="one-skill col-12 col-sm-6 col-lg-4">
+                                 <div class="circle-gradient">
+                                     <div class="circle-inside"><i class="fab fa-js-square"></i>
+                                     </div>
+                                 </div>
+
+                                 <span>JavaScript</span>
+                             </div>
 
 
+                             <div class="one-skill col-12 col-sm-6 col-lg-4">
+                                 <div class="circle-gradient">
+                                     <div class="circle-inside"><i class="fab fa-git-alt"></i>
+                                     </div>
+                                 </div>
+                                 <span>GIT</span>
 
-    <script src="jquery-3.4.1.min.js"></script>
-    <script src="main.js"></script>
-</body>
+                             </div>
 
-</html>
+                             <div class="one-skill col-12 col-sm-6 col-lg-4">
+                                 <div class="circle-gradient">
+                                     <div class="circle-inside"><i class="fab fa-sass"></i>
+                                     </div>
+                                 </div>
+                                 <span>LESS &amp; SCSS</span>
+                             </div>
+
+                             <div class="one-skill col-12 col-sm-6 col-lg-4">
+                                 <div class="circle-gradient">
+                                     <div class="circle-inside"><i class="fab fa-bootstrap"></i></div>
+                                 </div>
+                                 <span>Bootstrap 4</span>
+
+                             </div>
+                         </div>
+                     </div>
+                 </section>
+
+                 <section class="each-section container" id="wyksztalcenie">
+                     <h1>Wykształcenie</h1>
+                     <div class="row">
+
+                         <div class="logo first col-12" id="education-AGH">
+                             <div class="AGH">
+                                 <img src="/img/logo/AGH-logo-wyciete.png" alt="">
+                                 <h3>
+                                     <p>Studia inżynierskie</p>
+                                     <p>Kierunek: <i>budownictwo</i></p>
+                                     <p>na Akademii Górniczo-Hutniczej w Krakowie</p>
+                                 </h3>
+                             </div>
+                         </div>
+                         <div class="logo second col-12" id="education-POLLUB">
+                             <div class="POLLUB">
+                                 <img src="img/logo/POLLUB-LOGO-wyciete.png" alt="">
+                                 <h3>
+                                     <p>Studia magisterskie</p>
+                                     <p>Kierunek: <i>budownictwo</i></p>
+                                     <p>na Politechnice Lubelskiej</p>
+                                 </h3>
+                             </div>
+                         </div>
+                     </div>
+                 </section>
+
+                 <section class="each-section" id="doswiadczenie-zawodowe">
+                     <h1>To jest sekcja nr 4 - Doświadczenie zawodowe</h1>
+                     <p>06.2017 - 05.2018 Kierownik Budowy, P.W.Sanitex
+                         Zakres obowiązków:
+                         - Prowadzenie dokumentacji technicznej
+                         - Pilnowanie harmonogramu prac i jakości robót
+                         - Nadzorowanie pracowników do 100 osób</p>
+                     <p>
+                         04.2013 - 05.2017 Inżynier Budowy, P.W.Sanitex
+                         Zakres obowiązków:
+                         - Nadzorowanie pracowników do 50 osób
+                         - Koordynacja prac na placu budowy</p>
+                 </section>
+
+                 <section class="each-section" id="inne-umiejetnosci">
+                     <h1>To jest sekcja nr 5 - Inne umiejętności</h1>
+                     <p>Języki obce
+                         Angielski: B1, średnio-zaawansowany</p>
+                     <p>
+                         Prawo jazdy kategorii A i B
+                     </p>
+                 </section>
+
+                 <section class="each-section" id="moje-zaintresowania">
+                     <h1>To jest sekcja nr 6 - Moje Zainteresowania</h1>
+                     <p>Stolarstwo – wykonywanie mebli i zabawek z drewna.</p>
+                     <p>Turystyka górska - Bieszczady, Tatry, Pieniny.</p>
+                 </section>
+
+                 <section class="each-section" id="kontakt">
+                     <h1>To jest sekcja nr 7 - Kontakt</h1>
+                     <p>Telefon: 507-610-092</p>
+                     <p>E-mail: pawel.nowak.90@gmail.com</p>
+                     <p> If you want to hire me, just call me.</p>
+
+                 </section>
+
+             </article>
+         </main>
+         <div class="button-scroll"> <a href="#"> <span> >></span> </a> </div>
+     </div>
+
+     <!-- <script src="jquery-3.4.1.min.js"></script> -->
+     <!-- Bootstrap js -->
+     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+     </script>
+     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+         integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+     </script>
+     <script src="js_bootstrap/bootstrap.min.js"></script>
+     <script src="main.js"></script>
+ </body>
+
+ </html>
