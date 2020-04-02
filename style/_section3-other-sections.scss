@@ -61,3 +61,55 @@ section#wyksztalcenie {
         }
     }
 }
+
+
+
+//SECTION 6 - MOJE ZAINTERESOWANIA
+
+section#moje-zainteresowania {
+
+    div.stolarstwo,
+    div.turystyka-gorska {
+        margin: 20px 0;
+        position: relative;
+        text-align: center;
+
+        img {
+            // width: 75%;
+
+        }
+
+        h1 {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translate(-50%, 0);
+            font-size: 50px;
+            text-shadow: -2px 0 5px white, 0 2px 5px white, 2px 0 5px white, 0 -2px 5px white;
+        }
+
+        .dots {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+
+            & span {
+                padding: 20px;
+                display: inline-block;
+                background-color: #fff;
+                margin: 0 20px;
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                box-shadow: 0 0 0 2px black;
+                cursor: pointer;
+
+                &.active {
+                    background-color: #000;
+                }
+            }
+        }
+
+    }
+}
