@@ -91,13 +91,13 @@ const slideListStolarstwo = [{
 }]
 
 const slideListTurystyka = [{
-    img: 'img/stolarstwo1.jpg',
+    img: 'img/gory1.jpg',
     text: 'Turystyka górska - Bieszczady',
 }, {
-    img: 'img/stolarstwo2.jpg',
+    img: 'img/gory2.jpg',
     text: 'Turystyka górska - Pieniny',
 }, {
-    img: 'img/stolarstwo3.jpg',
+    img: 'img/gory3.jpg',
     text: 'Turystyka górska - Tatry',
 }]
 
@@ -113,9 +113,14 @@ const slideListTurystyka = [{
 // }]
 
 //Pobranie el.
-const image = document.querySelector('img.slider');
-const h1 = document.querySelector('h1.slider');
-const dots = [...document.querySelectorAll('.dots span')];
+const image_1st = document.querySelector('img.slider#slider_1st');
+const image_2nd = document.querySelector('img.slider#slider_2nd');
+
+const h1_1st = document.querySelector('h1.slider#h1_1st');
+const h1_2nd = document.querySelector('h1.slider#h1_2nd');
+
+const dots_1st = [...document.querySelectorAll('.dot-1st span')];
+const dots_2nd = [...document.querySelectorAll('.dot-2nd span')];
 
 
 //zmienne sterujace
@@ -123,46 +128,60 @@ let active = 0;
 const time = 3000;
 
 //zmiana kropek na dole slidera
-const changeDot = () => {
+const changeDot = (dots) => {
     const activeDot = dots.findIndex(dot => dot.classList.contains('active'));
     dots[activeDot].classList.remove('active');
     dots[active].classList.add('active');
+    // console.log(dots);
+
 }
 
-const changeSlide = (array) => {
+const changeSlide = (array, image, dots, h1) => {
     active++;
     if (active === array.length) {
         active = 0;
     }
     image.src = array[active].img;
     h1.textContent = array[active].text;
-    changeDot();
-}
-let sliderStart = setInterval(changeSlide, time, slideListStolarstwo);
+    // console.log(dots);
 
-const clickChangeSlide = (event, arrayList) => {
+    changeDot(dots);
+}
+
+let sliderStartStolarstwo = setInterval(changeSlide, time, slideListStolarstwo, image_1st, dots_1st, h1_1st);
+let sliderStart = setInterval(changeSlide, time, slideListTurystyka, image_2nd, dots_2nd, h1_2nd);
+
+
+const clickChangeSlide = (event, arrayList, image, dots, h1) => {
     // function clickChangeSlide(event, arrayList) { //w ten sposób też działa przekazanie eventu
     if (event.target.dataset.order) {
+        console.log(dots);
+
         active = event.target.dataset.order - 1;
-        clearInterval(sliderStart);
+        clearInterval(sliderStartStolarstwo);
         image.src = arrayList[active].img;
         h1.textContent = arrayList[active].text;
-        changeDot();
-        sliderStart = setInterval(changeSlide, time, arrayList);
+
+        sliderStartStolarstwo = setInterval(changeSlide, time, arrayList, image, dots_1st);
+        changeDot(dots);
     }
 }
 
 window.addEventListener('click', function (event) {
-    clickChangeSlide(event, slideListStolarstwo)
-})
+    clickChangeSlide(event, slideListStolarstwo, image_1st, dots_1st, h1_1st)
+});
+
+window.addEventListener('click', function (event) {
+    clickChangeSlide(event, slideListTurystyka, image_2nd, dots_2nd, h1_2nd)
+});
+
 
 // window.addEventListener('click', function (event) {
 //     clickChangeSlide(event, slideListTurystyka)
 // })
 
-
+//zobaczyć czy pobrałem wszystkie elementy dla drugiego slidera i spróbować przkazać je jako argumenty
 //żeby działało uniwersalnie trzeba przekazywac argumenty takie jak h1, image, dots do funkcji ?
-// i pobrać te elementy jeszcze raz dla drugiego slidera
 
 //obsluga slidera Turystyka
 //...

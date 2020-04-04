@@ -94,19 +94,27 @@ section#moje-zainteresowania {
             left: 50%;
             transform: translateX(-50%);
 
-            & span {
-                padding: 20px;
+            div.dot {
+                margin: 15px;
                 display: inline-block;
-                background-color: #fff;
-                margin: 0 20px;
-                width: 10px;
-                height: 10px;
-                border-radius: 50%;
-                box-shadow: 0 0 0 2px black;
+                width: 40px;
+                height: 40px;
                 cursor: pointer;
 
-                &.active {
-                    background-color: #000;
+                span {
+                    padding: 15px;
+                    display: inline-block;
+                    background-color: #fff;
+                    margin: 0 20px;
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 50%;
+                    box-shadow: 0 0 0 2px black;
+
+
+                    &.active {
+                        background-color: #000;
+                    }
                 }
             }
         }

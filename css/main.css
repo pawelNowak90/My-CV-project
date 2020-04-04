@@ -351,9 +351,18 @@ section#moje-zainteresowania div.turystyka-gorska .dots {
           transform: translateX(-50%);
 }
 
-section#moje-zainteresowania div.stolarstwo .dots span,
-section#moje-zainteresowania div.turystyka-gorska .dots span {
-  padding: 20px;
+section#moje-zainteresowania div.stolarstwo .dots div.dot,
+section#moje-zainteresowania div.turystyka-gorska .dots div.dot {
+  margin: 15px;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+section#moje-zainteresowania div.stolarstwo .dots div.dot span,
+section#moje-zainteresowania div.turystyka-gorska .dots div.dot span {
+  padding: 15px;
   display: inline-block;
   background-color: #fff;
   margin: 0 20px;
@@ -362,11 +371,10 @@ section#moje-zainteresowania div.turystyka-gorska .dots span {
   border-radius: 50%;
   -webkit-box-shadow: 0 0 0 2px black;
           box-shadow: 0 0 0 2px black;
-  cursor: pointer;
 }
 
-section#moje-zainteresowania div.stolarstwo .dots span.active,
-section#moje-zainteresowania div.turystyka-gorska .dots span.active {
+section#moje-zainteresowania div.stolarstwo .dots div.dot span.active,
+section#moje-zainteresowania div.turystyka-gorska .dots div.dot span.active {
   background-color: #000;
 }
 
