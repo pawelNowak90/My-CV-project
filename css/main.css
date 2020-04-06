@@ -248,7 +248,6 @@ section.technologie div.skills-container div.one-skill span {
 
 section.each-section {
   min-height: 50vh;
-  background-color: #c8c8c8;
 }
 
 section.each-section h1 {
@@ -324,6 +323,10 @@ section#wyksztalcenie div.logo div.POLLUB h3 {
   padding: 15px;
 }
 
+section#moje-zainteresowania .slides {
+  margin: 30px 0;
+}
+
 section#moje-zainteresowania div.stolarstwo,
 section#moje-zainteresowania div.turystyka-gorska {
   margin: 20px 0;
@@ -385,7 +388,6 @@ section#moje-zainteresowania div.turystyka-gorska .dots div.dot span.active {
 }
 
 body {
-  background-color: #aaaaaa;
   overflow-x: hidden;
 }
 

@@ -1,6 +1,6 @@
 section.each-section {
     min-height: 50vh;
-    background-color: rgb(200, 200, 200);
+    // background-color: rgb(200, 200, 200);
 
 
     h1 {
@@ -67,6 +67,9 @@ section#wyksztalcenie {
 //SECTION 6 - MOJE ZAINTERESOWANIA
 
 section#moje-zainteresowania {
+    .slides {
+        margin: 30px 0;
+    }
 
     div.stolarstwo,
     div.turystyka-gorska {
@@ -74,10 +77,6 @@ section#moje-zainteresowania {
         position: relative;
         text-align: center;
 
-        img {
-            // width: 75%;
-
-        }
 
         h1 {
             position: absolute;
