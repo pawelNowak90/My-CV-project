@@ -27,15 +27,12 @@ var maxiScrollY = (document.body.offsetHeight - window.innerHeight); //tu są ja
 window.addEventListener('scroll', (e) => {
     precentageHeight = window.scrollY / maxiScrollY;
     scrollTopBar.style.width = precentageHeight * 100 + "%";
-    // console.log(Math.floor(precentageHeight * 100) + "%");
 });
 
 // MENU dodanie .active po przewinięciu 100vh
 window.addEventListener('scroll', () => {
     if (window.scrollY >= sectionAboutMe.offsetHeight * 0.90) {
         nav.classList.add("active");
-        // console.log(window.scrollY);
-        // console.log('Teraz dodaję klasę .active do nav-MENU');
     } else if (window.scrollY <= sectionAboutMe.offsetHeight) {
         nav.classList.remove("active");
     }
@@ -63,15 +60,9 @@ window.addEventListener('scroll', () => {
 
 //sekcja wyksztalcenie, - add .active - zalaczenia animacji wjazdu z boku
 window.addEventListener('scroll', () => {
-    console.log(window.scrollY);
-
     if (window.scrollY >= (sectionTechnologies.offsetHeight + sectionAboutMe.offsetHeight * 0.25)) {
         educationRight.classList.add("active");
         educationLeft.classList.add("active");
-        console.log('TO JEST WARTOSC:');
-
-        console.log(sectionTechnologies.offsetHeight + sectionAboutMe.offsetHeight * 0.10);
-
     }
 });
 
@@ -79,27 +70,8 @@ window.addEventListener('scroll', () => {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//sekcja Moje zainteresowania
+//obsluga slidera Stolarstwo jesty wykonywana przez bibliotekę slider.js
 
 
 

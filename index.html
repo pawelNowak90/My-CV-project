@@ -7,16 +7,16 @@
      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
      <!-- Font Awesome is here -->
      <script src="https://kit.fontawesome.com/8d7badb3f4.js" crossorigin="anonymous"></script>
-     <!-- Bootstrap CSS -->
      <link href="https://fonts.googleapis.com/css2?family=Cabin&display=swap" rel="stylesheet">
      <link rel="stylesheet" href="style/normalize.css">
      <link rel="stylesheet" href="css/css_bootstrap/bootstrap.min.css">
      <link rel="stylesheet" href="css/main.css">
+     <link rel="stylesheet" href="css/css_slider.css">
      <title>Paweł Nowak - CV</title>
  </head>
 
  <body>
-     <div id="top">
+     <div class="main-wrapper" id="top">
          <header>
              <div class="loading-bar-background">
                  <div class="loading-bar"></div>
@@ -154,23 +154,117 @@
                      </p>
                  </section>
 
-                 <section class="each-section" id="moje-zaintresowania">
-                     <h1>To jest sekcja nr 6 - Moje Zainteresowania</h1>
-                     <p>Stolarstwo – wykonywanie mebli i zabawek z drewna.</p>
-                     <p>Turystyka górska - Bieszczady, Tatry, Pieniny.</p>
+                 <section class="each-section container" id="moje-zainteresowania">
+                     <h1>Moje Zainteresowania</h1>
+
+                     <div id="slider" class="slides show">
+                         <div class="slide">
+                             <figure>
+                                 <img class="hidden" src="img/stolarstwo1.jpg" alt="Pierwszy slide">
+                             </figure>
+                             <div class="slide-description">
+                                 <h3 class="slide-header">Rozkładany samolocik z drewna, z ukrytym silnikiem.</h3>
+                             </div>
+                         </div>
+                         <div class="slide">
+                             <figure>
+                                 <img class="hidden" src="img/stolarstwo2.jpg" alt="Drugi slide">
+                             </figure>
+                             <div class="slide-description">
+                                 <h3 class="slide-header">Huśtawka ogrodowa z daszkiem</h3>
+                             </div>
+                         </div>
+                         <div class="slide">
+                             <figure>
+                                 <img class="" src="img/stolarstwo3.jpg" alt="">
+                             </figure>
+                             <div class="slide-description">
+                                 <h3 class="slide-header">Huśtawka ogrodowa.</h3>
+                             </div>
+                         </div>
+
+                         <nav role="pagination" class="dots">
+                             <span class="dot"></span>
+                             <span class="dot"></span>
+                             <span class="dot"></span>
+
+                         </nav>
+                         <nav role="pagination" class="arrows">
+                             <button class="arrow-prev">❮</button>
+                         </nav>
+                         <nav role="pagination" class="arrows">
+                             <button class="arrow-next">❯</button>
+                         </nav>
+                     </div>
+
+
+
+
+
+
+
+                     <div id="slider_2nd" class="slides show">
+                         <div class="slide">
+                             <figure>
+                                 <img class="hidden" src="img/gory1.jpg" alt="Pierwszy slide">
+                             </figure>
+                             <div class="slide-description">
+                                 <h3 class="slide-header">Bieszczady</h3>
+
+                             </div>
+                         </div>
+                         <div class="slide">
+                             <figure>
+                                 <img class="hidden" src="img/gory2.jpg" alt="Drugi slide">
+                             </figure>
+                             <div class="slide-description">
+                                 <h3 class="slide-header">Pieniny</h3>
+                             </div>
+                         </div>
+                         <div class="slide">
+                             <figure>
+                                 <img class="" src="img/gory3.jpg" alt="">
+                             </figure>
+                             <div class="slide-description">
+                                 <h3 class="slide-header">Tatry</h3>
+                             </div>
+                         </div>
+
+                         <nav role="pagination" class="dots2">
+                             <span class="dot"></span>
+                             <span class="dot"></span>
+                             <span class="dot"></span>
+
+                         </nav>
+                         <nav role="pagination" class="arrows">
+                             <button class="arrow-prev2">❮</button>
+                         </nav>
+                         <nav role="pagination" class="arrows">
+                             <button class="arrow-next2">❯</button>
+                         </nav>
+                     </div>
+
+
                  </section>
-
-                 <section class="each-section" id="kontakt">
-                     <h1>To jest sekcja nr 7 - Kontakt</h1>
-                     <p>Telefon: 507-610-092</p>
-                     <p>E-mail: pawel.nowak.90@gmail.com</p>
-                     <p> If you want to hire me, just call me.</p>
-
-                 </section>
-
              </article>
          </main>
-         <div class="button-scroll"> <a href="#"> <span> >></span> </a> </div>
+     </div>
+
+
+
+
+
+     <section class="each-section" id="kontakt">
+         <h1>To jest sekcja nr 7 - Kontakt</h1>
+         <p>Telefon: 507-610-092</p>
+         <p>E-mail: pawel.nowak.90@gmail.com</p>
+         <p> If you want to hire me, just call me.</p>
+
+     </section>
+
+
+     </main>
+     <div class="button-scroll"> <a href="#"> <span> >></span> </a> </div>
      </div>
 
      <!-- <script src="jquery-3.4.1.min.js"></script> -->
@@ -183,6 +277,60 @@
      </script>
      <script src="js_bootstrap/bootstrap.min.js"></script>
      <script src="main.js"></script>
+
+     <!-- podpięcie slider.js -->
+     <script src="/js_slider/comp.js"></script>
+     <script src="/js_slider/slider.js"></script>
+     <script>
+         (function () {
+             new Slider("#slider .slide").options({
+                 prev: "#slider nav button.arrow-prev",
+                 next: "#slider nav button.arrow-next",
+                 nav: "#slider nav.dots span",
+                 time: 3000
+             }).init();
+         })();
+
+
+         (function () {
+             new Slider("#slider_2nd .slide").options({
+                 prev: "#slider_2nd nav button.arrow-prev2",
+                 next: "#slider_2nd nav button.arrow-next2",
+                 nav: "#slider_2nd nav.dots2 span",
+                 time: 3000
+             }).init();
+         })();
+     </script>
+
+
+
+     <!-- <script>
+         (function () {
+             new Slider("#slider .slide").options({
+                 first: 0, // Pozycja od której rozpocznie się slider
+
+                 activeClassName: "active", // Nazwa klasy aktywnego slidu
+                 prevClassName: "prev", // Nazwa klasy slidu który był poprzednio aktywny (pomocne przy animacjach CSS)
+                 firstClassName: "first", // Nazwa nadawany na pierwszy (first: 0) slide podczas pierwszego uruchomienia
+                 loadingClassName: "loading", // Nazwa nadawana na slide oraz nawigację za pomocą kropek podczas wczytywania
+                 loadErrorClassName: "error", // Nazwa nadawana na slide oraz nawigację za pomocą kropek w przypadku kiedy slide się nie wczytał
+                 loadedClassName: "loaded", // Nazwa nadawana na slide oraz nawigację za pomocą kropek w przypadku kiedy slide się wczytał
+                 jsClassName: "js", // Nazwa nadawana na slider w celu wykrycia obsługiwania przez użytkownika JS
+                 animation: "fade", // Jedna z nazw animacji zip|fade|chain|tape
+
+                 prev: "#slider nav button.arrow-prev", // Ciąg znaków wskazujący na element, który po kliknięciu będzie przełączał nam slider (#slider nav button.arrow-next), składnia CSS
+                 next: "#slider nav button.arrow-next", // Ciąg znaków wskazujący na element, który po kliknięciu będzie przełączał nam slider (#slider nav button.arrow-prev), składnia CSS
+                 auto: true, // Wskazuje czy slider ma się przełączać automatycznie
+                 time: 3000, // Czas pomiędzy slidami
+                 pause: true, // Wskazuje czy slider ma się zatrzymywać po najechaniu na aktywny slide
+
+                 nav: "#slider nav.dots span", // Ciąg znaków wskazujący na elementy, które po kliknięciu będą przełączały nam slider (#slider nav.dots span), składnia CSS, ilość elementów musi być tożsama z ilością slidów
+                 parent: true, // Ciąg znaków wskazujący na element rodzica
+                 height: true, // Wskazuje czy rodzic slidera ma zmieniać wysokość
+                 load: true // Wskazuje czy zdjęcia mają być wczytywane za pomocą AJAX
+             }).init();
+         })();
+     </script> -->
  </body>
 
  </html>

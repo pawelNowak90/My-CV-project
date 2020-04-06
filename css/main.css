@@ -248,7 +248,6 @@ section.technologie div.skills-container div.one-skill span {
 
 section.each-section {
   min-height: 50vh;
-  background-color: #c8c8c8;
 }
 
 section.each-section h1 {
@@ -324,6 +323,64 @@ section#wyksztalcenie div.logo div.POLLUB h3 {
   padding: 15px;
 }
 
+section#moje-zainteresowania .slides {
+  margin: 30px 0;
+}
+
+section#moje-zainteresowania div.stolarstwo,
+section#moje-zainteresowania div.turystyka-gorska {
+  margin: 20px 0;
+  position: relative;
+  text-align: center;
+}
+
+section#moje-zainteresowania div.stolarstwo h1,
+section#moje-zainteresowania div.turystyka-gorska h1 {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  font-size: 50px;
+  text-shadow: -2px 0 5px white, 0 2px 5px white, 2px 0 5px white, 0 -2px 5px white;
+}
+
+section#moje-zainteresowania div.stolarstwo .dots,
+section#moje-zainteresowania div.turystyka-gorska .dots {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+section#moje-zainteresowania div.stolarstwo .dots div.dot,
+section#moje-zainteresowania div.turystyka-gorska .dots div.dot {
+  margin: 15px;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+section#moje-zainteresowania div.stolarstwo .dots div.dot span,
+section#moje-zainteresowania div.turystyka-gorska .dots div.dot span {
+  padding: 15px;
+  display: inline-block;
+  background-color: #fff;
+  margin: 0 20px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 0 0 2px black;
+          box-shadow: 0 0 0 2px black;
+}
+
+section#moje-zainteresowania div.stolarstwo .dots div.dot span.active,
+section#moje-zainteresowania div.turystyka-gorska .dots div.dot span.active {
+  background-color: #000;
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -331,7 +388,6 @@ section#wyksztalcenie div.logo div.POLLUB h3 {
 }
 
 body {
-  background-color: #aaaaaa;
   overflow-x: hidden;
 }
 
