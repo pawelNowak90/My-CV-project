@@ -369,6 +369,50 @@ section#wyksztalcenie div.logo div.POLLUB h3 {
   font-size: 28px;
 }
 
+section#inne-umiejetnosci div p {
+  font-size: 28px;
+  opacity: 0.1;
+  -webkit-transform: translateY(50%);
+          transform: translateY(50%);
+  -webkit-transition: opacity 0.5s linear, -webkit-transform 0.5s linear;
+  transition: opacity 0.5s linear, -webkit-transform 0.5s linear;
+  transition: opacity 0.5s linear, transform 0.5s linear;
+  transition: opacity 0.5s linear, transform 0.5s linear, -webkit-transform 0.5s linear;
+  -webkit-transition-delay: 0.3s;
+          transition-delay: 0.3s;
+}
+
+section#inne-umiejetnosci div p i {
+  padding-right: 30px;
+  font-size: 48px;
+}
+
+section#inne-umiejetnosci div p:nth-of-type(2) {
+  -webkit-transition-delay: 0.6s;
+          transition-delay: 0.6s;
+}
+
+section#inne-umiejetnosci div p:nth-of-type(3) {
+  -webkit-transition-delay: 0.9s;
+          transition-delay: 0.9s;
+}
+
+section#inne-umiejetnosci div p:nth-of-type(4) {
+  -webkit-transition-delay: 1.2s;
+          transition-delay: 1.2s;
+}
+
+section#inne-umiejetnosci div p:nth-of-type(5) {
+  -webkit-transition-delay: 1.5s;
+          transition-delay: 1.5s;
+}
+
+section#inne-umiejetnosci div p.active {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
 section#moje-zainteresowania .slides {
   margin: 10px 0;
 }
