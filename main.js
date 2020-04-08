@@ -29,8 +29,6 @@ window.addEventListener('scroll', (e) => {
 
 // MENU dodanie .active po przewinięciu 100vh
 window.addEventListener('scroll', () => {
-    console.log(window.scrollY);
-
     if (window.scrollY >= sectionAboutMe.offsetHeight * 0.90) {
         nav.classList.add("active");
     } else if (window.scrollY <= sectionAboutMe.offsetHeight) {
@@ -112,4 +110,36 @@ function fadeInButton() {
 // window.addEventListener('scroll', fadeInButton);
 $(window).on('scroll', fadeInButton);
 
-$(window).on
+
+//pojawianie się nagłówków h1 na scrollY - rozwiazanie trzeba zoptymalizować
+const h1_2Technologie = document.querySelector('section#technologie h1');
+const h1_3Wykszt = document.querySelector('section#wyksztalcenie h1');
+const h1_4DosZawodowe = document.querySelector('section#doswiadczenie-zawodowe h1');
+const h1_5InneUm = document.querySelector('section#inne-umiejetnosci h1');
+const h1_6MojeZainteresowania = document.querySelector('section#moje-zainteresowania h1');
+const h1_7Kontakt = document.querySelector('section#kontakt h1');
+
+
+
+const sec_1 = document.querySelector('section#o-mnie').offsetHeight;
+const sec_2 = document.querySelector('section#wyksztalcenie').offsetHeight;
+const sec_3 = document.querySelector('section#wyksztalcenie').offsetHeight;
+const sec_4 = document.querySelector('section#doswiadczenie-zawodowe').offsetHeight;
+const sec_5 = document.querySelector('section#inne-umiejetnosci').offsetHeight;
+const sec_6 = document.querySelector('section#moje-zainteresowania').offsetHeight;
+const sec_7 = document.querySelector('section#kontakt').offsetHeight;
+
+
+
+$(window).on('scroll', function () {
+    console.log(window.scrollY);
+
+    if (window.scrollY >= sec_1 * 0.5) h1_2Technologie.classList.add('active');
+    if (window.scrollY >= sec_1 + sec_2 * 0.5) h1_3Wykszt.classList.add('active');
+    if (window.scrollY >= sec_1 + sec_2 + sec_3 * 0.5) h1_4DosZawodowe.classList.add('active');
+    if (window.scrollY >= sec_1 + sec_2 + sec_3 + sec_4 * 0.5) h1_5InneUm.classList.add('active');
+    if (window.scrollY >= sec_1 + sec_2 + sec_3 + sec_4 + sec_5 * 0.2) h1_6MojeZainteresowania.classList.add('active');
+    if (window.scrollY >= sec_1 + sec_2 + sec_3 + sec_4 + sec_5 + sec_6 * 0.2) h1_7Kontakt.classList.add('active');
+
+
+});
