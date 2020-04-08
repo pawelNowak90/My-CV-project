@@ -399,6 +399,44 @@ section#moje-zainteresowania div.turystyka-gorska .dots div.dot span.active {
   background-color: #000;
 }
 
+section#kontakt h4 {
+  font-size: 20px;
+  margin-top: 30px;
+}
+
+section#kontakt p {
+  padding: 0;
+  margin: 0px 0px 20px;
+}
+
+section#kontakt input {
+  border-radius: 0;
+}
+
+section#kontakt input:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border: solid 2px;
+}
+
+section#kontakt textarea {
+  border-radius: 0;
+}
+
+section#kontakt textarea:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border: solid 2px;
+}
+
+section#kontakt div button {
+  padding: 10px 24px;
+  color: white;
+  border-radius: 5px;
+  background-color: orangered;
+  border: none;
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
