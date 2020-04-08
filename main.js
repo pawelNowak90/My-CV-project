@@ -1,5 +1,5 @@
 const btnScrollUp = document.querySelector('div.button-scroll');
-const nav = document.getElementById('menu');
+const nav = document.getElementById('navigation');
 // const sectionAboutMe = document.getElementsByClassName('o-mnie'); - pobieram w ten sposób HTML collections i .offsetHeight zwraca undefined !
 const sectionAboutMe = document.querySelector('section.o-mnie');
 const sectionTechnologies = document.querySelector('section.technologie');
@@ -13,24 +13,24 @@ const techCircSkills = [...document.querySelectorAll('div.one-skill')];
 //     // document.scrollTop();
 // }
 
-const div = document.querySelector('div.container');
+//Pasek postepu przewijania
+// const div = document.querySelector('div.container');
 const scrollTopBar = document.querySelector('div.loading-bar');
 scrollTopBar.style.width = 0 + "px";
 let scrollValue = 0;
 
-
-
 //okreslenie przewiniecia strony w procentach
 var totalHeight = document.body.offsetHeight;
 var actualScroll = window.scrollY;
-var maxiScrollY = (document.body.offsetHeight - window.innerHeight); //tu są jakieś błędy rzędu 20-30px ? może window inner height nie uwzględnia marginesów ? albo nie uwzględniam marigunesu który potem dodaję ??
 window.addEventListener('scroll', (e) => {
-    precentageHeight = window.scrollY / maxiScrollY;
+    precentageHeight = (window.scrollY + window.innerHeight) / document.body.offsetHeight;
     scrollTopBar.style.width = precentageHeight * 100 + "%";
 });
 
 // MENU dodanie .active po przewinięciu 100vh
 window.addEventListener('scroll', () => {
+    console.log(window.scrollY);
+
     if (window.scrollY >= sectionAboutMe.offsetHeight * 0.90) {
         nav.classList.add("active");
     } else if (window.scrollY <= sectionAboutMe.offsetHeight) {
