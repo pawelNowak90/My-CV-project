@@ -8,9 +8,9 @@ header div.loading-bar-background {
   top: 0;
   left: 0;
   width: 100%;
-  background: rgba(128, 128, 128, 0.5);
+  background: gray;
   height: 0.4vh;
-  z-index: 10;
+  z-index: 2000;
 }
 
 header div.loading-bar-background div.loading-bar {
@@ -21,27 +21,50 @@ header div.loading-bar-background div.loading-bar {
   opacity: 1;
 }
 
-header nav {
+header div.navigation {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 10;
+  z-index: 100;
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#423a3c), to(transparent));
   background-image: linear-gradient(#423a3c, transparent);
   text-align: center;
 }
 
-header nav a {
+@media (max-width: 1200px) {
+  header div.navigation {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(transparent));
+    background-image: linear-gradient(transparent);
+    background-color: black;
+  }
+}
+
+header div.navigation button {
+  color: white;
+  text-shadow: -2px 0 10px black, 0 2px 10px black, 2px 0 10px black, 0 -2px 10px black;
+}
+
+header div.navigation button:focus {
+  outline: none;
+}
+
+header div.navigation button span {
+  padding: 4px;
+}
+
+header div.navigation ul {
+  list-style-type: none;
+}
+
+header div.navigation ul li {
+  display: inline-block;
+}
+
+header div.navigation ul li a {
   display: inline-block;
   margin: 5px;
-  padding: 20px;
+  padding: 5px;
   color: white;
   font-size: 1.2em;
   text-decoration: none;
@@ -51,8 +74,7 @@ header nav a {
   background-image: linear-gradient(transparent, transparent);
 }
 
-header nav a:hover {
-  color: white;
+header div.navigation ul li a:hover {
   text-decoration: none;
 }
 
@@ -74,7 +96,7 @@ header nav a:hover {
   }
 }
 
-header nav.active {
+header div.navigation.active {
   margin-top: 0.4vh;
   position: fixed;
   top: 0;
@@ -153,7 +175,6 @@ section.technologie h1::first-letter {
 }
 
 section.technologie div.skills-container {
-  position: relative;
   background-color: #c8c8c8;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -248,16 +269,12 @@ section.technologie div.skills-container div.one-skill span {
 
 section.each-section {
   min-height: 50vh;
+  background-color: #c8c8c8;
 }
 
 section.each-section h1 {
   padding: 10px;
   text-align: center;
-}
-
-section.each-section p {
-  padding: 10px;
-  font-size: 1.5em;
 }
 
 section#wyksztalcenie {
@@ -306,25 +323,26 @@ section#wyksztalcenie div.logo div.POLLUB {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
 section#wyksztalcenie div.logo div.AGH img,
 section#wyksztalcenie div.logo div.POLLUB img {
   padding: 15px;
-  width: 100%;
-  height: auto;
+  width: 300px;
+  height: 300px;
 }
 
 section#wyksztalcenie div.logo div.AGH h3,
 section#wyksztalcenie div.logo div.POLLUB h3 {
-  padding: 15px;
+  padding: 30px;
+  font-size: 28px;
 }
 
 section#moje-zainteresowania .slides {
-  margin: 30px 0;
+  margin: 10px 0;
 }
 
 section#moje-zainteresowania div.stolarstwo,

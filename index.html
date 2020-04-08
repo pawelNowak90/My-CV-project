@@ -3,7 +3,6 @@
 
  <head>
      <meta charset="UTF-8">
-     <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
      <!-- Font Awesome is here -->
      <script src="https://kit.fontawesome.com/8d7badb3f4.js" crossorigin="anonymous"></script>
@@ -21,22 +20,48 @@
              <div class="loading-bar-background">
                  <div class="loading-bar"></div>
              </div>
-             <nav id="menu" class="container-fluid">
-                 <!-- nie wiem czy klasa container-fluid jest tu dobrze zaimplementowana -->
-                 <!-- <div class="row"> -->
-                 <a href=".o-mnie">O MNIE</a>
-                 <a href="#wyksztalcenie" id="technologie">TECHNOLOGIE</a>
-                 <a href="#moje-projekty">Wykształcenie</a>
-                 <a href="#">Doświadczenie zawodowe</a>
-                 <a href="#">Inne umiejętności</a>
-                 <a href="#">Moje Zainteresowania</a>
-                 <a href="#">Kontakt</a>
-                 <!-- </div> -->
-             </nav>
+
+             <div class="navigation" id="navigation">
+                 <nav id="menu" class="container-fluid navbar navbar-expand-xl">
+                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler"
+                         aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+                         <span class="navbar-toggler-icon">
+                     <i class="fas fa-bars"></i>
+
+                     </span>
+                     </button>
+                     <div class="collapse navbar-collapse" id="navbarToggler">
+                         <a class="navbar-brand" href="#"></a>
+                         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                             <li class="nav-item">
+                                 <a class="nav-link" href="#o-mnie">O MNIE</a>
+                             </li>
+                             <li class="nav-item">
+                                 <a class="nav-link" href="#technologie">TECHNOLOGIE</a>
+                             </li>
+                             <li class="nav-item">
+                                 <a class="nav-link" href="#wyksztalcenie">Wykształcenie</a>
+                             </li>
+                             <li class="nav-item">
+                                 <a class="nav-link" href="#doswiadczenie-zawodowe">Doświadczenie zawodowe</a>
+                             </li>
+                             <li class="nav-item">
+                                 <a class="nav-link" href="#inne-umiejetnosci">Inne umiejętności</a>
+                             </li>
+                             <li class="nav-item">
+                                 <a class="nav-link" href="#moje-zainteresowania">Moje Zainteresowania</a>
+                             </li>
+                             <li class="nav-item">
+                                 <a class="nav-link" href="#kontakt">Kontakt</a>
+                             </li>
+                         </ul>
+                     </div>
+                 </nav>
+             </div>
          </header>
          <main id="main">
              <article>
-                 <section class="o-mnie">
+                 <section class="o-mnie" id="o-mnie">
                      <div class="background-filter"></div>
                      <div class="about-me">
                          <h2>Nowak Paweł</h2>
@@ -45,12 +70,12 @@
                      </div>
                  </section>
 
-                 <section class="technologie">
+                 <section class="technologie" id="technologie">
                      <h1>Moje umiejętności</i></h1>
                      <div class="skills-container container-fluid">
 
                          <div class="row">
-                             <div class="one-skill col-12 col-sm-6 col-md-4">
+                             <div class="one-skill col-12 col-sm-6 col-lg-4">
                                  <div class="circle-gradient">
                                      <div class="circle-inside"><i class="fab fa-html5"></i>
                                      </div>
@@ -110,22 +135,23 @@
 
                          <div class="logo first col-12" id="education-AGH">
                              <div class="AGH">
-                                 <img src="/img/logo/AGH-logo-wyciete.png" alt="">
+                                 <img src="/img/logo/AGH-logo300x300.png" alt="">
                                  <h3>
                                      <p>Studia inżynierskie</p>
                                      <p>Kierunek: <i>budownictwo</i></p>
-                                     <p>na Akademii Górniczo-Hutniczej w Krakowie</p>
+                                     <p>na AGH w Krakowie</p>
                                  </h3>
                              </div>
                          </div>
                          <div class="logo second col-12" id="education-POLLUB">
                              <div class="POLLUB">
-                                 <img src="img/logo/POLLUB-LOGO-wyciete.png" alt="">
+
                                  <h3>
                                      <p>Studia magisterskie</p>
                                      <p>Kierunek: <i>budownictwo</i></p>
                                      <p>na Politechnice Lubelskiej</p>
                                  </h3>
+                                 <img src="img/logo/POLLUB-LOGO-300x300.png" alt="">
                              </div>
                          </div>
                      </div>
@@ -156,6 +182,7 @@
 
                  <section class="each-section container" id="moje-zainteresowania">
                      <h1>Moje Zainteresowania</h1>
+                     <h1>Stolarstwo</h1>
 
                      <div id="slider" class="slides show">
                          <div class="slide">
@@ -201,7 +228,7 @@
 
 
 
-
+                     <h1>Turystyka górska</h1>
 
                      <div id="slider_2nd" class="slides show">
                          <div class="slide">
@@ -246,6 +273,13 @@
 
 
                  </section>
+                 <section class="each-section" id="kontakt">
+                     <h1>To jest sekcja nr 7 - Kontakt</h1>
+                     <p>Telefon: 507-610-092</p>
+                     <p>E-mail: pawel.nowak.90@gmail.com</p>
+                     <p> If you want to hire me, just call me.</p>
+
+                 </section>
              </article>
          </main>
      </div>
@@ -254,13 +288,7 @@
 
 
 
-     <section class="each-section" id="kontakt">
-         <h1>To jest sekcja nr 7 - Kontakt</h1>
-         <p>Telefon: 507-610-092</p>
-         <p>E-mail: pawel.nowak.90@gmail.com</p>
-         <p> If you want to hire me, just call me.</p>
 
-     </section>
 
 
      </main>

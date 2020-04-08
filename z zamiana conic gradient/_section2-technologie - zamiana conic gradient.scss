@@ -18,18 +18,20 @@ section.technologie {
     }
 
     div.skills-container {
-        // position: relative;
+
         background-color: rgb(200, 200, 200);
         text-transform: uppercase;
         letter-spacing: 2px;
         z-index: 5;
 
+
         div.one-skill {
             padding: 30px;
             color: white;
             opacity: 0;
-
-
+            background-color: gray;
+            border: solid red 1px;
+            position: relative;
 
             &.active {
                 transition: opacity 1s linear;
@@ -63,14 +65,36 @@ section.technologie {
             div.circle-gradient {
                 margin: auto;
                 position: relative;
-                background: conic-gradient(green 0deg 5deg, transparent 275deg);
-                border-radius: 50%;
-                width: 262px;
-                height: 262px;
+                background: green;
+                width: 125px;
+                height: 250px;
                 z-index: 20;
+                box-sizing: border-box;
 
-                &:hover {
-                    background: conic-gradient(green 0deg 305deg, transparent 275deg);
+
+                &.jeden {
+                    border-top-right-radius: 125px;
+                    border-bottom-right-radius: 125px;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    // transform: translate(50%, 0);
+                }
+
+                &.dwa {
+                    position: absolute;
+                    top: 0;
+                    right: 125px;
+                    border-top-left-radius: 125px;
+                    border-bottom-left-radius: 125px;
+                    transform: rotate(0deg);
+                    transform-origin: right;
+
+
+                    &:hover {
+                        transform: rotate(-175deg);
+                        transition: transform linear 1s;
+                    }
                 }
 
                 div.circle-inside {
