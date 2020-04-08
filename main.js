@@ -127,8 +127,9 @@ const sec_3 = document.querySelector('section#wyksztalcenie').offsetHeight;
 const sec_4 = document.querySelector('section#doswiadczenie-zawodowe').offsetHeight;
 const sec_5 = document.querySelector('section#inne-umiejetnosci').offsetHeight;
 const sec_6 = document.querySelector('section#moje-zainteresowania').offsetHeight;
-const sec_7 = document.querySelector('section#kontakt').offsetHeight;
 
+const kontaktLeftAnimation = document.querySelector('div.kontakt-left');
+const kontaktRightAnimation = document.querySelector('div.kontakt-right');
 
 
 $(window).on('scroll', function () {
@@ -140,6 +141,8 @@ $(window).on('scroll', function () {
     if (window.scrollY >= sec_1 + sec_2 + sec_3 + sec_4 * 0.5) h1_5InneUm.classList.add('active');
     if (window.scrollY >= sec_1 + sec_2 + sec_3 + sec_4 + sec_5 * 0.2) h1_6MojeZainteresowania.classList.add('active');
     if (window.scrollY >= sec_1 + sec_2 + sec_3 + sec_4 + sec_5 + sec_6 * 0.2) h1_7Kontakt.classList.add('active');
+    if (window.scrollY >= sec_1 + sec_2 + sec_3 + sec_4 + sec_5 + sec_6 * 0.2) kontaktLeftAnimation.classList.add('active');
+    if (window.scrollY >= sec_1 + sec_2 + sec_3 + sec_4 + sec_5 + sec_6 * 0.2) kontaktRightAnimation.classList.add('active');
 
 
 });
