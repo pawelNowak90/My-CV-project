@@ -131,6 +131,8 @@ const sec_6 = document.querySelector('section#moje-zainteresowania').offsetHeigh
 const kontaktLeftAnimation = document.querySelector('div.kontakt-left');
 const kontaktRightAnimation = document.querySelector('div.kontakt-right');
 
+const secInneUmiejetnosciP = [...document.querySelectorAll('section#inne-umiejetnosci p')];
+
 
 $(window).on('scroll', function () {
     console.log(window.scrollY);
@@ -138,7 +140,10 @@ $(window).on('scroll', function () {
     if (window.scrollY >= sec_1 * 0.5) h1_2Technologie.classList.add('active');
     if (window.scrollY >= sec_1 + sec_2 * 0.5) h1_3Wykszt.classList.add('active');
     if (window.scrollY >= sec_1 + sec_2 + sec_3 * 0.5) h1_4DosZawodowe.classList.add('active');
-    if (window.scrollY >= sec_1 + sec_2 + sec_3 + sec_4 * 0.5) h1_5InneUm.classList.add('active');
+    if (window.scrollY >= sec_1 + sec_2 + sec_3 + sec_4 * 0.5) {
+        h1_5InneUm.classList.add('active');
+        secInneUmiejetnosciP.forEach(p => p.classList.add('active'));
+    }
     if (window.scrollY >= sec_1 + sec_2 + sec_3 + sec_4 + sec_5 * 0.2) h1_6MojeZainteresowania.classList.add('active');
     if (window.scrollY >= sec_1 + sec_2 + sec_3 + sec_4 + sec_5 + sec_6 * 0.2) h1_7Kontakt.classList.add('active');
     if (window.scrollY >= sec_1 + sec_2 + sec_3 + sec_4 + sec_5 + sec_6 * 0.2) kontaktLeftAnimation.classList.add('active');
