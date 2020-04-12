@@ -1,0 +1,437 @@
+section {
+    margin-top: 10px;
+    padding-top: 10px;
+    overflow: hidden; //DORA jak jest tylko overflow-x:hidden, to na Y pjawia się scroll ?
+
+    &>h1 {
+        margin: 10px 0;
+        color: #000;
+        text-transform: uppercase;
+        font-style: 34px;
+        letter-spacing: 2px;
+        opacity: 0;
+        transform: scale(1.5);
+        transition: transform 0.5s linear, opacity 0.5s linear;
+        text-align: center;
+        font-size: 28px;
+
+        span {
+            padding: 10px 20px;
+            border-bottom: 3px solid orangered;
+        }
+
+        &::first-letter {
+            letter-spacing: 5px;
+            font-size: 175%;
+        }
+
+        &.active {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+
+    &.bg-gray {
+        background-color: rgb(200, 200, 200);
+
+        h1 {
+            color: white;
+        }
+    }
+}
+
+section#my-baner {
+    position: relative;
+    margin: 0;
+    height: 100vh;
+    background: url("../img/pawel-gory.jpg");
+    background-size: cover;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-position: center; //DORA - jaka szerokość jest minimalna dla mobilki, czy wartosc CENTER jest ok ?
+    filter: grayscale(15%) sepia(15%);
+
+    div.background-filter {
+        position: relative;
+        z-index: -1;
+        height: 100%;
+        background-color: rgba(20, 20, 20, 0.35);
+    }
+
+    div.about-me {
+        position: absolute;
+        top: 25%;
+        left: 55%;
+
+        h1,
+        h2 {
+            padding: 20px 30px;
+            color: white;
+            text-shadow: -2px 0 10px black, 0 2px 10px black, 2px 0 10px black, 0 -2px 10px black;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+        }
+
+        h2 {
+            font-size: 3em;
+        }
+    }
+
+}
+
+section#o-mnie {
+    p {
+        padding: 0 100px 50px 100px;
+        font-size: 26px;
+        text-align: justify;
+        opacity: 0;
+        transform: translateY(50%);
+        transition: opacity 0.5s linear, transform 0.5s linear;
+        transition-delay: 0.3s;
+
+        &:nth-of-type(2) {
+            transition-delay: 0.6s;
+        }
+
+        &.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+    }
+}
+
+section.technologie {
+    text-align: center;
+
+    div.skills-container {
+        text-transform: uppercase;
+
+        div.one-skill {
+            padding: 30px;
+            color: white;
+            opacity: 0;
+
+            &.active {
+                transition: opacity 1s linear;
+                opacity: 1;
+
+                &:nth-of-type(1) {
+                    transition-delay: 0.1s;
+                }
+
+                &:nth-of-type(2) {
+                    transition-delay: 0.1s;
+                }
+
+                &:nth-of-type(3) {
+                    transition-delay: 0.2s;
+                }
+
+                &:nth-of-type(4) {
+                    transition-delay: 0.3s;
+                }
+
+                &:nth-of-type(5) {
+                    transition-delay: 0.4s;
+                }
+
+                &:nth-of-type(6) {
+                    transition-delay: 0.5s;
+                }
+            }
+
+            div.circle-gradient {
+                margin: auto;
+                position: relative;
+                background: conic-gradient(rgba(0, 0, 0, 0.8) 0deg 5deg, transparent 275deg);
+                border-radius: 50%;
+                width: 262px;
+                height: 262px;
+
+                &:hover {
+                    background: conic-gradient(rgba(0, 0, 0, 0.8) 0deg 305deg, transparent 275deg);
+                }
+
+                div.circle-inside {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    width: 250px;
+                    height: 250px;
+                    border-radius: 50%;
+                    background-color: orangered;
+                    border: 10px solid rgb(200, 200, 200);
+
+                    i {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        font-size: 128px;
+                    }
+                }
+            }
+
+            span {
+                display: block;
+                font-size: 1.5em;
+            }
+        }
+    }
+}
+
+
+section#inne-umiejetnosci {
+
+    div {
+        p {
+            i {
+                padding-right: 30px;
+                font-size: 28px;
+            }
+
+            font-size: 28px;
+            opacity:0;
+            transform:translateY(50%);
+            transition: opacity 0.5s linear,
+            transform 0.5s linear;
+            transition-delay: 0.3s;
+
+            &:nth-of-type(2) {
+                transition-delay: 0.6s;
+            }
+
+            &:nth-of-type(3) {
+                transition-delay: 0.9s;
+            }
+
+            &:nth-of-type(4) {
+                transition-delay: 1.2s;
+            }
+
+            &:nth-of-type(5) {
+                transition-delay: 1.5s;
+            }
+
+
+            &.active {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    }
+}
+
+section#wyksztalcenie {
+    div.logo {
+        &.first {
+            transform: translateX(-70%);
+            opacity: 0;
+
+            &.active {
+                transform: translateX(0);
+                opacity: 1;
+                transition: transform 1.5s, opacity 1.5s 0.75s;
+            }
+        }
+
+        &.second {
+            transform: translateX(70%);
+            opacity: 0;
+
+            &.active {
+                transform: translateX(0);
+                opacity: 1;
+                transition: transform 1.5s, opacity 1.5s 0.75s;
+            }
+        }
+
+        div.AGH,
+        div.POLLUB {
+            padding: 15px;
+            display: flex;
+            justify-content: space-evenly;
+
+            img {
+                padding: 15px;
+                width: 300px;
+                height: 300px;
+            }
+
+            h3 {
+                padding: 30px;
+                font-size: 28px;
+            }
+        }
+    }
+}
+
+section#doswiadczenie-zawodowe {
+    p {
+        padding: 0 100px 50px 100px;
+        font-size: 26px;
+        text-align: justify;
+        opacity: 0;
+        transform: translateY(50%);
+        transition: opacity 0.5s linear, transform 0.5s linear;
+        transition-delay: 0.3s;
+
+        &.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        &:nth-of-type(2) {
+            transition-delay: 0.6s;
+        }
+
+        &:nth-of-type(3) {
+            transition-delay: 0.9s;
+            font-size: 20px;
+        }
+    }
+}
+
+section#moje-zainteresowania {
+    .slides {
+        margin: 10px 0;
+    }
+
+    div.stolarstwo,
+    div.turystyka-gorska {
+        margin: 20px 0;
+        position: relative;
+        text-align: center;
+
+
+        h1 {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translate(-50%, 0);
+            font-size: 50px;
+            text-shadow: -2px 0 5px white, 0 2px 5px white, 2px 0 5px white, 0 -2px 5px white;
+        }
+
+        .dots {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+
+            div.dot {
+                margin: 15px;
+                display: inline-block;
+                width: 40px;
+                height: 40px;
+                cursor: pointer;
+
+                span {
+                    padding: 15px;
+                    display: inline-block;
+                    background-color: #fff;
+                    margin: 0 20px;
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 50%;
+                    box-shadow: 0 0 0 2px black;
+
+
+                    &.active {
+                        background-color: #000;
+                    }
+                }
+            }
+        }
+    }
+}
+
+section#kontakt {
+    background: orangered;
+    padding-bottom: 75px;
+
+    div.kontakt-left {
+        transform: translateX(-50%);
+        opacity: 0;
+        transition: opacity 0.5s linear, transform 0.5s ease-in-out;
+        transition-delay: 0.3s;
+
+        &.active {
+            transform: translateX(0);
+            opacity: 1;
+        }
+
+        &>div {
+            clear: both;
+        }
+
+        i {
+            display: block;
+            font-size: 30px;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            float: left;
+        }
+
+        h4 {
+            padding-left: 60px;
+            font-size: 22px;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+
+        p {
+            padding-left: 60px;
+            margin: 0px;
+            font-size: 18px;
+        }
+    }
+
+    div.kontakt-right {
+        transform: translateX(50%);
+        opacity: 0;
+        transition: opacity 0.5s linear, transform 0.5s ease-in-out;
+        transition-delay: 0.3s;
+
+        &.active {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+
+    input {
+        border-radius: 0;
+
+        &:focus {
+            box-shadow: none;
+            border: solid 2px;
+        }
+
+        &.form-control {}
+
+    }
+
+    textarea {
+        border-radius: 0;
+
+        &:focus {
+            box-shadow: none;
+            border: solid 2px;
+        }
+    }
+
+    button {
+        padding: 10px 24px;
+        color: white;
+        border-radius: 5px;
+        background-color: #000;
+        border: none;
+    }
+}

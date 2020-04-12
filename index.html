@@ -5,12 +5,14 @@
      <meta charset="UTF-8">
      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
      <!-- Font Awesome is here -->
-     <script src="https://kit.fontawesome.com/8d7badb3f4.js" crossorigin="anonymous"></script>
-     <link href="https://fonts.googleapis.com/css2?family=Cabin&display=swap" rel="stylesheet">
-     <link rel="stylesheet" href="style/normalize.css">
+     <!-- <script src="https://kit.fontawesome.com/8d7badb3f4.js" crossorigin="anonymous"></script> -->
+     <!-- podpiecie czcionki z serwera -->
+     <!-- <link href="https://fonts.googleapis.com/css2?family=Cabin&display=swap" rel="stylesheet"> -->
+     <link rel="stylesheet" href="css/normalize.css">
      <link rel="stylesheet" href="css/css_bootstrap/bootstrap.min.css">
      <link rel="stylesheet" href="css/main.css">
      <link rel="stylesheet" href="css/css_slider.css">
+     <link rel="stylesheet" href="css/fontAwesome_all.css">
      <title>Paweł Nowak - CV</title>
  </head>
 
@@ -34,19 +36,19 @@
                          <a class="navbar-brand" href="#"></a>
                          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                              <li class="nav-item">
-                                 <a class="nav-link" href="#o-mnie">O MNIE</a>
+                                 <a class="nav-link" href="#o-mnie">O mnie</a>
                              </li>
                              <li class="nav-item">
-                                 <a class="nav-link" href="#technologie">TECHNOLOGIE</a>
+                                 <a class="nav-link" href="#technologie">Technologie</a>
+                             </li>
+                             <li class="nav-item">
+                                 <a class="nav-link" href="#inne-umiejetnosci">Inne umiejętności</a>
                              </li>
                              <li class="nav-item">
                                  <a class="nav-link" href="#wyksztalcenie">Wykształcenie</a>
                              </li>
                              <li class="nav-item">
                                  <a class="nav-link" href="#doswiadczenie-zawodowe">Doświadczenie zawodowe</a>
-                             </li>
-                             <li class="nav-item">
-                                 <a class="nav-link" href="#inne-umiejetnosci">Inne umiejętności</a>
                              </li>
                              <li class="nav-item">
                                  <a class="nav-link" href="#moje-zainteresowania">Moje Zainteresowania</a>
@@ -61,19 +63,43 @@
          </header>
          <main id="main">
              <article>
-                 <section class="o-mnie" id="o-mnie">
+                 <section class="my-baner" id="my-baner">
                      <div class="background-filter"></div>
                      <div class="about-me">
                          <h2>Nowak Paweł</h2>
                          <h1>Junior Front-end Developer</h1>
-                         <p>Jak się pojednam z CSSem to będę uczył się Reacta <span class="emoji">:-]</span> </p>
                      </div>
                  </section>
 
-                 <section class="technologie" id="technologie">
-                     <h1>Moje umiejętności</i></h1>
-                     <div class="skills-container container-fluid">
+                 <section class="o-mnie" id="o-mnie">
+                     <h1><span>O mnie</span></h1>
+                     <div class="container">
+                         <p>Nazywam się Paweł Nowak.
+                             Jestem absolwentem kierunku <i>Budownictwo</i> na <strong>Akademii
+                                 Górniczo-Hutniczej</strong>
+                             w Krakowie oraz <strong>Politechnice&nbsp;Lubelskiej</strong>.
+                             Przez cztery lata procowałem jako inżynier budowy. Uzyskałem uprawnienia budowlane i przez
+                             rok
+                             byłem kierownikiem
+                             budowy. Posiadam duże doświadczenie w pracy z ludźmi, w swojej pracy podołałem
+                             bardzo odpowiedzialnym zadaniom.
+                         </p>
+                         <p>
+                             Obecnie chciałbym rozwijać się jako Frontend Developer.
+                             Ukończyłem kursy na platformie <i>udemy</i> :
+                             <strong>HTML</strong>, <strong>CSS</strong>, <strong>JavaScript</strong>,
+                             <strong>GIT</strong>.
+                             Używam edytora <strong>Visual&nbsp;Studio&nbsp;Code</strong>.
+                             Swoje projekty prowadzę w serwisie GitHub.
+                             Aktualnie uczę się frameworka <strong>React.js</strong>.
+                         </p>
 
+                     </div>
+                 </section>
+
+                 <section class="technologie bg-gray" id="technologie">
+                     <h1><span>Technologie</span> </h1>
+                     <div class="skills-container container">
                          <div class="row">
                              <div class="one-skill col-12 col-sm-6 col-lg-4">
                                  <div class="circle-gradient">
@@ -129,169 +155,168 @@
                      </div>
                  </section>
 
-                 <section class="each-section container" id="wyksztalcenie">
-                     <h1>Wykształcenie</h1>
-                     <div class="row">
+                 <section class="" id="inne-umiejetnosci">
+                     <h1><span>Inne umiejętności</span></h1>
+                     <div class="container">
+                         <p><i class="fas fa-arrow-right"></i>Języki obce: Angielski: B1, średnio-zaawansowany</p>
+                         <p><i class="fas fa-arrow-right"></i>Prawo jazdy kategorii A1 i B</p>
+                         <p><i class="fas fa-arrow-right"></i>Duża dokładność, staranność</p>
+                         <p><i class="fas fa-arrow-right"></i>Dobra komunikatywność</p>
+                     </div>
+                 </section>
 
-                         <div class="logo first col-12" id="education-AGH">
-                             <div class="AGH">
-                                 <img src="/img/logo/AGH-logo300x300.png" alt="">
-                                 <h3>
-                                     <p>Studia inżynierskie</p>
-                                     <p>Kierunek: <i>budownictwo</i></p>
-                                     <p>na AGH w Krakowie</p>
-                                 </h3>
+                 <section class=" bg-gray" id="wyksztalcenie">
+                     <h1><span>Wykształcenie</span></h1>
+                     <div class="container">
+                         <div class="row">
+
+                             <div class="logo first col-12" id="education-AGH">
+                                 <div class="AGH">
+                                     <img src="img/logo/AGH-logo300x300.png" alt="">
+                                     <h3>
+                                         <p>Studia inżynierskie</p>
+                                         <p>Kierunek: <i>budownictwo</i></p>
+                                         <p>na AGH w Krakowie</p>
+                                     </h3>
+                                 </div>
                              </div>
-                         </div>
-                         <div class="logo second col-12" id="education-POLLUB">
-                             <div class="POLLUB">
+                             <div class="logo second col-12" id="education-POLLUB">
+                                 <div class="POLLUB">
 
-                                 <h3>
-                                     <p>Studia magisterskie</p>
-                                     <p>Kierunek: <i>budownictwo</i></p>
-                                     <p>na Politechnice Lubelskiej</p>
-                                 </h3>
-                                 <img src="img/logo/POLLUB-LOGO-300x300.png" alt="">
+                                     <h3>
+                                         <p>Studia magisterskie</p>
+                                         <p>Kierunek: <i>budownictwo</i></p>
+                                         <p>na Politechnice Lubelskiej</p>
+                                     </h3>
+                                     <img src="img/logo/POLLUB-LOGO-300x300.png" alt="">
+                                 </div>
                              </div>
                          </div>
                      </div>
                  </section>
 
-                 <section class="each-section" id="doswiadczenie-zawodowe">
-                     <h1>Doświadczenie zawodowe</h1>
-                     <p>06.2017 - 05.2018 Kierownik Budowy, P.W.Sanitex
-                         Zakres obowiązków:
-                         - Prowadzenie dokumentacji technicznej
-                         - Pilnowanie harmonogramu prac i jakości robót
-                         - Nadzorowanie pracowników do 100 osób</p>
-                     <p>
-                         04.2013 - 05.2017 Inżynier Budowy, P.W.Sanitex
-                         Zakres obowiązków:
-                         - Nadzorowanie pracowników do 50 osób
-                         - Koordynacja prac na placu budowy</p>
-                 </section>
-
-                 <section class="each-section container" id="inne-umiejetnosci">
-                     <h1>Inne umiejętności</h1>
-                     <div>
-                         <p><i> > </i>Języki obce: Angielski: B1, średnio-zaawansowany</p>
-                         <p><i> > </i>Prawo jazdy kategorii B</p>
-                         <p><i> > </i>Prawo jazdy kategorii A1 </p>
-                         <p><i> > </i>Duża dokładność, staranność</p>
-                         <p><i> > </i>Dobra komunikatywność</p>
+                 <section class=" " id="doswiadczenie-zawodowe">
+                     <h1><span>Doświadczenie zawodowe</span></h1>
+                     <div class="container">
+                         <p>06.2017 - 05.2018 Kierownik Budowy, P.W.Sanitex
+                             Zakres obowiązków:
+                             - Prowadzenie dokumentacji technicznej
+                             - Pilnowanie harmonogramu prac i jakości robót
+                             - Nadzorowanie pracowników do 100 osób</p>
+                         <p>
+                             04.2013 - 05.2017 Inżynier Budowy, P.W.Sanitex
+                             Zakres obowiązków:
+                             - Nadzorowanie pracowników do 50 osób
+                             - Koordynacja prac na placu budowy</p>
                      </div>
                  </section>
 
-                 <section class="each-section container" id="moje-zainteresowania">
-                     <h1>Moje Zainteresowania</h1>
-                     <h2>Stolarstwo</h2>
+                 <section class=" bg-gray" id="moje-zainteresowania">
+                     <h1><span>Moje Zainteresowania</span></h1>
+                     <div class="container">
+                         <h2>Stolarstwo</h2>
 
-                     <div id="slider" class="slides show">
-                         <div class="slide">
-                             <figure>
-                                 <img class="hidden" src="img/stolarstwo1.jpg" alt="Pierwszy slide">
-                             </figure>
-                             <div class="slide-description">
-                                 <h3 class="slide-header">Rozkładany samolocik z drewna, z ukrytym silnikiem.</h3>
+                         <div id="slider" class="slides show">
+                             <div class="slide">
+                                 <figure>
+                                     <img class="hidden" src="img/stolarstwo1.jpg" alt="Pierwszy slide">
+                                 </figure>
+                                 <div class="slide-description">
+                                     <h3 class="slide-header">Rozkładany samolocik z drewna, z ukrytym silnikiem.</h3>
+                                 </div>
                              </div>
-                         </div>
-                         <div class="slide">
-                             <figure>
-                                 <img class="hidden" src="img/stolarstwo2.jpg" alt="Drugi slide">
-                             </figure>
-                             <div class="slide-description">
-                                 <h3 class="slide-header">Huśtawka ogrodowa z daszkiem</h3>
+                             <div class="slide">
+                                 <figure>
+                                     <img class="hidden" src="img/stolarstwo2.jpg" alt="Drugi slide">
+                                 </figure>
+                                 <div class="slide-description">
+                                     <h3 class="slide-header">Huśtawka ogrodowa z daszkiem</h3>
+                                 </div>
                              </div>
-                         </div>
-                         <div class="slide">
-                             <figure>
-                                 <img class="" src="img/stolarstwo3.jpg" alt="">
-                             </figure>
-                             <div class="slide-description">
-                                 <h3 class="slide-header">Huśtawka ogrodowa.</h3>
+                             <div class="slide">
+                                 <figure>
+                                     <img class="" src="img/stolarstwo3.jpg" alt="">
+                                 </figure>
+                                 <div class="slide-description">
+                                     <h3 class="slide-header">Huśtawka ogrodowa.</h3>
+                                 </div>
                              </div>
-                         </div>
 
-                         <nav role="pagination" class="dots">
-                             <span class="dot"></span>
-                             <span class="dot"></span>
-                             <span class="dot"></span>
-
-                         </nav>
-                         <nav role="pagination" class="arrows">
-                             <button class="arrow-prev">❮</button>
-                         </nav>
-                         <nav role="pagination" class="arrows">
-                             <button class="arrow-next">❯</button>
-                         </nav>
-                     </div>
-
-
-
-
-
-                     <h2>Turystyka górska</h2>
-
-                     <div id="slider_2nd" class="slides show">
-                         <div class="slide">
-                             <figure>
-                                 <img class="hidden" src="img/gory1.jpg" alt="Pierwszy slide">
-                             </figure>
-                             <div class="slide-description">
-                                 <h3 class="slide-header">Bieszczady</h3>
-
-                             </div>
-                         </div>
-                         <div class="slide">
-                             <figure>
-                                 <img class="hidden" src="img/gory2.jpg" alt="Drugi slide">
-                             </figure>
-                             <div class="slide-description">
-                                 <h3 class="slide-header">Pieniny</h3>
-                             </div>
-                         </div>
-                         <div class="slide">
-                             <figure>
-                                 <img class="" src="img/gory3.jpg" alt="">
-                             </figure>
-                             <div class="slide-description">
-                                 <h3 class="slide-header">Tatry</h3>
-                             </div>
+                             <nav role="pagination" class="dots">
+                                 <span class="dot"></span>
+                                 <span class="dot"></span>
+                                 <span class="dot"></span>
+                             </nav>
+                             <nav role="pagination" class="arrows">
+                                 <button class="arrow-prev">❮</button>
+                             </nav>
+                             <nav role="pagination" class="arrows">
+                                 <button class="arrow-next">❯</button>
+                             </nav>
                          </div>
 
-                         <nav role="pagination" class="dots2">
-                             <span class="dot"></span>
-                             <span class="dot"></span>
-                             <span class="dot"></span>
+                         <h2>Turystyka górska</h2>
 
-                         </nav>
-                         <nav role="pagination" class="arrows">
-                             <button class="arrow-prev2">❮</button>
-                         </nav>
-                         <nav role="pagination" class="arrows">
-                             <button class="arrow-next2">❯</button>
-                         </nav>
+                         <div id="slider_2nd" class="slides show">
+                             <div class="slide">
+                                 <figure>
+                                     <img class="hidden" src="img/gory1.jpg" alt="Pierwszy slide">
+                                 </figure>
+                                 <div class="slide-description">
+                                     <h3 class="slide-header">Bieszczady</h3>
+                                 </div>
+                             </div>
+                             <div class="slide">
+                                 <figure>
+                                     <img class="hidden" src="img/gory2.jpg" alt="Drugi slide">
+                                 </figure>
+                                 <div class="slide-description">
+                                     <h3 class="slide-header">Pieniny</h3>
+                                 </div>
+                             </div>
+                             <div class="slide">
+                                 <figure>
+                                     <img class="" src="img/gory3.jpg" alt="">
+                                 </figure>
+                                 <div class="slide-description">
+                                     <h3 class="slide-header">Tatry</h3>
+                                 </div>
+                             </div>
+
+                             <nav role="pagination" class="dots2">
+                                 <span class="dot"></span>
+                                 <span class="dot"></span>
+                                 <span class="dot"></span>
+
+                             </nav>
+                             <nav role="pagination" class="arrows">
+                                 <button class="arrow-prev2">❮</button>
+                             </nav>
+                             <nav role="pagination" class="arrows">
+                                 <button class="arrow-next2">❯</button>
+                             </nav>
+                         </div>
                      </div>
                  </section>
 
-                 <section class="each-section" id="kontakt">
+                 <section class="bg-gray" id="kontakt">
                      <h1>Kontakt</h1>
                      <div class="container">
                          <div class="row">
                              <div class="col-lg-4">
                                  <div class="info kontakt-left">
-                                     <div class="name">
-                                         <i></i>
+                                     <div class="mb-4">
+                                         <i class="far fa-address-card"></i>
                                          <h4>Imię i nazwisko:</h4>
                                          <p>Paweł Nowak</p>
                                      </div>
-                                     <div class="email">
-                                         <i></i>
+                                     <div class="mb-4">
+                                         <i class="fas fa-at"></i>
                                          <h4>Email:</h4>
                                          <p>pawel.nowak.90@gmail.com</p>
                                      </div>
-                                     <div class="phone">
-                                         <i></i>
+                                     <div>
+                                         <i class="fas fa-mobile-alt"></i>
                                          <h4>Telefon:</h4>
                                          <p>507-610-092</p>
                                      </div>
@@ -315,7 +340,7 @@
                                      </div>
                                      <div class="form-group">
                                          <textarea name="message" class="form-control" rows="6"
-                                             placeholder="Message"></textarea>
+                                             placeholder="Twoja wiadomość"></textarea>
                                      </div>
                                      <div class="text-center">
                                          <button type="submit">Wyślij wiadomość</button>
@@ -325,36 +350,29 @@
                          </div>
                      </div>
                  </section>
-
              </article>
          </main>
      </div>
 
-
-
-
-
-
-
-
      </main>
-     <div class="button-scroll"> <a href="#"> <span> >></span> </a> </div>
+     <div class="button-scroll"> <a href="#">  <p class="arrow"> >></p> </a> </div>
      </div>
 
-     <!-- <script src="jquery-3.4.1.min.js"></script> -->
+
+
+
      <!-- Bootstrap js -->
-     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
-     </script>
-     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-         integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
-     </script>
+     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"> </script>
+     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"> </script>
      <script src="js_bootstrap/bootstrap.min.js"></script>
+
+     <!-- moj plik js -->
      <script src="main.js"></script>
 
      <!-- podpięcie slider.js -->
-     <script src="/js_slider/comp.js"></script>
-     <script src="/js_slider/slider.js"></script>
+     <script src="js_slider/comp.js"></script>
+     <script src="js_slider/slider.js"></script>
+
      <script>
          (function () {
              new Slider("#slider .slide").options({

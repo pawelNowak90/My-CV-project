@@ -27,34 +27,35 @@ header div.navigation {
   left: 0;
   z-index: 100;
   width: 100%;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#423a3c), to(transparent));
-  background-image: linear-gradient(#423a3c, transparent);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#171213), to(transparent));
+  background-image: linear-gradient(#171213, transparent);
   text-align: center;
 }
 
 @media (max-width: 1200px) {
   header div.navigation {
-    background-image: -webkit-gradient(linear, left top, left bottom, from(transparent));
-    background-image: linear-gradient(transparent);
-    background-color: black;
+    background: black;
   }
 }
 
-header div.navigation button {
+header div.navigation button.navbar-toggler {
   color: white;
-  text-shadow: -2px 0 10px black, 0 2px 10px black, 2px 0 10px black, 0 -2px 10px black;
 }
 
-header div.navigation button:focus {
+header div.navigation button.navbar-toggler:focus {
   outline: none;
 }
 
-header div.navigation button span {
+header div.navigation button.navbar-toggler span {
   padding: 4px;
 }
 
 header div.navigation ul {
   list-style-type: none;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 header div.navigation ul li {
@@ -68,14 +69,15 @@ header div.navigation ul li a {
   color: white;
   font-size: 1.2em;
   text-decoration: none;
-  text-transform: uppercase;
-  text-shadow: -2px 0 10px black, 0 2px 10px black, 2px 0 10px black, 0 -2px 10px black;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent));
-  background-image: linear-gradient(transparent, transparent);
+  text-decoration: none;
+  border: solid 2px transparent;
 }
 
-header div.navigation ul li a:hover {
-  text-decoration: none;
+header div.navigation ul li a.nowOnScreen {
+  border-radius: 5px;
+  border: solid 2px orangered;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
 }
 
 @-webkit-keyframes navigation {
@@ -96,7 +98,7 @@ header div.navigation ul li a:hover {
   }
 }
 
-header div.navigation.active {
+header div.navigation.navbar-fixed {
   margin-top: 0.4vh;
   position: fixed;
   top: 0;
@@ -108,77 +110,126 @@ header div.navigation.active {
           animation: navigation 0.5s linear;
 }
 
-section.o-mnie {
-  position: relative;
-  height: 100vh;
-  width: 100%;
-  margin: 0;
+section {
+  margin-top: 10px;
+  padding-top: 10px;
+  overflow: hidden;
+}
+
+section > h1 {
+  margin: 10px 0;
+  color: #000;
+  text-transform: uppercase;
+  font-style: 34px;
+  letter-spacing: 2px;
+  opacity: 0;
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+  -webkit-transition: opacity 0.5s linear, -webkit-transform 0.5s linear;
+  transition: opacity 0.5s linear, -webkit-transform 0.5s linear;
+  transition: transform 0.5s linear, opacity 0.5s linear;
+  transition: transform 0.5s linear, opacity 0.5s linear, -webkit-transform 0.5s linear;
+  text-align: center;
   font-size: 28px;
+}
+
+section > h1 span {
+  padding: 10px 20px;
+  border-bottom: 3px solid orangered;
+}
+
+section > h1::first-letter {
+  letter-spacing: 5px;
+  font-size: 175%;
+}
+
+section > h1.active {
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+section.bg-gray {
+  background-color: #c8c8c8;
+}
+
+section.bg-gray h1 {
+  color: white;
+}
+
+section#my-baner {
+  position: relative;
+  margin: 0;
+  height: 100vh;
   background: url("../img/pawel-gory.jpg");
   background-size: cover;
   background-position: 0 0;
-  -webkit-filter: grayscale(15%) sepia(15%);
-          filter: grayscale(15%) sepia(15%);
   background-repeat: no-repeat;
   background-position: center;
+  -webkit-filter: grayscale(15%) sepia(15%);
+          filter: grayscale(15%) sepia(15%);
 }
 
-section.o-mnie div.background-filter {
-  width: 100%;
-  height: 100%;
-  background-color: rgba(20, 20, 20, 0.35);
+section#my-baner div.background-filter {
   position: relative;
   z-index: -1;
+  height: 100%;
+  background-color: rgba(20, 20, 20, 0.35);
 }
 
-section.o-mnie div.about-me {
+section#my-baner div.about-me {
   position: absolute;
   top: 25%;
   left: 55%;
 }
 
-section.o-mnie div.about-me h1,
-section.o-mnie div.about-me h2,
-section.o-mnie div.about-me p {
-  padding: 0 30px;
+section#my-baner div.about-me h1,
+section#my-baner div.about-me h2 {
+  padding: 20px 30px;
   color: white;
   text-shadow: -2px 0 10px black, 0 2px 10px black, 2px 0 10px black, 0 -2px 10px black;
 }
 
-section.o-mnie div.about-me h1 span.emoji,
-section.o-mnie div.about-me h2 span.emoji,
-section.o-mnie div.about-me p span.emoji {
-  display: inline-block;
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
-  -webkit-transform-origin: center center;
-          transform-origin: center center;
+section#my-baner div.about-me h1 {
+  font-size: 3.5rem;
+}
+
+section#my-baner div.about-me h2 {
+  font-size: 3em;
+}
+
+section#o-mnie p {
+  padding: 0 100px 50px 100px;
+  font-size: 26px;
+  text-align: justify;
+  opacity: 0;
+  -webkit-transform: translateY(50%);
+          transform: translateY(50%);
+  -webkit-transition: opacity 0.5s linear, -webkit-transform 0.5s linear;
+  transition: opacity 0.5s linear, -webkit-transform 0.5s linear;
+  transition: opacity 0.5s linear, transform 0.5s linear;
+  transition: opacity 0.5s linear, transform 0.5s linear, -webkit-transform 0.5s linear;
+  -webkit-transition-delay: 0.3s;
+          transition-delay: 0.3s;
+}
+
+section#o-mnie p:nth-of-type(2) {
+  -webkit-transition-delay: 0.6s;
+          transition-delay: 0.6s;
+}
+
+section#o-mnie p.active {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
 }
 
 section.technologie {
-  min-height: 100vh;
-  margin: 15px 0;
-}
-
-section.technologie h1 {
-  padding: 20px;
-  font-size: 28px;
   text-align: center;
-  color: white;
-  text-shadow: -2px 0 10px black, 0 2px 10px black, 2px 0 10px black, 0 -2px 10px black;
-  letter-spacing: 2px;
-}
-
-section.technologie h1::first-letter {
-  font-size: 150%;
-  color: gray;
 }
 
 section.technologie div.skills-container {
-  background-color: #c8c8c8;
   text-transform: uppercase;
-  letter-spacing: 2px;
-  z-index: 5;
 }
 
 section.technologie div.skills-container div.one-skill {
@@ -226,15 +277,14 @@ section.technologie div.skills-container div.one-skill.active:nth-of-type(6) {
 section.technologie div.skills-container div.one-skill div.circle-gradient {
   margin: auto;
   position: relative;
-  background: conic-gradient(green 0deg 5deg, transparent 275deg);
+  background: conic-gradient(rgba(0, 0, 0, 0.8) 0deg 5deg, transparent 275deg);
   border-radius: 50%;
   width: 262px;
   height: 262px;
-  z-index: 20;
 }
 
 section.technologie div.skills-container div.one-skill div.circle-gradient:hover {
-  background: conic-gradient(green 0deg 305deg, transparent 275deg);
+  background: conic-gradient(rgba(0, 0, 0, 0.8) 0deg 305deg, transparent 275deg);
 }
 
 section.technologie div.skills-container div.one-skill div.circle-gradient div.circle-inside {
@@ -247,6 +297,7 @@ section.technologie div.skills-container div.one-skill div.circle-gradient div.c
   height: 250px;
   border-radius: 50%;
   background-color: orangered;
+  border: 10px solid #c8c8c8;
 }
 
 section.technologie div.skills-container div.one-skill div.circle-gradient div.circle-inside i {
@@ -256,61 +307,55 @@ section.technologie div.skills-container div.one-skill div.circle-gradient div.c
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   font-size: 128px;
-  text-align: center;
 }
 
 section.technologie div.skills-container div.one-skill span {
   display: block;
-  margin-left: auto;
-  margin-right: auto;
   font-size: 1.5em;
-  text-align: center;
 }
 
-section.each-section {
-  min-height: 50vh;
-  background-color: #c8c8c8;
-}
-
-section.each-section h1 {
-  padding: 10px;
-  text-align: center;
-}
-
-section > h1 {
-  color: white;
-  text-transform: uppercase;
-  font-style: 34px;
-  text-shadow: -2px 0 10px black, 0 2px 10px black, 2px 0 10px black, 0 -2px 10px black;
-  letter-spacing: 2px;
+section#inne-umiejetnosci div p {
+  font-size: 28px;
   opacity: 0;
-  -webkit-transform: scale(1.5);
-          transform: scale(1.5);
-  -webkit-transition: opacity 0.5s linear, -webkit-transform 0.5s linear;
-  transition: opacity 0.5s linear, -webkit-transform 0.5s linear;
-  transition: transform 0.5s linear, opacity 0.5s linear;
-  transition: transform 0.5s linear, opacity 0.5s linear, -webkit-transform 0.5s linear;
+  -webkit-transform: translateY(50%);
+          transform: translateY(50%);
+  -webkit-transition: opacity 0.5s linear, -webkit-transform 0.5s linear;
+  transition: opacity 0.5s linear, -webkit-transform 0.5s linear;
+  transition: opacity 0.5s linear, transform 0.5s linear;
+  transition: opacity 0.5s linear, transform 0.5s linear, -webkit-transform 0.5s linear;
+  -webkit-transition-delay: 0.3s;
+          transition-delay: 0.3s;
 }
 
-section > h1::first-letter {
-  letter-spacing: 5px;
-  font-size: 175%;
-  color: gray;
-  text-shadow: -2px 0 10px white, 0 2px 10px white, 2px 0 10px white, 0 -2px 10px white;
+section#inne-umiejetnosci div p i {
+  padding-right: 30px;
+  font-size: 28px;
 }
 
-section > h1.active {
+section#inne-umiejetnosci div p:nth-of-type(2) {
+  -webkit-transition-delay: 0.6s;
+          transition-delay: 0.6s;
+}
+
+section#inne-umiejetnosci div p:nth-of-type(3) {
+  -webkit-transition-delay: 0.9s;
+          transition-delay: 0.9s;
+}
+
+section#inne-umiejetnosci div p:nth-of-type(4) {
+  -webkit-transition-delay: 1.2s;
+          transition-delay: 1.2s;
+}
+
+section#inne-umiejetnosci div p:nth-of-type(5) {
+  -webkit-transition-delay: 1.5s;
+          transition-delay: 1.5s;
+}
+
+section#inne-umiejetnosci div p.active {
   opacity: 1;
-  -webkit-transform: scale(1);
-          transform: scale(1);
-}
-
-section#wyksztalcenie {
-  overflow: hidden;
-}
-
-section#wyksztalcenie div.logo {
-  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
 }
 
 section#wyksztalcenie div.logo.first {
@@ -369,48 +414,36 @@ section#wyksztalcenie div.logo div.POLLUB h3 {
   font-size: 28px;
 }
 
-section#inne-umiejetnosci div p {
-  font-size: 28px;
-  opacity: 0.1;
+section#doswiadczenie-zawodowe p {
+  padding: 0 100px 50px 100px;
+  font-size: 26px;
+  text-align: justify;
+  opacity: 0;
   -webkit-transform: translateY(50%);
           transform: translateY(50%);
-  -webkit-transition: opacity 0.5s linear, -webkit-transform 0.5s linear;
-  transition: opacity 0.5s linear, -webkit-transform 0.5s linear;
-  transition: opacity 0.5s linear, transform 0.5s linear;
-  transition: opacity 0.5s linear, transform 0.5s linear, -webkit-transform 0.5s linear;
+  -webkit-transition: opacity 0.5s linear, -webkit-transform 0.5s linear;
+  transition: opacity 0.5s linear, -webkit-transform 0.5s linear;
+  transition: opacity 0.5s linear, transform 0.5s linear;
+  transition: opacity 0.5s linear, transform 0.5s linear, -webkit-transform 0.5s linear;
   -webkit-transition-delay: 0.3s;
           transition-delay: 0.3s;
 }
 
-section#inne-umiejetnosci div p i {
-  padding-right: 30px;
-  font-size: 48px;
+section#doswiadczenie-zawodowe p.active {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
 }
 
-section#inne-umiejetnosci div p:nth-of-type(2) {
+section#doswiadczenie-zawodowe p:nth-of-type(2) {
   -webkit-transition-delay: 0.6s;
           transition-delay: 0.6s;
 }
 
-section#inne-umiejetnosci div p:nth-of-type(3) {
+section#doswiadczenie-zawodowe p:nth-of-type(3) {
   -webkit-transition-delay: 0.9s;
           transition-delay: 0.9s;
-}
-
-section#inne-umiejetnosci div p:nth-of-type(4) {
-  -webkit-transition-delay: 1.2s;
-          transition-delay: 1.2s;
-}
-
-section#inne-umiejetnosci div p:nth-of-type(5) {
-  -webkit-transition-delay: 1.5s;
-          transition-delay: 1.5s;
-}
-
-section#inne-umiejetnosci div p.active {
-  opacity: 1;
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
+  font-size: 20px;
 }
 
 section#moje-zainteresowania .slides {
@@ -471,14 +504,79 @@ section#moje-zainteresowania div.turystyka-gorska .dots div.dot span.active {
   background-color: #000;
 }
 
-section#kontakt h4 {
-  font-size: 20px;
-  margin-top: 30px;
+section#kontakt {
+  background: orangered;
+  padding-bottom: 75px;
 }
 
-section#kontakt p {
-  padding: 0;
-  margin: 0px 0px 20px;
+section#kontakt div.kontakt-left {
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  opacity: 0;
+  -webkit-transition: opacity 0.5s linear, -webkit-transform 0.5s ease-in-out;
+  transition: opacity 0.5s linear, -webkit-transform 0.5s ease-in-out;
+  transition: opacity 0.5s linear, transform 0.5s ease-in-out;
+  transition: opacity 0.5s linear, transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
+  -webkit-transition-delay: 0.3s;
+          transition-delay: 0.3s;
+}
+
+section#kontakt div.kontakt-left.active {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  opacity: 1;
+}
+
+section#kontakt div.kontakt-left > div {
+  clear: both;
+}
+
+section#kontakt div.kontakt-left i {
+  display: block;
+  font-size: 30px;
+  width: 50px;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  float: left;
+}
+
+section#kontakt div.kontakt-left h4 {
+  padding-left: 60px;
+  font-size: 22px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+section#kontakt div.kontakt-left p {
+  padding-left: 60px;
+  margin: 0px;
+  font-size: 18px;
+}
+
+section#kontakt div.kontakt-right {
+  -webkit-transform: translateX(50%);
+          transform: translateX(50%);
+  opacity: 0;
+  -webkit-transition: opacity 0.5s linear, -webkit-transform 0.5s ease-in-out;
+  transition: opacity 0.5s linear, -webkit-transform 0.5s ease-in-out;
+  transition: opacity 0.5s linear, transform 0.5s ease-in-out;
+  transition: opacity 0.5s linear, transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
+  -webkit-transition-delay: 0.3s;
+          transition-delay: 0.3s;
+}
+
+section#kontakt div.kontakt-right.active {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  opacity: 1;
 }
 
 section#kontakt input {
@@ -501,48 +599,17 @@ section#kontakt textarea:focus {
   border: solid 2px;
 }
 
-section#kontakt div.kontakt-left {
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  opacity: 0;
-  -webkit-transition: opacity 0.5s linear, -webkit-transform 0.5s ease-in-out;
-  transition: opacity 0.5s linear, -webkit-transform 0.5s ease-in-out;
-  transition: opacity 0.5s linear, transform 0.5s ease-in-out;
-  transition: opacity 0.5s linear, transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
-  -webkit-transition-delay: 0.3s;
-          transition-delay: 0.3s;
-}
-
-section#kontakt div.kontakt-left.active {
-  -webkit-transform: translateX(0);
-          transform: translateX(0);
-  opacity: 1;
-}
-
-section#kontakt div.kontakt-right {
-  -webkit-transform: translateX(50%);
-          transform: translateX(50%);
-  opacity: 0;
-  -webkit-transition: opacity 0.5s linear, -webkit-transform 0.5s ease-in-out;
-  transition: opacity 0.5s linear, -webkit-transform 0.5s ease-in-out;
-  transition: opacity 0.5s linear, transform 0.5s ease-in-out;
-  transition: opacity 0.5s linear, transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
-  -webkit-transition-delay: 0.3s;
-          transition-delay: 0.3s;
-}
-
-section#kontakt div.kontakt-right.active {
-  -webkit-transform: translateX(0);
-          transform: translateX(0);
-  opacity: 1;
-}
-
-section#kontakt div button {
+section#kontakt button {
   padding: 10px 24px;
   color: white;
   border-radius: 5px;
-  background-color: orangered;
+  background-color: #000;
   border: none;
+}
+
+@font-face {
+  font-family: Cabin;
+  src: url(../fonts/Cabin/Cabin-Medium.ttf);
 }
 
 * {
@@ -551,63 +618,55 @@ section#kontakt div button {
   font-family: 'Cabin', 'Arial', sans-serif;
 }
 
-body {
-  overflow-x: hidden;
-}
-
 html {
   scroll-behavior: smooth;
   /*!nie działa w IE*/
 }
 
-div.container-fluid {
-  margin: 0;
-  padding: 0;
+a {
+  text-decoration: none;
+  color: white;
+  text-align: center;
+}
+
+a:hover {
+  color: white;
+  text-decoration: none;
 }
 
 div.button-scroll {
-  min-width: 35px;
-  min-height: 35px;
-  width: 5vh;
-  height: 5vh;
-  background-color: pink;
+  width: 40px;
+  height: 40px;
   position: fixed;
   bottom: 3%;
   right: 3%;
-  z-index: 12;
-  border-radius: 10%;
-  -webkit-transform: rotate(270deg);
-          transform: rotate(270deg);
-  -webkit-transform-origin: center;
-          transform-origin: center;
-  -webkit-transition: opacity ease-in-out 0.5s;
-  transition: opacity ease-in-out 0.5s;
+  z-index: 2000;
+  background-color: black;
+  border-radius: 3px;
   opacity: 0;
 }
 
 div.button-scroll.active {
+  -webkit-transition: opacity ease-in-out 0.3s;
+  transition: opacity ease-in-out 0.3s;
+  opacity: 0.8;
+}
+
+div.button-scroll.active:hover {
   opacity: 1;
 }
 
 div.button-scroll a {
-  display: block;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  opacity: 0.6;
-  text-decoration: none;
-  font-weight: bold;
-  -webkit-transition: ease-in-out 0.5s;
-  transition: ease-in-out 0.5s;
-  border-radius: inherit;
+  position: relative;
+  opacity: 1;
 }
 
-div.button-scroll a span {
-  color: black;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+div.button-scroll a p.arrow {
+  -webkit-transform: translateX(-1px) rotate(270deg);
+          transform: translateX(-1px) rotate(270deg);
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  font-size: 30px;
+  line-height: 40px;
 }
 /*# sourceMappingURL=main.css.map */
