@@ -4,15 +4,12 @@
  <head>
      <meta charset="UTF-8">
      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-     <!-- Font Awesome is here -->
-     <!-- <script src="https://kit.fontawesome.com/8d7badb3f4.js" crossorigin="anonymous"></script> -->
-     <!-- podpiecie czcionki z serwera -->
-     <!-- <link href="https://fonts.googleapis.com/css2?family=Cabin&display=swap" rel="stylesheet"> -->
      <link rel="stylesheet" href="css/normalize.css">
      <link rel="stylesheet" href="css/css_bootstrap/bootstrap.min.css">
      <link rel="stylesheet" href="css/main.css">
      <link rel="stylesheet" href="css/css_slider.css">
      <link rel="stylesheet" href="css/fontAwesome_all.css">
+
      <title>Paweł Nowak - CV</title>
  </head>
 
@@ -24,7 +21,7 @@
              </div>
 
              <div class="navigation" id="navigation">
-                 <nav id="menu" class="container-fluid navbar navbar-expand-xl">
+                 <nav id="menu" class="container-fluid navbar navbar-expand-lg">
                      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler"
                          aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
                          <span class="navbar-toggler-icon">
@@ -34,7 +31,7 @@
                      </button>
                      <div class="collapse navbar-collapse" id="navbarToggler">
                          <a class="navbar-brand" href="#"></a>
-                         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                         <ul class="navbar-nav mr-auto mt-2 mt-lg-0" id="navigation-list">
                              <li class="nav-item">
                                  <a class="nav-link" href="#o-mnie">O mnie</a>
                              </li>
@@ -355,21 +352,16 @@
      </div>
 
      </main>
-     <div class="button-scroll"> <a href="#">  <p class="arrow"> >></p> </a> </div>
+     <a href="#" class="to-top">  <p class="arrow"> >></p> </a>
      </div>
 
 
 
 
-     <!-- Bootstrap js -->
-     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"> </script>
-     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"> </script>
+     <script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+     <script src="js_bootstrap/popper.min.js"> </script>
      <script src="js_bootstrap/bootstrap.min.js"></script>
-
-     <!-- moj plik js -->
      <script src="main.js"></script>
-
-     <!-- podpięcie slider.js -->
      <script src="js_slider/comp.js"></script>
      <script src="js_slider/slider.js"></script>
 

@@ -14,7 +14,7 @@ header div.loading-bar-background {
 }
 
 header div.loading-bar-background div.loading-bar {
-  background-color: royalblue;
+  background-color: orangered;
   height: inherit;
   -webkit-transition: all 1s;
   transition: all 1s;
@@ -32,7 +32,7 @@ header div.navigation {
   text-align: center;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 992px) {
   header div.navigation {
     background: black;
   }
@@ -634,36 +634,43 @@ a:hover {
   text-decoration: none;
 }
 
-div.button-scroll {
+a.to-top {
+  display: none;
   width: 40px;
   height: 40px;
   position: fixed;
-  bottom: 3%;
+  bottom: 2%;
   right: 3%;
   z-index: 2000;
   background-color: black;
-  border-radius: 3px;
+  border-radius: 50%;
   opacity: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  pointer-events: none;
+  -webkit-transition: opacity linear 0.3s, bottom linear 0.3s;
+  transition: opacity linear 0.3s, bottom linear 0.3s;
 }
 
-div.button-scroll.active {
-  -webkit-transition: opacity ease-in-out 0.3s;
-  transition: opacity ease-in-out 0.3s;
-  opacity: 0.8;
-}
-
-div.button-scroll.active:hover {
+a.to-top.active {
   opacity: 1;
+  pointer-events: auto;
+  bottom: 3%;
 }
 
-div.button-scroll a {
-  position: relative;
-  opacity: 1;
-}
-
-div.button-scroll a p.arrow {
-  -webkit-transform: translateX(-1px) rotate(270deg);
-          transform: translateX(-1px) rotate(270deg);
+a.to-top p.arrow {
+  margin: 0;
+  padding: 0;
+  display: block;
+  -webkit-transform: translateX(-1.5px) rotate(270deg);
+          transform: translateX(-1.5px) rotate(270deg);
   -webkit-transform-origin: center;
           transform-origin: center;
   font-size: 30px;
