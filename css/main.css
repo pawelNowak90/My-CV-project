@@ -9,15 +9,16 @@ header div.loading-bar-background {
   left: 0;
   width: 100%;
   background: gray;
-  height: 0.4vh;
+  height: 3px;
   z-index: 2000;
 }
 
 header div.loading-bar-background div.loading-bar {
+  width: 0;
   background-color: orangered;
   height: inherit;
-  -webkit-transition: all 1s;
-  transition: all 1s;
+  -webkit-transition: all 0.1s;
+  transition: all 0.1s;
   opacity: 1;
 }
 
@@ -114,10 +115,11 @@ section {
   margin-top: 10px;
   padding-top: 10px;
   overflow: hidden;
+  text-align: center;
 }
 
 section > h1 {
-  margin: 10px 0;
+  margin: 10px 0 20px 0;
   color: #000;
   text-transform: uppercase;
   font-style: 34px;
@@ -150,10 +152,15 @@ section > h1.active {
 }
 
 section.bg-gray {
-  background-color: #c8c8c8;
+  background-color: #b9b9b9;
 }
 
 section.bg-gray h1 {
+  color: white;
+}
+
+section.bg-gray h2 {
+  padding-top: 20px;
   color: white;
 }
 
@@ -222,10 +229,6 @@ section#o-mnie p.active {
   opacity: 1;
   -webkit-transform: translateY(0);
           transform: translateY(0);
-}
-
-section.technologie {
-  text-align: center;
 }
 
 section.technologie div.skills-container {
@@ -297,7 +300,7 @@ section.technologie div.skills-container div.one-skill div.circle-gradient div.c
   height: 250px;
   border-radius: 50%;
   background-color: orangered;
-  border: 10px solid #c8c8c8;
+  border: 10px solid #b9b9b9;
 }
 
 section.technologie div.skills-container div.one-skill div.circle-gradient div.circle-inside i {
@@ -364,7 +367,7 @@ section#wyksztalcenie div.logo.first {
   opacity: 0;
 }
 
-section#wyksztalcenie div.logo.first.active {
+section#wyksztalcenie div.logo.first.driveFromTheSide {
   -webkit-transform: translateX(0);
           transform: translateX(0);
   opacity: 1;
@@ -380,7 +383,7 @@ section#wyksztalcenie div.logo.second {
   opacity: 0;
 }
 
-section#wyksztalcenie div.logo.second.active {
+section#wyksztalcenie div.logo.second.driveFromTheSide {
   -webkit-transform: translateX(0);
           transform: translateX(0);
   opacity: 1;
@@ -444,6 +447,12 @@ section#doswiadczenie-zawodowe p:nth-of-type(3) {
   -webkit-transition-delay: 0.9s;
           transition-delay: 0.9s;
   font-size: 20px;
+}
+
+section#moje-zainteresowania p {
+  padding: 10px 0;
+  color: white;
+  font-size: 1.5em;
 }
 
 section#moje-zainteresowania .slides {
@@ -665,15 +674,7 @@ a.to-top.active {
   bottom: 3%;
 }
 
-a.to-top p.arrow {
-  margin: 0;
-  padding: 0;
-  display: block;
-  -webkit-transform: translateX(-1.5px) rotate(270deg);
-          transform: translateX(-1.5px) rotate(270deg);
-  -webkit-transform-origin: center;
-          transform-origin: center;
+a.to-top i {
   font-size: 30px;
-  line-height: 40px;
 }
 /*# sourceMappingURL=main.css.map */

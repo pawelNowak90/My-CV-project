@@ -2,9 +2,11 @@ section {
     margin-top: 10px;
     padding-top: 10px;
     overflow: hidden; //DORA jak jest tylko overflow-x:hidden, to na Y pjawia się scroll ?
+    text-align: center;
+
 
     &>h1 {
-        margin: 10px 0;
+        margin: 10px 0 20px 0;
         color: #000;
         text-transform: uppercase;
         font-style: 34px;
@@ -32,11 +34,17 @@ section {
     }
 
     &.bg-gray {
-        background-color: rgb(200, 200, 200);
+        background-color: rgb(185, 185, 185);
 
         h1 {
             color: white;
         }
+
+        h2 {
+            padding-top: 20px;
+            color: white;
+        }
+
     }
 }
 
@@ -78,7 +86,6 @@ section#my-baner {
             font-size: 3em;
         }
     }
-
 }
 
 section#o-mnie {
@@ -104,7 +111,6 @@ section#o-mnie {
 }
 
 section.technologie {
-    text-align: center;
 
     div.skills-container {
         text-transform: uppercase;
@@ -164,7 +170,7 @@ section.technologie {
                     height: 250px;
                     border-radius: 50%;
                     background-color: orangered;
-                    border: 10px solid rgb(200, 200, 200);
+                    border: 10px solid rgb(185, 185, 185);
 
                     i {
                         position: absolute;
@@ -232,7 +238,7 @@ section#wyksztalcenie {
             transform: translateX(-70%);
             opacity: 0;
 
-            &.active {
+            &.driveFromTheSide {
                 transform: translateX(0);
                 opacity: 1;
                 transition: transform 1.5s, opacity 1.5s 0.75s;
@@ -243,7 +249,7 @@ section#wyksztalcenie {
             transform: translateX(70%);
             opacity: 0;
 
-            &.active {
+            &.driveFromTheSide {
                 transform: translateX(0);
                 opacity: 1;
                 transition: transform 1.5s, opacity 1.5s 0.75s;
@@ -297,6 +303,15 @@ section#doswiadczenie-zawodowe {
 }
 
 section#moje-zainteresowania {
+
+
+
+    p {
+        padding: 10px 0;
+        color: white;
+        font-size: 1.5em;
+    }
+
     .slides {
         margin: 10px 0;
     }

@@ -54,17 +54,19 @@ a.to-top {
 
     }
 
-    p.arrow {
-        margin: 0;
-        padding: 0;
-        display: block;
-        transform: translateX(-1.5px) rotate(270deg);
-        transform-origin: center;
+    i {
         font-size: 30px;
-        line-height: 40px;
-        //DORA, dlaczego transform: translate(-50%, -50%); przesuwa o 50% rodzica, a nie elementu ?
-
-
     }
+
+    // p.arrow {
+    //     margin: 0;
+    //     padding: 0;
+    //     display: block;
+    //     transform: translateX(-1.5px) rotate(270deg);
+    //     transform-origin: center;
+    //     font-size: 30px;
+    //     line-height: 40px;
+    //     //DORA, dlaczego transform: translate(-50%, -50%); przesuwa o 50% rodzica, a nie elementu ?
+    // }
 
 }
