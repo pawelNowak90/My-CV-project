@@ -61,11 +61,13 @@ header {
           text-decoration: none;
           text-decoration: none;
           border: solid 2px transparent;
+          cursor: pointer;
 
           &.nowOnScreen {
             border-radius: 5px;
             border: solid 2px orangered;
             transition: all 0.2s linear;
+            cursor: pointer;
           }
         }
       }

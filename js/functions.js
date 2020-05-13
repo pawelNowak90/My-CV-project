@@ -8,10 +8,8 @@ const navHeight = document.getElementById("navigation").offsetHeight;
 const nav = document.getElementById("navigation");
 
 const navLinks = [...document.querySelectorAll("nav li a.nav-link")];
-const sectionArray = [...document.querySelectorAll("section")].reduce((r, item) => {
-  r[item.id] = item;
-  return r;
-}, []);
+const sectionArray = [...document.querySelectorAll("section")];
+const sectionArrayReduce = [...document.querySelectorAll("section")].reduce((r, item) => { r[item.id] = item; return r; }, []);
 
 const sectionAboutMe = document.querySelector("section.o-mnie");
 
@@ -28,7 +26,7 @@ function setAnimationForNav() {
     item.addEventListener("click", function (event) {
       event.preventDefault();
       let sectionId = this.hash.slice(1);
-      document.documentElement.scrollTop = sectionArray[sectionId].offsetTop - navHeight;
+      document.documentElement.scrollTop = sectionArrayReduce[sectionId].offsetTop - navHeight;
     })
   );
 }
@@ -48,82 +46,24 @@ function setNavItemActive() {
   }
 }
 
-
 function sectionAnimations() {
-  if (
-    window.scrollY >=
-    document.querySelector("section#o-mnie").offsetTop - 4 * navHeight
-  ) {
-    h1_Headers[0].classList.add("active");
-    oMnieParagraphs.forEach((p) => p.classList.add("active"));
+  for (let i = 0; i < sectionArray.length; i++) {
+    if (window.scrollY >= sectionArray[i].offsetTop - 1 * navHeight) {
+      sectionArray[i + 1].classList.add('visited');
+    }
   }
-  if (
-    window.scrollY >=
-    document.querySelector("section#technologie").offsetTop - 4 * navHeight
-  ) {
-    h1_Headers[1].classList.add("active");
-    techCircSkills.forEach((techCircSkill) =>
-      techCircSkill.classList.add("active")
-    );
-  }
-
-  if (
-    window.scrollY >=
-    document.querySelector("section#inne-umiejetnosci").offsetTop -
-    4 * navHeight
-  ) {
-    h1_Headers[2].classList.add("active");
-    inneUmParagraphs.forEach((p) => p.classList.add("active"));
-  }
-  if (
-    window.scrollY >=
-    document.querySelector("section#wyksztalcenie").offsetTop - 4 * navHeight
-  ) {
-    h1_Headers[3].classList.add("active");
-    document.getElementById("education-POLLUB").classList.add("driveFromTheSide");
-    document.getElementById("education-AGH").classList.add("driveFromTheSide");
-  }
-  if (
-    window.scrollY >=
-    document.querySelector("section#doswiadczenie-zawodowe").offsetTop -
-    4 * navHeight
-  ) {
-    h1_Headers[4].classList.add("active");
-    doswZawodoweParagraphs.forEach((p) => p.classList.add("active"));
-  }
-  if (
-    window.scrollY >=
-    document.querySelector("section#moje-zainteresowania").offsetTop -
-    7 * navHeight
-  )
-    h1_Headers[5].classList.add("active");
-  if (
-    window.scrollY >=
-    document.querySelector("section#kontakt").offsetTop - 7 * navHeight
-  )
-    h1_Headers[6].classList.add("active");
-  if (
-    window.scrollY >=
-    document.querySelector("section#kontakt").offsetTop - 7 * navHeight
-  )
-    document.querySelector("div.kontakt-left").classList.add("active");
-  if (
-    window.scrollY >=
-    document.querySelector("section#kontakt").offsetTop - 7 * navHeight
-  )
-    document.querySelector("div.kontakt-right").classList.add("active");
 }
 
+let flag = true;
 function btnUpAnimation() {
-  let flag = 0;
   const btnToTop = document.querySelector("a.to-top");
 
-  if (window.scrollY >= 120 && !flag) {
+  if (flag && (window.scrollY >= 200)) {
     btnToTop.classList.add("active");
     flag = !flag;
-  } else if (window.scrollY < 120 && flag) {
+  } else if (window.scrollY < 200) {
     btnToTop.classList.remove("active");
-    flag = !flag;
+    flag = true;
   }
 }
 
@@ -134,3 +74,8 @@ function progressBar(e) {
     window.scrollY / (document.body.offsetHeight - window.innerHeight);
   scrollTopBar.style.width = precentageHeight * 100 + "%";
 }
+
+//CHOWANIE MENU TOGGLER NA RWD po przekierowaniu animacji
+document.body.addEventListener('click', () => {
+  document.querySelector('header div.navbar-collapse').classList.remove('show');
+})

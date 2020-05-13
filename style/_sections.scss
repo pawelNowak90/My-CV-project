@@ -27,10 +27,7 @@ section {
             font-size: 175%;
         }
 
-        &.active {
-            opacity: 1;
-            transform: scale(1);
-        }
+
     }
 
     &.bg-gray {
@@ -46,6 +43,10 @@ section {
         }
 
     }
+&.visited >h1 {
+    opacity: 1;
+    transform: scale(1);
+}
 }
 
 section#my-baner {
@@ -96,21 +97,22 @@ section#o-mnie {
         opacity: 0;
         transform: translateY(50%);
         transition: opacity 0.5s linear, transform 0.5s linear;
-        transition-delay: 0.3s;
+        transition-delay: 0.2s;
 
         &:nth-of-type(2) {
-            transition-delay: 0.6s;
-        }
-
-        &.active {
-            opacity: 1;
-            transform: translateY(0);
+            transition-delay: 0.4s;
         }
 
     }
+&.visited{
+    p{
+        opacity: 1;
+        transform: translateY(0);  
+    }
+}
 }
 
-section.technologie {
+section#technologie {
 
     div.skills-container {
         text-transform: uppercase;
@@ -119,34 +121,8 @@ section.technologie {
             padding: 30px;
             color: white;
             opacity: 0;
-
-            &.active {
-                transition: opacity 1s linear;
-                opacity: 1;
-
-                &:nth-of-type(1) {
-                    transition-delay: 0.1s;
-                }
-
-                &:nth-of-type(2) {
-                    transition-delay: 0.1s;
-                }
-
-                &:nth-of-type(3) {
-                    transition-delay: 0.2s;
-                }
-
-                &:nth-of-type(4) {
-                    transition-delay: 0.3s;
-                }
-
-                &:nth-of-type(5) {
-                    transition-delay: 0.4s;
-                }
-
-                &:nth-of-type(6) {
-                    transition-delay: 0.5s;
-                }
+            
+       
             }
 
             div.circle-gradient {
@@ -187,49 +163,83 @@ section.technologie {
                 font-size: 1.5em;
             }
         }
-    }
+    
+
+&.visited{
+    div.skills-container {
+        div.one-skill {  
+            transition: opacity 1s linear;
+            opacity: 1;
+
+            &:nth-of-type(1) {
+                transition-delay: 0.3s;
+            }
+
+            &:nth-of-type(2) {
+                transition-delay: 0.4s;
+            }
+
+            &:nth-of-type(3) {
+                transition-delay: 0.5s;
+            }
+
+            &:nth-of-type(4) {
+                transition-delay: 0.6s;
+            }
+
+            &:nth-of-type(5) {
+                transition-delay: 0.7s;
+            }
+
+            &:nth-of-type(6) {
+                transition-delay: 0.8s;
+            }
+        
+}
 }
 
+}
+}
 
 section#inne-umiejetnosci {
 
     div {
         p {
-            i {
-                padding-right: 30px;
-                font-size: 28px;
-            }
-
             font-size: 28px;
             opacity:0;
             transform:translateY(50%);
             transition: opacity 0.5s linear,
             transform 0.5s linear;
-            transition-delay: 0.3s;
+            transition-delay: 0.2s;
 
             &:nth-of-type(2) {
-                transition-delay: 0.6s;
+                transition-delay: 0.4s;
             }
 
             &:nth-of-type(3) {
-                transition-delay: 0.9s;
+                transition-delay: 0.6s;
             }
 
             &:nth-of-type(4) {
-                transition-delay: 1.2s;
-            }
-
-            &:nth-of-type(5) {
-                transition-delay: 1.5s;
+                transition-delay: 0.8s;
             }
 
 
-            &.active {
-                opacity: 1;
-                transform: translateY(0);
+            i {
+                padding-right: 30px;
+                font-size: 28px;
             }
+
         }
+    
     }
+
+&.visited{
+    div p {
+        opacity: 1;
+        transform: translateY(0);
+}
+}
 }
 
 section#wyksztalcenie {
@@ -237,23 +247,11 @@ section#wyksztalcenie {
         &.first {
             transform: translateX(-70%);
             opacity: 0;
-
-            &.driveFromTheSide {
-                transform: translateX(0);
-                opacity: 1;
-                transition: transform 1.5s, opacity 1.5s 0.75s;
-            }
         }
 
         &.second {
             transform: translateX(70%);
             opacity: 0;
-
-            &.driveFromTheSide {
-                transform: translateX(0);
-                opacity: 1;
-                transition: transform 1.5s, opacity 1.5s 0.75s;
-            }
         }
 
         div.AGH,
@@ -274,6 +272,15 @@ section#wyksztalcenie {
             }
         }
     }
+
+    &.visited{
+        div.logo.first,
+        div.logo.second{
+                transform: translateX(0);
+                opacity: 1;
+                transition: transform 1.5s, opacity 1.5s 0.75s; 
+        }
+    }
 }
 
 section#doswiadczenie-zawodowe {
@@ -284,27 +291,23 @@ section#doswiadczenie-zawodowe {
         opacity: 0;
         transform: translateY(50%);
         transition: opacity 0.5s linear, transform 0.5s linear;
-        transition-delay: 0.3s;
-
-        &.active {
-            opacity: 1;
-            transform: translateY(0);
-        }
+        transition-delay: 0.2s;
 
         &:nth-of-type(2) {
-            transition-delay: 0.6s;
+            transition-delay: 0.4s;
         }
 
-        &:nth-of-type(3) {
-            transition-delay: 0.9s;
-            font-size: 20px;
         }
+    
+&.visited{
+    p{
+        opacity: 1;
+        transform: translateY(0);  
     }
+}
 }
 
 section#moje-zainteresowania {
-
-
 
     p {
         padding: 10px 0;
@@ -323,47 +326,48 @@ section#moje-zainteresowania {
         text-align: center;
 
 
-        h1 {
-            position: absolute;
-            top: 0;
-            left: 50%;
-            transform: translate(-50%, 0);
-            font-size: 50px;
-            text-shadow: -2px 0 5px white, 0 2px 5px white, 2px 0 5px white, 0 -2px 5px white;
+        // h2 {
+        //     position: absolute;
+        //     top: 0;
+        //     left: 50%;
+        //     transform: translate(-50%, 0);
+        //     font-size: 50px;
+        //     text-shadow: -2px 0 5px white, 0 2px 5px white, 2px 0 5px white, 0 -2px 5px white;
+        // }
+
+        // .dots {
+        //     position: absolute;
+        //     bottom: 30px;
+        //     left: 50%;
+        //     transform: translateX(-50%);
+
+        //     div.dot {
+        //         margin: 15px;
+        //         display: inline-block;
+        //         width: 40px;
+        //         height: 40px;
+        //         cursor: pointer;
+
+        //         span {
+        //             padding: 15px;
+        //             display: inline-block;
+        //             background-color: #fff;
+        //             margin: 0 20px;
+        //             width: 10px;
+        //             height: 10px;
+        //             border-radius: 50%;
+        //             box-shadow: 0 0 0 2px black;
+
+
+        //             &.active {
+        //                 background-color: #000;
+        //             }
+                // }
+            // }
         }
 
-        .dots {
-            position: absolute;
-            bottom: 30px;
-            left: 50%;
-            transform: translateX(-50%);
-
-            div.dot {
-                margin: 15px;
-                display: inline-block;
-                width: 40px;
-                height: 40px;
-                cursor: pointer;
-
-                span {
-                    padding: 15px;
-                    display: inline-block;
-                    background-color: #fff;
-                    margin: 0 20px;
-                    width: 10px;
-                    height: 10px;
-                    border-radius: 50%;
-                    box-shadow: 0 0 0 2px black;
-
-
-                    &.active {
-                        background-color: #000;
-                    }
-                }
-            }
-        }
-    }
 }
+
 
 section#kontakt {
     background: orangered;
@@ -375,10 +379,6 @@ section#kontakt {
         transition: opacity 0.5s linear, transform 0.5s ease-in-out;
         transition-delay: 0.3s;
 
-        &.active {
-            transform: translateX(0);
-            opacity: 1;
-        }
 
         &>div {
             clear: both;
@@ -415,10 +415,7 @@ section#kontakt {
         transition: opacity 0.5s linear, transform 0.5s ease-in-out;
         transition-delay: 0.3s;
 
-        &.active {
-            transform: translateX(0);
-            opacity: 1;
-        }
+
     }
 
     input {
@@ -449,4 +446,12 @@ section#kontakt {
         background-color: #000;
         border: none;
     }
+&.visited{
+    div.kontakt-left, 
+    div.kontakt-right{
+        transform: translateX(0);
+            opacity: 1;
+    }
+
+}
 }
