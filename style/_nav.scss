@@ -63,7 +63,7 @@ header {
           border: solid 2px transparent;
           cursor: pointer;
 
-          &.nowOnScreen {
+          &.active {
             border-radius: 5px;
             border: solid 2px orangered;
             transition: all 0.2s linear;

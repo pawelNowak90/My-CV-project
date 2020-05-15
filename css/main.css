@@ -75,7 +75,7 @@ header div.navigation ul li a {
   cursor: pointer;
 }
 
-header div.navigation ul li a.nowOnScreen {
+header div.navigation ul li a.active {
   border-radius: 5px;
   border: solid 2px orangered;
   -webkit-transition: all 0.2s linear;

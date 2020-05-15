@@ -1,23 +1,19 @@
 (function () {
-  // init();
   addEventListeners();
+  onScrollHandlers();
 })();
 
 function addEventListeners() {
-  window.onload = onLoadHandlers;
   window.onscroll = onScrollHandlers;
-}
 
-function onLoadHandlers() {
-  onScrollHandlers();
-  setAnimationForNav();
+  addNavClickedHandler();
+  addToggleMenuHandler();
 }
 
 function onScrollHandlers() {
   stickNavigation();
-  btnUpAnimation();
-  sectionAnimations();
   setNavItemActive();
-  progressBar();
+  sectionAnimations();
+  progressBarAnimation();
 }
 
