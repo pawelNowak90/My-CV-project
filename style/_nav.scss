@@ -1,99 +1,98 @@
 header {
-    position: relative;
+  position: relative;
 
-    div.loading-bar-background {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        background: rgba(128, 128, 128, 1);
-        height: 0.4vh;
-        z-index: 2000;
+  div.loading-bar-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(128, 128, 128, 1);
+    height: 3px;
+    z-index: 2000;
 
-        div.loading-bar {
-            background-color: royalblue;
-            height: inherit;
-            transition: all 1s;
-            opacity: 1;
-        }
+    div.loading-bar {
+      width: 0;
+      background-color: orangered;
+      height: inherit;
+      transition: all 0.1s;
+      opacity: 1;
+    }
+  }
+
+  div.navigation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    background-image: linear-gradient(#171213, transparent);
+    text-align: center;
+
+    @media (max-width: 992px) {
+      background: black;
     }
 
-    div.navigation {
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 100;
-        width: 100%;
-        background-image: linear-gradient(#171213, transparent);
-        text-align: center;
+    button.navbar-toggler {
+      color: white;
 
-        @media (max-width: 1200px) {
-            background: black;
-        }
+      &:focus {
+        outline: none;
+      }
 
-        button.navbar-toggler {
-            color: white;
-
-            &:focus {
-                outline: none;
-            }
-
-            span {
-                padding: 4px;
-            }
-        }
-
-        ul {
-            list-style-type: none;
-            width: 100%;
-            justify-content: center;
-
-            li {
-                display: inline-block;
-
-                a {
-                    display: inline-block;
-                    margin: 5px;
-                    padding: 5px;
-                    color: white;
-                    font-size: 1.2em;
-                    text-decoration: none;
-                    text-decoration: none;
-                    border: solid 2px transparent;
-
-                    &.nowOnScreen {
-                        border-radius: 5px;
-                        border: solid 2px orangered;
-                        transition: all 0.2s linear;
-                    }
-                }
-
-            }
-        }
-
-        @keyframes navigation {
-            from {
-                opacity: 0;
-            }
-
-            to {
-                opacity: 1;
-            }
-        }
-
-        &.navbar-fixed {
-            margin-top: 0.4vh;
-            position: fixed;
-            top: 0;
-            left: 0;
-            background: black;
-            box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.75);
-            // transition: all ease-in-out .5s;
-            animation: navigation 0.5s linear;
-        }
+      span {
+        padding: 4px;
+      }
     }
 
+    ul {
+      list-style-type: none;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
 
+      li {
+        display: inline-block;
 
+        a {
+          display: inline-block;
+          margin: 5px;
+          padding: 5px;
+          color: white;
+          font-size: 1.2em;
+          text-decoration: none;
+          text-decoration: none;
+          border: solid 2px transparent;
+          cursor: pointer;
 
+          &.active {
+            border-radius: 5px;
+            border: solid 2px orangered;
+            transition: all 0.2s linear;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+
+    @keyframes navigation {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    &.navbar-fixed {
+      margin-top: 0.4vh;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background: black;
+      box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.75);
+      // transition: all ease-in-out .5s;
+      animation: navigation 0.5s linear;
+    }
+  }
 }
