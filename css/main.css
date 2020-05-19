@@ -57,6 +57,9 @@ header div.navigation ul {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 header div.navigation ul li {
@@ -117,7 +120,7 @@ section {
   margin-top: 10px;
   padding-top: 10px;
   overflow: hidden;
-  text-align: center;
+  text-align: justify;
 }
 
 section > h1 {
@@ -220,6 +223,12 @@ section#o-mnie p {
   transition: opacity 0.5s linear, transform 0.5s linear, -webkit-transform 0.5s linear;
   -webkit-transition-delay: 0.2s;
           transition-delay: 0.2s;
+}
+
+@media (max-width: 992px) {
+  section#o-mnie p {
+    padding: 0 5px 20px 5px;
+  }
 }
 
 section#o-mnie p:nth-of-type(2) {
@@ -406,7 +415,7 @@ section#wyksztalcenie.visited div.logo.second {
 }
 
 section#doswiadczenie-zawodowe p {
-  padding: 0 100px 50px 100px;
+  padding: 0 0 0 100px;
   font-size: 26px;
   text-align: justify;
   opacity: 0;
@@ -431,21 +440,21 @@ section#doswiadczenie-zawodowe.visited p {
           transform: translateY(0);
 }
 
-section#moje-zainteresowania p {
-  padding: 10px 0;
+section#moje-zainteresowania div.slider-wrapper {
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+  overflow: hidden;
+}
+
+section#moje-zainteresowania div.slider-wrapper p {
+  padding: 10px 10px;
   color: white;
   font-size: 1.5em;
 }
 
-section#moje-zainteresowania .slides {
-  margin: 10px 0;
-}
-
-section#moje-zainteresowania div.stolarstwo,
-section#moje-zainteresowania div.turystyka-gorska {
-  margin: 20px 0;
-  position: relative;
-  text-align: center;
+section#moje-zainteresowania div.slider-wrapper .slide {
+  min-height: 400px;
 }
 
 section#kontakt {

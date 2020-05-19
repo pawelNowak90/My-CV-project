@@ -1,8 +1,8 @@
 section {
     margin-top: 10px;
     padding-top: 10px;
-    overflow: hidden; //DORA jak jest tylko overflow-x:hidden, to na Y pjawia się scroll ?
-    text-align: center;
+    overflow: hidden;
+    text-align: justify;
 
 
     &>h1 {
@@ -92,6 +92,9 @@ section#my-baner {
 section#o-mnie {
     p {
         padding: 0 100px 50px 100px;
+        @media (max-width: 992px){
+            padding: 0 5px 20px 5px;
+        }
         font-size: 26px;
         text-align: justify;
         opacity: 0;
@@ -285,7 +288,7 @@ section#wyksztalcenie {
 
 section#doswiadczenie-zawodowe {
     p {
-        padding: 0 100px 50px 100px;
+        padding: 0 0 0 100px;
         font-size: 26px;
         text-align: justify;
         opacity: 0;
@@ -309,62 +312,32 @@ section#doswiadczenie-zawodowe {
 
 section#moje-zainteresowania {
 
+
+    div.slider-wrapper{
+        margin-left:auto;
+        margin-right: auto;
+        width:70%;
+        // height:90vh;
+        overflow: hidden;
     p {
-        padding: 10px 0;
+        padding: 10px 10px;
         color: white;
         font-size: 1.5em;
     }
 
-    .slides {
-        margin: 10px 0;
+    .slide{
+        min-height: 400px;
     }
+    
 
-    div.stolarstwo,
-    div.turystyka-gorska {
-        margin: 20px 0;
-        position: relative;
-        text-align: center;
+}
+    // div.stolarstwo,
+    // div.turystyka-gorska {
+    //     margin: 20px 0;
+    //     position: relative;
+    //     text-align: center;
 
-
-        // h2 {
-        //     position: absolute;
-        //     top: 0;
-        //     left: 50%;
-        //     transform: translate(-50%, 0);
-        //     font-size: 50px;
-        //     text-shadow: -2px 0 5px white, 0 2px 5px white, 2px 0 5px white, 0 -2px 5px white;
-        // }
-
-        // .dots {
-        //     position: absolute;
-        //     bottom: 30px;
-        //     left: 50%;
-        //     transform: translateX(-50%);
-
-        //     div.dot {
-        //         margin: 15px;
-        //         display: inline-block;
-        //         width: 40px;
-        //         height: 40px;
-        //         cursor: pointer;
-
-        //         span {
-        //             padding: 15px;
-        //             display: inline-block;
-        //             background-color: #fff;
-        //             margin: 0 20px;
-        //             width: 10px;
-        //             height: 10px;
-        //             border-radius: 50%;
-        //             box-shadow: 0 0 0 2px black;
-
-
-        //             &.active {
-        //                 background-color: #000;
-        //             }
-                // }
-            // }
-        }
+    //     }
 
 }
 

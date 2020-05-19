@@ -11,6 +11,8 @@ function addNavClickedHandler() {
    [...document.querySelectorAll("nav a.nav-link")].forEach((item) =>
       item.addEventListener("click", function (event) {
          event.preventDefault();
+
+         document.querySelector('header div.navbar-collapse').classList.remove('show');
          let sectionId = this.hash.slice(1);
          document.documentElement.scrollTop = sectionArrayReduce[sectionId].offsetTop - nav.offsetHeight;
       })
@@ -21,7 +23,11 @@ function addToggleMenuHandler() {
    document.body.addEventListener('click', () => {
       document.querySelector('header div.navbar-collapse').classList.remove('show');
    });
+   document.querySelector('header div.navbar-collapse').addEventListener('click', (e) => { e.stopPropagation() });
+   // document.querySelector('header div.navbar-collapse').addEventListener('click', (e) => { alert('kliknales w menu: ' + e.target1) });
+
 }
+
 
 function stickNavigation() {
    const sectionAboutMe = document.querySelector("section.o-mnie");
