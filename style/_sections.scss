@@ -1,12 +1,12 @@
 section {
-    margin-top: 10px;
-    padding-top: 10px;
     overflow: hidden;
-    text-align: justify;
-
+    @media (max-width:991px) {
+        margin-top:0;
+    }
+ 
 
     &>h1 {
-        margin: 10px 0 20px 0;
+        margin: 10px 0 30px 0;
         color: #000;
         text-transform: uppercase;
         font-style: 34px;
@@ -16,18 +16,41 @@ section {
         transition: transform 0.5s linear, opacity 0.5s linear;
         text-align: center;
         font-size: 28px;
+        @media (max-width:991px){
+            font-size:24px;
+        }
+        @media (max-width:575px){
+            font-size:22px;
+                    }
 
         span {
+            display:inline-block;
             padding: 10px 20px;
             border-bottom: 3px solid orangered;
-        }
+            &::first-letter {
+                letter-spacing: 5px;
+                font-size: 150%;
+            }
+        
+            @media(max-width:575px){
+                width:240px;
+            }}}
 
-        &::first-letter {
-            letter-spacing: 5px;
-            font-size: 175%;
-        }
+    div>p{ 
+        padding: 0 100px 20px 100px;
+        font-size: 24px;
+            text-align: justify;
+            
+            @media (max-width: 991px){
+                padding: 0 20px 0 0;
+                font-size: 20px;
+            }
+            
+            @media (max-width: 575px){
+                font-size: 18px;
+            }
 
-
+                
     }
 
     &.bg-gray {
@@ -40,6 +63,11 @@ section {
         h2 {
             padding-top: 20px;
             color: white;
+        }
+        p,
+        span,
+        i{
+            color:white;
         }
 
     }
@@ -60,6 +88,10 @@ section#my-baner {
     background-position: center; //DORA - jaka szerokość jest minimalna dla mobilki, czy wartosc CENTER jest ok ?
     filter: grayscale(15%) sepia(15%);
 
+    @media (max-width: 575px){
+        background-position: 25% 0%;
+    }
+
     div.background-filter {
         position: relative;
         z-index: -1;
@@ -71,12 +103,23 @@ section#my-baner {
         position: absolute;
         top: 25%;
         left: 55%;
+        @media (max-width: 575px){
+            top: unset;
+            bottom:0;
+            left: 0%;
+            right:0%;
+        } 
 
         h1,
         h2 {
             padding: 20px 30px;
+            white-space: pre-line;
             color: white;
             text-shadow: -2px 0 10px black, 0 2px 10px black, 2px 0 10px black, 0 -2px 10px black;
+            text-align: center;
+            @media (max-width: 575px){
+                padding: 10px 0;
+            } 
         }
 
         h1 {
@@ -90,12 +133,14 @@ section#my-baner {
 }
 
 section#o-mnie {
-    p {
-        padding: 0 100px 50px 100px;
-        @media (max-width: 992px){
-            padding: 0 5px 20px 5px;
+    p{
+        
+        @media (max-width: 991px){
+            padding: 0 5px 0 5px;
         }
-        font-size: 26px;
+        @media (max-width: 575px){
+            padding: 0 5px 0 5px;
+        }
         text-align: justify;
         opacity: 0;
         transform: translateY(50%);
@@ -110,31 +155,40 @@ section#o-mnie {
 &.visited{
     p{
         opacity: 1;
-        transform: translateY(0);  
+        transform: translateY(0);     
     }
 }
 }
 
-section#technologie {
 
+
+
+section#technologie {
     div.skills-container {
         text-transform: uppercase;
 
         div.one-skill {
-            padding: 30px;
-            color: white;
             opacity: 0;
-            
-       
             }
 
             div.circle-gradient {
                 margin: auto;
                 position: relative;
-                background: conic-gradient(rgba(0, 0, 0, 0.8) 0deg 5deg, transparent 275deg);
+                background: conic-gradient(rgba(0, 0, 0, 0.8) 0deg 120deg, transparent 300deg);
                 border-radius: 50%;
-                width: 262px;
-                height: 262px;
+                width: 180px;
+                height: 180px;
+                
+                @media(max-width:991px){
+                    width: 120px;
+                    height: 120px;
+                }
+                @media(max-width:575px){
+                    width: 120px;
+                    height: 120px;
+                }
+
+            
 
                 &:hover {
                     background: conic-gradient(rgba(0, 0, 0, 0.8) 0deg 305deg, transparent 275deg);
@@ -145,25 +199,44 @@ section#technologie {
                     top: 50%;
                     left: 50%;
                     transform: translate(-50%, -50%);
-                    width: 250px;
-                    height: 250px;
+                    width: 175px;
+                    height: 175px;
                     border-radius: 50%;
                     background-color: orangered;
-                    border: 10px solid rgb(185, 185, 185);
+                    border: 8px solid rgb(185, 185, 185);
+
+                    @media(max-width:991px){
+                        width: 115px;
+                        height: 115px;
+                        border: 5px solid rgb(185, 185, 185);
+                    }
+
+                    @media(max-width:575px){
+                        width: 115px;
+                        height: 115px;
+                        border: 4px solid rgb(185, 185, 185);
+                    }
 
                     i {
                         position: absolute;
                         top: 50%;
                         left: 50%;
                         transform: translate(-50%, -50%);
-                        font-size: 128px;
+                        font-size: 82px;
+                        @media(max-width:575px){
+                            font-size: 50px;
+                        }
+                        
+                        @media(max-width:991px){
+                            font-size: 50px;
+                        }
                     }
                 }
             }
-
-            span {
-                display: block;
-                font-size: 1.5em;
+            p {
+                padding:0;
+                text-align: center;
+letter-spacing: 2px;
             }
         }
     
@@ -198,22 +271,38 @@ section#technologie {
                 transition-delay: 0.8s;
             }
         
-}
-}
+}}}}
 
-}
-}
-
-section#inne-umiejetnosci {
+section#inne-umiejetnosci {    
+    @media(max-width:991px){
+        margin-bottom:20px;
+        }
 
     div {
+
         p {
-            font-size: 28px;
+            padding-left:160px;
             opacity:0;
             transform:translateY(50%);
             transition: opacity 0.5s linear,
             transform 0.5s linear;
             transition-delay: 0.2s;
+            position: relative;
+   
+
+            @media (max-width: 991px){  
+                padding-left:40px;
+                margin-bottom:8px;
+                font-size: 20px;
+                top:5px;
+            }
+
+            @media(max-width:575px){
+                padding-left:30px;
+                margin-bottom:5px;
+                font-size: 18px;
+                top:3px
+            }
 
             &:nth-of-type(2) {
                 transition-delay: 0.4s;
@@ -227,25 +316,35 @@ section#inne-umiejetnosci {
                 transition-delay: 0.8s;
             }
 
-
             i {
-                padding-right: 30px;
                 font-size: 28px;
-            }
+                position: absolute;
+                top:6px;
+                left:100px;
 
-        }
-    
+                @media (max-width: 991px){
+                    font-size: 20px;
+                    top:5px;
+                    left:10px;
+                }
+
+                @media(max-width:575px){
+                    font-size: 18px;
+                    top:3px;
+                }
+            }
+        } 
     }
 
 &.visited{
     div p {
         opacity: 1;
         transform: translateY(0);
-}
-}
+    }}       
 }
 
 section#wyksztalcenie {
+ padding-bottom: 20px;
     div.logo {
         &.first {
             transform: translateX(-70%);
@@ -259,19 +358,54 @@ section#wyksztalcenie {
 
         div.AGH,
         div.POLLUB {
-            padding: 15px;
+            padding: 15px 100px 35px 100px;
             display: flex;
             justify-content: space-evenly;
+            @media(max-width:991px){
+                padding:0 0 35px 0;
+            }
 
             img {
                 padding: 15px;
                 width: 300px;
                 height: 300px;
+                @media(max-width:991px){
+                    width: 225px;
+                    height: 225px;     
+                }
+                @media(max-width:575px){
+                width: 175px;
+                height: 175px;     
+            }
+            }
+            div {
+                display:block;
+                width:300px;
+                height:300px;
+                padding:0;
+                p{
+                    font-size: 36px;
+                    padding: 0;
+                }
+
+                @media(max-width:991px){
+                width: 225px;
+                height: 225px;     
+                p{
+                    font-size: 26px;
+                    
+                }
+                }
+                @media(max-width:575px){
+                width: 150px;
+                height: 150px;     
+                p{
+                    font-size: 18px;
+                    
+                }
             }
 
-            h3 {
-                padding: 30px;
-                font-size: 28px;
+
             }
         }
     }
@@ -287,10 +421,19 @@ section#wyksztalcenie {
 }
 
 section#doswiadczenie-zawodowe {
+
+@media(max-width:575px){
+    & h1>span{
+        display: inline-block;
+        width:240px;
+        &::first-letter {
+            letter-spacing: 5px;
+            font-size: 175%;
+        }
+    }
+    
+}
     p {
-        padding: 0 0 0 100px;
-        font-size: 26px;
-        text-align: justify;
         opacity: 0;
         transform: translateY(50%);
         transition: opacity 0.5s linear, transform 0.5s linear;
@@ -304,45 +447,103 @@ section#doswiadczenie-zawodowe {
     
 &.visited{
     p{
-        opacity: 1;
+        opacity:1;
         transform: translateY(0);  
-    }
-}
-}
+    }}}
 
 section#moje-zainteresowania {
-
-
     div.slider-wrapper{
         margin-left:auto;
         margin-right: auto;
-        width:70%;
-        // height:90vh;
+        padding-bottom:30px;
+        width:78%;
         overflow: hidden;
+
+        @media(max-width:991px){
+            width:100%;
+        }
     p {
-        padding: 10px 10px;
-        color: white;
-        font-size: 1.5em;
+        span{
+            color:black;
+            text-transform: uppercase;
+        }
+        padding: 0 0 10px 0;
+        margin:0;
     }
 
     .slide{
-        min-height: 400px;
+        min-height: 450px;
+        @media(max-width:1199px){
+            min-height:420px;
+        }
+    @media(max-width:991px){
+        min-height:380px;
+    }
+    @media(max-width:767px){
+        min-height:280px;
+    }
+    @media(max-width:575px){
+        min-height:250px;
+    }
+    }
+
+    div.slide-description{
+    width:100%;
+    max-width: 100%;
+    height:auto;
+    align-self: flex-end;
+    padding: 5px;
+    position: relative;
+    transition: opacity 0.4s;
+    z-index: 0;
+    &:after {   //DORA DORA DORA - CZY DOBRZE ZE TUTAJ ZERUJE AFTER Z BIBLIOTEKI SLIDER.js ?
+        content: "";
+        background-color: transparent;
     }
     
 
+    h3{
+        width:100%;
+        margin:0 auto 10px auto;
+    position:absolute;
+    left:50%;
+    bottom:0;
+    transform: translateX(-50%);
+    font-size: 26px;
+    text-align: center;
+    letter-spacing: 1px;
+    line-height: 32px;
+
+    &:after { 
+        content: "";
+        background-color: rgba(0, 0, 0, 0.6);
+        position: absolute;
+        top: -5%;
+        bottom: -5%;
+        left: -3%;
+        right: -3%;
+        z-index: -1; 
+    }
+
+    @media (max-width: 991px){
+        font-size: 20px;
+        line-height: 25px;
+    }
+    
+    @media (max-width: 575px){
+        font-size: 18px;
+        line-height: 22px;
+        letter-spacing: 0;
+
+    }
+
+        }
+    }
 }
-    // div.stolarstwo,
-    // div.turystyka-gorska {
-    //     margin: 20px 0;
-    //     position: relative;
-    //     text-align: center;
-
-    //     }
-
 }
-
 
 section#kontakt {
+  
     background: orangered;
     padding-bottom: 75px;
 
@@ -358,6 +559,7 @@ section#kontakt {
         }
 
         i {
+            color:black;
             display: block;
             font-size: 30px;
             width: 50px;
@@ -369,6 +571,7 @@ section#kontakt {
         }
 
         h4 {
+            color:black;
             padding-left: 60px;
             font-size: 22px;
             margin-top: 0;
@@ -379,6 +582,7 @@ section#kontakt {
             padding-left: 60px;
             margin: 0px;
             font-size: 18px;
+            color:black;
         }
     }
 
