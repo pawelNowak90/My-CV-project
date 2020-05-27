@@ -24,17 +24,13 @@ function addToggleMenuHandler() {
       document.querySelector('header div.navbar-collapse').classList.remove('show');
    });
    document.querySelector('header div.navbar-collapse').addEventListener('click', (e) => { e.stopPropagation() });
-   // document.querySelector('header div.navbar-collapse').addEventListener('click', (e) => { alert('kliknales w menu: ' + e.target1) });
-
 }
-
 
 function stickNavigation() {
    const sectionAboutMe = document.querySelector("section.o-mnie");
    if (window.scrollY >= sectionAboutMe.offsetHeight * 0.8) {
       nav.classList.add("navbar-fixed");
       btnToTop.classList.add("active");
-
    } else if (window.scrollY <= sectionAboutMe.offsetHeight) {
       nav.classList.remove("navbar-fixed");
       btnToTop.classList.remove("active");
@@ -46,7 +42,6 @@ function setNavItemActive() {
       if (window.scrollY >= (sectionArrayReduce[key].offsetTop - nav.offsetHeight - 200) &&
          (window.scrollY < (sectionArrayReduce[key].offsetTop + sectionArrayReduce[key].offsetHeight - nav.offsetHeight - 200))) {
          navLinks.forEach((item) => {
-
             if (item.hash.slice(1) === key) {
                item.classList.add("active")
             } else {

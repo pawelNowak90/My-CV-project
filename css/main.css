@@ -9,7 +9,7 @@ header div.loading-bar-background {
   left: 0;
   width: 100%;
   background: gray;
-  height: 3px;
+  height: 4px;
   z-index: 2000;
 }
 
@@ -109,6 +109,9 @@ header div.navigation.navbar-fixed {
   position: fixed;
   top: 0;
   left: 0;
+  max-height: 100%;
+  width: 100%;
+  overflow: auto;
   background: black;
   -webkit-box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.75);
           box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.75);
@@ -117,14 +120,17 @@ header div.navigation.navbar-fixed {
 }
 
 section {
-  margin-top: 10px;
-  padding-top: 10px;
   overflow: hidden;
-  text-align: justify;
+}
+
+@media (max-width: 991px) {
+  section {
+    margin-top: 0;
+  }
 }
 
 section > h1 {
-  margin: 10px 0 20px 0;
+  margin: 10px 0 30px 0;
   color: #000;
   text-transform: uppercase;
   font-style: 34px;
@@ -140,14 +146,52 @@ section > h1 {
   font-size: 28px;
 }
 
+@media (max-width: 991px) {
+  section > h1 {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 575px) {
+  section > h1 {
+    font-size: 22px;
+  }
+}
+
 section > h1 span {
+  display: inline-block;
   padding: 10px 20px;
   border-bottom: 3px solid orangered;
 }
 
-section > h1::first-letter {
+section > h1 span::first-letter {
   letter-spacing: 5px;
-  font-size: 175%;
+  font-size: 150%;
+}
+
+@media (max-width: 575px) {
+  section > h1 span {
+    width: 240px;
+  }
+}
+
+section div > p {
+  padding: 0 100px 20px 100px;
+  font-size: 24px;
+  text-align: justify;
+}
+
+@media (max-width: 991px) {
+  section div > p {
+    padding: 0 20px 0 0;
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 575px) {
+  section div > p {
+    font-size: 18px;
+  }
 }
 
 section.bg-gray {
@@ -160,6 +204,12 @@ section.bg-gray h1 {
 
 section.bg-gray h2 {
   padding-top: 20px;
+  color: white;
+}
+
+section.bg-gray p,
+section.bg-gray span,
+section.bg-gray i {
   color: white;
 }
 
@@ -182,6 +232,12 @@ section#my-baner {
           filter: grayscale(15%) sepia(15%);
 }
 
+@media (max-width: 575px) {
+  section#my-baner {
+    background-position: 25% 0%;
+  }
+}
+
 section#my-baner div.background-filter {
   position: relative;
   z-index: -1;
@@ -195,24 +251,42 @@ section#my-baner div.about-me {
   left: 55%;
 }
 
+@media (max-width: 575px) {
+  section#my-baner div.about-me {
+    top: unset;
+    bottom: 5%;
+    left: 0%;
+    right: 0%;
+  }
+}
+
 section#my-baner div.about-me h1,
 section#my-baner div.about-me h2 {
   padding: 20px 30px;
+  white-space: pre-line;
   color: white;
   text-shadow: -2px 0 10px black, 0 2px 10px black, 2px 0 10px black, 0 -2px 10px black;
+  text-align: center;
+  font-size: 54px;
 }
 
-section#my-baner div.about-me h1 {
-  font-size: 3.5rem;
+@media (max-width: 767px) {
+  section#my-baner div.about-me h1,
+  section#my-baner div.about-me h2 {
+    padding: 20px 0;
+    font-size: 40px;
+  }
 }
 
-section#my-baner div.about-me h2 {
-  font-size: 3em;
+@media (max-width: 575px) {
+  section#my-baner div.about-me h1,
+  section#my-baner div.about-me h2 {
+    padding: 2px 0;
+    font-size: 42px;
+  }
 }
 
 section#o-mnie p {
-  padding: 0 100px 50px 100px;
-  font-size: 26px;
   text-align: justify;
   opacity: 0;
   -webkit-transform: translateY(50%);
@@ -225,9 +299,15 @@ section#o-mnie p {
           transition-delay: 0.2s;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 991px) {
   section#o-mnie p {
-    padding: 0 5px 20px 5px;
+    padding: 0 5px 0 5px;
+  }
+}
+
+@media (max-width: 575px) {
+  section#o-mnie p {
+    padding: 0 5px 0 5px;
   }
 }
 
@@ -247,22 +327,29 @@ section#technologie div.skills-container {
 }
 
 section#technologie div.skills-container div.one-skill {
-  padding: 30px;
-  color: white;
   opacity: 0;
 }
 
 section#technologie div.skills-container div.circle-gradient {
   margin: auto;
   position: relative;
-  background: conic-gradient(rgba(0, 0, 0, 0.8) 0deg 5deg, transparent 275deg);
   border-radius: 50%;
-  width: 262px;
-  height: 262px;
+  width: 180px;
+  height: 180px;
 }
 
-section#technologie div.skills-container div.circle-gradient:hover {
-  background: conic-gradient(rgba(0, 0, 0, 0.8) 0deg 305deg, transparent 275deg);
+@media (max-width: 991px) {
+  section#technologie div.skills-container div.circle-gradient {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+@media (max-width: 575px) {
+  section#technologie div.skills-container div.circle-gradient {
+    width: 120px;
+    height: 120px;
+  }
 }
 
 section#technologie div.skills-container div.circle-gradient div.circle-inside {
@@ -271,11 +358,27 @@ section#technologie div.skills-container div.circle-gradient div.circle-inside {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  width: 250px;
-  height: 250px;
+  width: 175px;
+  height: 175px;
   border-radius: 50%;
   background-color: orangered;
-  border: 10px solid #b9b9b9;
+  border: 8px solid #b9b9b9;
+}
+
+@media (max-width: 991px) {
+  section#technologie div.skills-container div.circle-gradient div.circle-inside {
+    width: 130px;
+    height: 130px;
+    border: 5px solid #b9b9b9;
+  }
+}
+
+@media (max-width: 575px) {
+  section#technologie div.skills-container div.circle-gradient div.circle-inside {
+    width: 130px;
+    height: 130px;
+    border: 4px solid #b9b9b9;
+  }
 }
 
 section#technologie div.skills-container div.circle-gradient div.circle-inside i {
@@ -284,12 +387,25 @@ section#technologie div.skills-container div.circle-gradient div.circle-inside i
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  font-size: 128px;
+  font-size: 82px;
 }
 
-section#technologie div.skills-container span {
-  display: block;
-  font-size: 1.5em;
+@media (max-width: 575px) {
+  section#technologie div.skills-container div.circle-gradient div.circle-inside i {
+    font-size: 58px;
+  }
+}
+
+@media (max-width: 991px) {
+  section#technologie div.skills-container div.circle-gradient div.circle-inside i {
+    font-size: 58px;
+  }
+}
+
+section#technologie div.skills-container p {
+  padding: 0;
+  text-align: center;
+  letter-spacing: 2px;
 }
 
 section#technologie.visited div.skills-container div.one-skill {
@@ -328,8 +444,14 @@ section#technologie.visited div.skills-container div.one-skill:nth-of-type(6) {
           transition-delay: 0.8s;
 }
 
+@media (max-width: 991px) {
+  section#inne-umiejetnosci {
+    margin-bottom: 20px;
+  }
+}
+
 section#inne-umiejetnosci div p {
-  font-size: 28px;
+  padding-left: 160px;
   opacity: 0;
   -webkit-transform: translateY(50%);
           transform: translateY(50%);
@@ -339,6 +461,25 @@ section#inne-umiejetnosci div p {
   transition: opacity 0.5s linear, transform 0.5s linear, -webkit-transform 0.5s linear;
   -webkit-transition-delay: 0.2s;
           transition-delay: 0.2s;
+  position: relative;
+}
+
+@media (max-width: 991px) {
+  section#inne-umiejetnosci div p {
+    padding-left: 40px;
+    margin-bottom: 8px;
+    font-size: 20px;
+    top: 5px;
+  }
+}
+
+@media (max-width: 575px) {
+  section#inne-umiejetnosci div p {
+    padding-left: 30px;
+    margin-bottom: 5px;
+    font-size: 18px;
+    top: 3px;
+  }
 }
 
 section#inne-umiejetnosci div p:nth-of-type(2) {
@@ -357,14 +498,35 @@ section#inne-umiejetnosci div p:nth-of-type(4) {
 }
 
 section#inne-umiejetnosci div p i {
-  padding-right: 30px;
   font-size: 28px;
+  position: absolute;
+  top: 6px;
+  left: 100px;
+}
+
+@media (max-width: 991px) {
+  section#inne-umiejetnosci div p i {
+    font-size: 20px;
+    top: 5px;
+    left: 10px;
+  }
+}
+
+@media (max-width: 575px) {
+  section#inne-umiejetnosci div p i {
+    font-size: 18px;
+    top: 3px;
+  }
 }
 
 section#inne-umiejetnosci.visited div p {
   opacity: 1;
   -webkit-transform: translateY(0);
           transform: translateY(0);
+}
+
+section#wyksztalcenie {
+  padding-bottom: 20px;
 }
 
 section#wyksztalcenie div.logo.first {
@@ -381,13 +543,20 @@ section#wyksztalcenie div.logo.second {
 
 section#wyksztalcenie div.logo div.AGH,
 section#wyksztalcenie div.logo div.POLLUB {
-  padding: 15px;
+  padding: 15px 100px 35px 100px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+}
+
+@media (max-width: 991px) {
+  section#wyksztalcenie div.logo div.AGH,
+  section#wyksztalcenie div.logo div.POLLUB {
+    padding: 0 0 35px 0;
+  }
 }
 
 section#wyksztalcenie div.logo div.AGH img,
@@ -397,10 +566,58 @@ section#wyksztalcenie div.logo div.POLLUB img {
   height: 300px;
 }
 
-section#wyksztalcenie div.logo div.AGH h3,
-section#wyksztalcenie div.logo div.POLLUB h3 {
-  padding: 30px;
-  font-size: 28px;
+@media (max-width: 991px) {
+  section#wyksztalcenie div.logo div.AGH img,
+  section#wyksztalcenie div.logo div.POLLUB img {
+    width: 225px;
+    height: 225px;
+  }
+}
+
+@media (max-width: 575px) {
+  section#wyksztalcenie div.logo div.AGH img,
+  section#wyksztalcenie div.logo div.POLLUB img {
+    width: 175px;
+    height: 175px;
+  }
+}
+
+section#wyksztalcenie div.logo div.AGH div,
+section#wyksztalcenie div.logo div.POLLUB div {
+  display: block;
+  width: 300px;
+  height: 300px;
+  padding: 0;
+}
+
+section#wyksztalcenie div.logo div.AGH div p,
+section#wyksztalcenie div.logo div.POLLUB div p {
+  font-size: 36px;
+  padding: 0;
+}
+
+@media (max-width: 991px) {
+  section#wyksztalcenie div.logo div.AGH div,
+  section#wyksztalcenie div.logo div.POLLUB div {
+    width: 225px;
+    height: 225px;
+  }
+  section#wyksztalcenie div.logo div.AGH div p,
+  section#wyksztalcenie div.logo div.POLLUB div p {
+    font-size: 26px;
+  }
+}
+
+@media (max-width: 575px) {
+  section#wyksztalcenie div.logo div.AGH div,
+  section#wyksztalcenie div.logo div.POLLUB div {
+    width: 150px;
+    height: 150px;
+  }
+  section#wyksztalcenie div.logo div.AGH div p,
+  section#wyksztalcenie div.logo div.POLLUB div p {
+    font-size: 18px;
+  }
 }
 
 section#wyksztalcenie.visited div.logo.first,
@@ -414,10 +631,18 @@ section#wyksztalcenie.visited div.logo.second {
   transition: transform 1.5s, opacity 1.5s 0.75s, -webkit-transform 1.5s;
 }
 
+@media (max-width: 575px) {
+  section#doswiadczenie-zawodowe h1 > span {
+    display: inline-block;
+    width: 240px;
+  }
+  section#doswiadczenie-zawodowe h1 > span::first-letter {
+    letter-spacing: 5px;
+    font-size: 175%;
+  }
+}
+
 section#doswiadczenie-zawodowe p {
-  padding: 0 0 0 100px;
-  font-size: 26px;
-  text-align: justify;
   opacity: 0;
   -webkit-transform: translateY(50%);
           transform: translateY(50%);
@@ -443,18 +668,111 @@ section#doswiadczenie-zawodowe.visited p {
 section#moje-zainteresowania div.slider-wrapper {
   margin-left: auto;
   margin-right: auto;
-  width: 70%;
+  padding-bottom: 30px;
+  width: 78%;
   overflow: hidden;
 }
 
+@media (max-width: 991px) {
+  section#moje-zainteresowania div.slider-wrapper {
+    width: 100%;
+  }
+}
+
 section#moje-zainteresowania div.slider-wrapper p {
-  padding: 10px 10px;
-  color: white;
-  font-size: 1.5em;
+  padding: 0 0 10px 0;
+  margin: 0;
+}
+
+section#moje-zainteresowania div.slider-wrapper p span {
+  color: black;
+  text-transform: uppercase;
 }
 
 section#moje-zainteresowania div.slider-wrapper .slide {
-  min-height: 400px;
+  min-height: 450px;
+}
+
+@media (max-width: 1199px) {
+  section#moje-zainteresowania div.slider-wrapper .slide {
+    min-height: 420px;
+  }
+}
+
+@media (max-width: 991px) {
+  section#moje-zainteresowania div.slider-wrapper .slide {
+    min-height: 380px;
+  }
+}
+
+@media (max-width: 767px) {
+  section#moje-zainteresowania div.slider-wrapper .slide {
+    min-height: 280px;
+  }
+}
+
+@media (max-width: 575px) {
+  section#moje-zainteresowania div.slider-wrapper .slide {
+    min-height: 250px;
+  }
+}
+
+section#moje-zainteresowania div.slider-wrapper div.slide-description {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  padding: 5px;
+  position: relative;
+  -webkit-transition: opacity 0.4s;
+  transition: opacity 0.4s;
+  z-index: 0;
+}
+
+section#moje-zainteresowania div.slider-wrapper div.slide-description:after {
+  content: "";
+  background-color: transparent;
+}
+
+section#moje-zainteresowania div.slider-wrapper div.slide-description h3 {
+  width: 100%;
+  margin: 0 auto 10px auto;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  font-size: 26px;
+  text-align: center;
+  letter-spacing: 1px;
+  line-height: 32px;
+}
+
+section#moje-zainteresowania div.slider-wrapper div.slide-description h3:after {
+  content: "";
+  background-color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  top: -5%;
+  bottom: -5%;
+  left: -3%;
+  right: -3%;
+  z-index: -1;
+}
+
+@media (max-width: 991px) {
+  section#moje-zainteresowania div.slider-wrapper div.slide-description h3 {
+    font-size: 20px;
+    line-height: 25px;
+  }
+}
+
+@media (max-width: 575px) {
+  section#moje-zainteresowania div.slider-wrapper div.slide-description h3 {
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 0;
+  }
 }
 
 section#kontakt {
@@ -479,6 +797,7 @@ section#kontakt div.kontakt-left > div {
 }
 
 section#kontakt div.kontakt-left i {
+  color: black;
   display: block;
   font-size: 30px;
   width: 50px;
@@ -496,6 +815,7 @@ section#kontakt div.kontakt-left i {
 }
 
 section#kontakt div.kontakt-left h4 {
+  color: black;
   padding-left: 60px;
   font-size: 22px;
   margin-top: 0;
@@ -506,6 +826,14 @@ section#kontakt div.kontakt-left p {
   padding-left: 60px;
   margin: 0px;
   font-size: 18px;
+  color: black;
+  padding: 0 20px 0 60px;
+}
+
+@media (max-width: 991px) {
+  section#kontakt div.kontakt-left p {
+    padding: 0 20px 0 60px;
+  }
 }
 
 section#kontakt div.kontakt-right {
@@ -555,6 +883,27 @@ section#kontakt.visited div.kontakt-right {
   opacity: 1;
 }
 
+footer {
+  background-color: #4a4a4a;
+  padding: 10px;
+  color: white;
+  text-align: center;
+}
+
+footer p {
+  margin: 0;
+}
+
+footer p a {
+  font-size: 18px;
+  padding: 0 7px;
+}
+
+footer p a i {
+  font-size: 24px;
+  padding-right: 7px;
+}
+
 @font-face {
   font-family: Cabin;
   src: url(../fonts/Cabin/Cabin-Medium.ttf);
@@ -572,6 +921,7 @@ html {
 }
 
 a {
+  cursor: pointer;
   text-decoration: none;
   color: white;
   text-align: center;
@@ -615,5 +965,16 @@ a.to-top.active {
 
 a.to-top i {
   font-size: 30px;
+}
+
+@media (max-width: 992px) {
+  a.to-top {
+    width: 30px;
+    height: 30px;
+    right: 1.5%;
+  }
+  a.to-top i {
+    font-size: 20px;
+  }
 }
 /*# sourceMappingURL=main.css.map */

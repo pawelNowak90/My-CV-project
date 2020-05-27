@@ -1,5 +1,6 @@
 @import 'nav';
 @import 'sections';
+@import 'footer';
 
 //-------------------------------------------------------------------------------
 @font-face {
@@ -19,6 +20,7 @@ html {
 }
 
 a {
+    cursor:pointer;
     text-decoration: none;
     color: white;
     text-align: center;
@@ -43,6 +45,7 @@ a.to-top {
     opacity: 0;
     display: flex;
     align-items: center;
+
     justify-content: center;
     pointer-events: none;
     transition: opacity linear 0.3s, bottom linear 0.3s;
@@ -58,15 +61,12 @@ a.to-top {
         font-size: 30px;
     }
 
-    // p.arrow {
-    //     margin: 0;
-    //     padding: 0;
-    //     display: block;
-    //     transform: translateX(-1.5px) rotate(270deg);
-    //     transform-origin: center;
-    //     font-size: 30px;
-    //     line-height: 40px;
-    //     //DORA, dlaczego transform: translate(-50%, -50%); przesuwa o 50% rodzica, a nie elementu ?
-    // }
-
+    @media(max-width:992px){
+    width: 30px;
+    height: 30px;  
+    right:1.5%;
+        i{
+            font-size: 20px;
+        }
+}
 }
