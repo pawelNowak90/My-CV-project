@@ -2,7 +2,6 @@
 @import 'sections';
 @import 'footer';
 
-//-------------------------------------------------------------------------------
 @font-face {
     font-family: Cabin;
     src: url(../fonts/Cabin/Cabin-Medium.ttf);
@@ -13,10 +12,8 @@
     font-family: 'Cabin', 'Arial', sans-serif;
 }
 
-
 html {
     scroll-behavior: smooth;
-    /*!nie działa w IE*/
 }
 
 a {
@@ -28,7 +25,6 @@ a {
     &:hover {
         color: white;
         text-decoration: none;
-
     }
 }
 
@@ -45,7 +41,6 @@ a.to-top {
     opacity: 0;
     display: flex;
     align-items: center;
-
     justify-content: center;
     pointer-events: none;
     transition: opacity linear 0.3s, bottom linear 0.3s;
@@ -54,7 +49,6 @@ a.to-top {
         opacity: 1;
         pointer-events: auto;
         bottom: 3%;
-
     }
 
     i {
@@ -64,7 +58,7 @@ a.to-top {
     @media(max-width:992px){
     width: 30px;
     height: 30px;  
-    right:1.5%;
+    right: 1.5%;
         i{
             font-size: 20px;
         }

@@ -1,6 +1,7 @@
 (function () {
   addEventListeners();
   onScrollHandlers();
+  initSliders();
 })();
 
 function addEventListeners() {
@@ -16,4 +17,3 @@ function onScrollHandlers() {
   sectionAnimations();
   progressBarAnimation();
 }
-

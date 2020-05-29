@@ -3,7 +3,10 @@
 const nav = document.getElementById("navigation");
 const navLinks = [...document.querySelectorAll("nav li a.nav-link")];
 const sectionArray = [...document.querySelectorAll("section")];
-const sectionArrayReduce = [...document.querySelectorAll("section")].reduce((tableSections, item) => { tableSections[item.id] = item; return tableSections; }, []);
+const sectionArrayReduce = [...document.querySelectorAll("section")].reduce((tableSections, item) => {
+   tableSections[item.id] = item;
+   return tableSections;
+}, []);
 const btnToTop = document.querySelector("a.to-top");
 const scrollTopBar = document.querySelector("div.loading-bar");
 
@@ -23,7 +26,9 @@ function addToggleMenuHandler() {
    document.body.addEventListener('click', () => {
       document.querySelector('header div.navbar-collapse').classList.remove('show');
    });
-   document.querySelector('header div.navbar-collapse').addEventListener('click', (e) => { e.stopPropagation() });
+   document.querySelector('header div.navbar-collapse').addEventListener('click', (e) => {
+      e.stopPropagation()
+   });
 }
 
 function stickNavigation() {
@@ -65,4 +70,19 @@ function progressBarAnimation() {
    precentageHeight =
       window.scrollY / (document.body.offsetHeight - window.innerHeight);
    scrollTopBar.style.width = precentageHeight * 100 + "%";
+}
+
+function initSliders() {
+   new Slider("#slider .slide").options({
+      prev: "#slider nav button.arrow-prev",
+      next: "#slider nav button.arrow-next",
+      time: 3000,
+      height: true
+   }).init();
+
+   new Slider("#slider_2nd .slide").options({
+      prev: "#slider_2nd nav button.arrow-prev2",
+      next: "#slider_2nd nav button.arrow-next2",
+      time: 3000,
+   }).init();
 }
