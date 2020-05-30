@@ -321,6 +321,12 @@ section#o-mnie.visited p {
           transform: translateY(0);
 }
 
+section#technologie {
+  background: url("../img/background-technologie.jpg") no-repeat center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
 section#technologie div.skills-container {
   text-transform: uppercase;
 }
@@ -776,7 +782,13 @@ section#moje-zainteresowania div.slider-wrapper div.slide-description h3:after {
 
 section#kontakt {
   background: orangered;
-  padding-bottom: 75px;
+  padding-bottom: 55px;
+}
+
+@media (max-width: 767px) {
+  section#kontakt {
+    padding-bottom: 40px;
+  }
 }
 
 section#kontakt h1 span {
@@ -861,6 +873,16 @@ section#kontakt div.kontakt-right form input:focus {
   border: solid 2px;
 }
 
+section#kontakt div.kontakt-right form .error {
+  display: none;
+  font-size: 16px;
+  padding: 0;
+  margin-top: 5px;
+  color: black;
+  padding-left: 0.75rem;
+  margin-bottom: 0;
+}
+
 section#kontakt div.kontakt-right form textarea {
   border-radius: 0;
 }
@@ -871,8 +893,22 @@ section#kontakt div.kontakt-right form textarea:focus {
   border: solid 2px;
 }
 
-section#kontakt div.kontakt-right form #codeFromThePicture {
-  padding-left: 0;
+section#kontakt div.kontakt-right form .captcha img {
+  height: calc(1.5em + .75rem + 2px);
+  vertical-align: top;
+}
+
+section#kontakt div.kontakt-right form .captcha a {
+  display: inline-block;
+  height: calc(1.5em + .75rem + 2px);
+  width: calc(1.5em + .75rem + 2px);
+  background-color: black;
+  border-radius: 5px;
+}
+
+section#kontakt div.kontakt-right form .captcha a i {
+  line-height: calc(1.5em + .75rem + 2px);
+  color: white;
 }
 
 section#kontakt div.kontakt-right form button {

@@ -9,6 +9,7 @@
 	<link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" href="css/css_slider.css">
 	<link rel="stylesheet" href="css/fontAwesome_all.css">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 
 	<title>Paweł Nowak - CV</title>
 
@@ -338,36 +339,38 @@
 									<div class="row">
 										<div class="col-md-6 form-group">
 											<input type="text" name="name" class="form-control" id="name"
-												placeholder="Twoje imię">
+                        placeholder="Twoje imię">
+                        <p class="error" id="error-name">Nazwa użytkownika jest zbyt długa.</p>
 										</div>
 										<div class="col-md-6 form-group">
 											<input type="email" name="email" class="form-control" id="email"
-												placeholder="Twój email" required maxlength="50">
-										</div>
+												placeholder="Twój e-mail" required maxlength="50">
+                        <p class="error" id="error-email">Niepoprawny adres e-mail.</p>
+                      </div>
 									</div>
-
 									<div class="form-group">
 										<textarea class="form-control" type="textarea" rows="4" name="message"
 											placeholder="Twoja wiadomość"></textarea>
 									</div>
 
-									<div class="row" style="margin-bottom:30px;">
-										<div class="col-sm-6">
-											<img src="captcha.php" id="captcha_image" />
-											<br />
-											<a id="captcha_reload" href="#">reload</a>
+									<div class="row mb-3 mb-md-5 ">
+										<div class="col-sm-6 captcha mb-3 mb-md-0">
+                    <img src="captcha.php" id="captcha_image" />
+                      <a class="label ml-2" id="captcha_reload" href="#">
+                         <i class="fas fa-redo-alt"> </i>
+                      </a>
 										</div>
 										<div class="col-sm-6" id="codeFromThePicture">
-											<label for="email">Przepisz kod z obrazka tutaj:</label>
 											<input type="text" class="form-control" required id="captcha"
-												name="captcha">
+                        name="captcha" placeholder="Przepisz kod z obrazka tutaj:">
+                        <p class="error" id="error-captcha">Wpisano błędny kod z obrazka.</p>
+										
 										</div>
 									</div>
 									<div class="text-center">
 										<button type="submit" id="btnContact">Wyślij wiadomość</button>
 									</div>
 								</form>
-
 							</div>
 						</div>
 					</div>

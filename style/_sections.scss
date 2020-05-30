@@ -169,6 +169,10 @@ section#o-mnie {
 }
 
 section#technologie {
+  background: url("../img/background-technologie.jpg") no-repeat center;
+  background-size: cover;
+  background-attachment: fixed;
+
   div.skills-container {
     text-transform: uppercase;
 
@@ -555,7 +559,11 @@ section#moje-zainteresowania {
 
 section#kontakt {
   background: orangered;
-  padding-bottom: 75px;
+  padding-bottom: 55px;
+
+  @media(max-width:767px) {
+    padding-bottom: 40px;
+  }
 
   h1 span {
     border-bottom: 3px solid white;
@@ -620,6 +628,17 @@ section#kontakt {
         }
       }
 
+      .error {
+        display: none;
+        font-size: 16px;
+        padding: 0;
+        margin-top: 5px;
+        color: black;
+        padding-left: 0.75rem;
+        margin-bottom: 0;
+
+      }
+
       textarea {
         border-radius: 0;
 
@@ -629,8 +648,25 @@ section#kontakt {
         }
       }
 
-      #codeFromThePicture {
-        padding-left: 0;
+      .captcha {
+        img {
+          height: calc(1.5em + .75rem + 2px);
+          vertical-align: top;
+        }
+
+        a {
+          display: inline-block;
+          height: calc(1.5em + .75rem + 2px);
+          width: calc(1.5em + .75rem + 2px);
+          background-color: black;
+          border-radius: 5px;
+
+          i {
+            line-height: calc(1.5em + .75rem + 2px);
+
+            color: white;
+          }
+        }
       }
 
       button {
