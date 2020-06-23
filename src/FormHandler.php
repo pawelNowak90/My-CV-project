@@ -43,22 +43,16 @@ class FormHandler
 		$this->mailer->IsSMTP();
 		$this->mailer->Host =  "ssl://smtp.gmail.com";
 		$this->mailer->SMTPAuth = true;   
-		$this->mailer->Username = 'dorotanowak90@gmail.com';
+		$this->mailer->Username = 'pawelnowakcv@gmail.com';
 		$this->mailer->SMTPSecure = "ssl";
-		$this->mailer->Password = 'roztocze';
+		$this->mailer->Password = 'PawelNowakcv!(^*';
 		$this->mailer->Port = 443;
 
 		$this->mail_template='';
 
-		$this->mailer->Subject = "Contact Form Submission ";
+		$this->mailer->Subject = "CV Kontakt";
 
 		$host = isset($_SERVER['SERVER_NAME'])?$_SERVER['SERVER_NAME']:'localhost';
-		$from_email = "dorotanowak90@gmail.com";
-		// $from_email ='forms@'.$host;
-		// $from_email = 'dorota.nowak90@gmail.com';
-		   // $this->mailer->setFrom($from_email,'Contact Form',false);  
-		   $this->mailer->From = 'dorotanowak90@gmail.com';
-
    		$this->captcha = false;   
 
    		$this->attachments = [];
@@ -75,15 +69,7 @@ class FormHandler
 	 */
 	public function sendEmailTo($email_s)
 	{
-		if(is_array($email_s))
-		{
-			$this->emails =array_merge($this->emails, $email_s);
-		}
-		else
-		{
-			$this->mailer->AddAddress("dorotanowak90@gmail.com", $email_s);	
-		}
-		
+		$this->mailer->AddAddress($email_s, $email_s);	
 		return $this;
 	}
 

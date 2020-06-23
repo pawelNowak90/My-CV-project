@@ -9,7 +9,7 @@
 	<link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" href="css/css_slider.css">
 	<link rel="stylesheet" href="css/fontAwesome_all.css">
-  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 
 	<title>Paweł Nowak - CV</title>
 
@@ -66,7 +66,7 @@
 					<div class="background-filter"></div>
 					<div class="about-me">
 						<h2>Nowak Paweł</h2>
-						<h2>Junior Front&#8209;end Developer</h2>
+						<h2>Front&#8209;end<br />Developer</h2>
 					</div>
 				</section>
 
@@ -86,11 +86,12 @@
 						<p>
 							Obecnie chciałbym rozwijać się jako Front&#8209;end Developer.
 							Ukończyłem kursy na platformie <i>udemy</i> :
-							<strong>HTML</strong>, <strong>CSS</strong>, <strong>JavaScript</strong>,
-							<strong>GIT</strong>.
+							<span>HTML</span>, <span>CSS</span>, <span>JavaScript</span>,
+							<span>GIT</span>. Aktualnie uczę się frameworka <span>React.js</span>.
 							Używam edytora <strong>Visual&nbsp;Studio&nbsp;Code</strong>.
-							Swoje projekty prowadzę w serwisie GitHub.
-							Aktualnie uczę się frameworka <strong>React.js</strong>.
+							Swoje projekty prowadzę w serwisie
+							<a href="https://github.com/pawelNowak90/My-CV-project" target="_blank"></i>GitHub</a>.
+
 						</p>
 
 					</div>
@@ -242,7 +243,7 @@
 										<img class="" src="img/stolarstwo3.jpg" alt="">
 									</figure>
 									<div class="slide-description">
-										<h3 class="slide-header">Rozkładany samolt z silnikiem</h3>
+										<h3 class="slide-header">Rozkładany samolot z silnikiem</h3>
 									</div>
 								</div>
 								<nav role="pagination" class="arrows">
@@ -254,7 +255,8 @@
 							</div>
 						</div>
 						<div class="slider-wrapper">
-							<p><span> Góry</span> to miejsce w którym lubię być. Mogę w skupieniu spojrzeć na wiele i
+							<p><span> Góry</span> to miejsce w którym lubię być. Mogę w skupieniu spojrzeć na wiele
+								spraw i
 								nabrać potrzebnego dystantu.
 							</p>
 							<div id="slider_2nd" class="slides show">
@@ -339,14 +341,14 @@
 									<div class="row">
 										<div class="col-md-6 form-group">
 											<input type="text" name="name" class="form-control" id="name"
-                        placeholder="Twoje imię">
-                        <p class="error" id="error-name">Nazwa użytkownika jest zbyt długa.</p>
+												placeholder="Twoje imię">
+											<p class="error" id="error-name">Nazwa użytkownika jest zbyt długa.</p>
 										</div>
 										<div class="col-md-6 form-group">
 											<input type="email" name="email" class="form-control" id="email"
 												placeholder="Twój e-mail" required maxlength="50">
-                        <p class="error" id="error-email">Niepoprawny adres e-mail.</p>
-                      </div>
+											<p class="error" id="error-email">Niepoprawny adres e-mail.</p>
+										</div>
 									</div>
 									<div class="form-group">
 										<textarea class="form-control" type="textarea" rows="4" name="message"
@@ -355,16 +357,16 @@
 
 									<div class="row mb-3 mb-md-5 ">
 										<div class="col-sm-6 captcha mb-3 mb-md-0">
-                    <img src="captcha.php" id="captcha_image" />
-                      <a class="label ml-2" id="captcha_reload" href="#">
+											<img src="captcha.php" id="captcha_image" />
+											<a class="label ml-2" id="captcha_reload" href="#">
                          <i class="fas fa-redo-alt"> </i>
                       </a>
 										</div>
 										<div class="col-sm-6" id="codeFromThePicture">
-											<input type="text" class="form-control" required id="captcha"
-                        name="captcha" placeholder="Przepisz kod z obrazka tutaj:">
-                        <p class="error" id="error-captcha">Wpisano błędny kod z obrazka.</p>
-										
+											<input type="text" class="form-control" required id="captcha" name="captcha"
+												placeholder="Przepisz kod z obrazka tutaj:">
+											<p class="error" id="error-captcha">Wpisano błędny kod z obrazka.</p>
+
 										</div>
 									</div>
 									<div class="text-center">

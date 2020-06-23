@@ -57,7 +57,7 @@ section {
   }
 
   &.bg-gray {
-    background-color: rgb(185, 185, 185);
+    background-color: #777;
 
     h1 {
       color: white;
@@ -110,7 +110,7 @@ section#my-baner {
 
     @media (max-width: 575px) {
       top: unset;
-      bottom: 5%;
+      bottom: 10%;
       left: 0%;
       right: 0%;
     }
@@ -158,6 +158,17 @@ section#o-mnie {
     &:nth-of-type(2) {
       transition-delay: 0.4s;
     }
+
+    span {
+      font-weight: bold;
+      color: orangered;
+    }
+
+    a {
+      color: #212529;
+      text-decoration: underline;
+    }
+
   }
 
   &.visited {
