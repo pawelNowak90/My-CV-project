@@ -41,16 +41,16 @@ class FormHandler
 		$this->validator = FormValidator::create();
 		$this->mailer = new PHPMailer;
 		$this->mailer->IsSMTP();
-		$this->mailer->Host =  "ssl://smtp.gmail.com";
+
+		$this->mailer->Host =  "smtp.gmail.com";
 		$this->mailer->SMTPAuth = true;   
 		$this->mailer->Username = 'pawelnowakcv@gmail.com';
 		$this->mailer->SMTPSecure = "ssl";
 		$this->mailer->Password = 'PawelNowakcv!(^*';
-		$this->mailer->Port = 443;
+		$this->mailer->Port = 465;
 
 		$this->mail_template='';
-
-		$this->mailer->Subject = "CV Kontakt";
+		$this->mailer->Subject = "CV Kontakt"; 
 
 		$host = isset($_SERVER['SERVER_NAME'])?$_SERVER['SERVER_NAME']:'localhost';
    		$this->captcha = false;   
@@ -69,6 +69,7 @@ class FormHandler
 	 */
 	public function sendEmailTo($email_s)
 	{
+		array_push($this->emails, $email_s);
 		$this->mailer->AddAddress($email_s, $email_s);	
 		return $this;
 	}
