@@ -65,7 +65,7 @@
 				<section class="my-baner" id="my-baner">
 					<div class="background-filter"></div>
 					<div class="about-me">
-						<h2>Nowak Paweł</h2>
+						<h2>Paweł Nowak</h2>
 						<h2>Front&#8209;end<br />Developer</h2>
 					</div>
 				</section>
@@ -74,7 +74,7 @@
 					<h1><span>O mnie</span></h1>
 					<div class="container">
 						<p>Nazywam się Paweł Nowak.
-							Jestem absolwentem kierunku <i>Budownictwo</i> na <strong>Akademii
+							Jestem absolwentem kierunku <i>budownictwo</i> na <strong>Akademii
 								Górniczo-Hutniczej</strong>
 							w Krakowie oraz <strong>Politechnice&nbsp;Lubelskiej</strong>.
 							Przez cztery lata procowałem jako inżynier budowy. Uzyskałem uprawnienia budowlane i przez
@@ -160,7 +160,7 @@
 				<section class="inne-umiejetnosci" id="inne-umiejetnosci">
 					<h1><span>Inne umiejętności</span></h1>
 					<div class="container">
-						<p><i class="fas fa-arrow-right"></i>Języki obce: Angielski: B1, średnio-zaawansowany</p>
+						<p><i class="fas fa-arrow-right"></i>Języki obce: Angielski: B1-B2</p>
 						<p><i class="fas fa-arrow-right"></i>Prawo jazdy kategorii A1 i B</p>
 						<p><i class="fas fa-arrow-right"></i>Duża dokładność, staranność</p>
 						<p><i class="fas fa-arrow-right"></i>Dobra komunikatywność</p>
@@ -205,11 +205,11 @@
 							Zakres obowiązków:
 							- Prowadzenie dokumentacji technicznej
 							- Pilnowanie harmonogramu prac i jakości robót
-							- Nadzorowanie pracowników do 100 osób</p>
+							- Nadzorowanie grupą pracowników do 100 osób</p>
 						<p>
 							04.2013 - 05.2017 Inżynier Budowy, P.W.Sanitex
 							Zakres obowiązków:
-							- Nadzorowanie pracowników do 50 osób
+							- Nadzorowanie grupą pracowników do 25 osób
 							- Koordynacja prac na placu budowy</p>
 					</div>
 				</section>
@@ -255,9 +255,9 @@
 							</div>
 						</div>
 						<div class="slider-wrapper">
-							<p><span> Góry</span> to miejsce w którym lubię być. Mogę w skupieniu spojrzeć na wiele
+							<p><span> Góry</span> to miejsce, w którym lubię być. Mogę w skupieniu spojrzeć na wiele
 								spraw i
-								nabrać potrzebnego dystantu.
+								nabrać potrzebnego dystansu.
 							</p>
 							<div id="slider_2nd" class="slides show">
 								<div class="slide">
