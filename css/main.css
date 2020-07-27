@@ -861,6 +861,14 @@ section#kontakt div.kontakt-left p {
   }
 }
 
+section#kontakt div.kontakt-left p a {
+  color: #000000;
+}
+
+section#kontakt div.kontakt-left p a.link {
+  text-decoration: underline;
+}
+
 section#kontakt div.kontakt-right {
   -webkit-transform: translateX(50%);
           transform: translateX(50%);

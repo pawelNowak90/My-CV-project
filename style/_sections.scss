@@ -620,7 +620,17 @@ section#kontakt {
       @media (max-width: 991px) {
         padding: 0 20px 0 60px;
       }
+
+      a {
+        color: #000000;
+
+        &.link {
+          text-decoration: underline;
+        }
+      }
     }
+
+
   }
 
   div.kontakt-right {

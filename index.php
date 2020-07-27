@@ -311,13 +311,18 @@
 										<div class="col-md-6 col-lg-12 mb-4">
 											<i class="fas fa-at"></i>
 											<h4>Email:</h4>
-											<p>pawel.nowak.90@gmail.com</p>
+											<p><a href="mailto:pawel.nowak.90@gmail.com">pawel.nowak.90@gmail.com</a> </p>
 										</div>
 
-										<div class="col-md-6 col-lg-12">
+										<div class="col-md-6 col-lg-12 mb-4">
 											<i class="fas fa-mobile-alt"></i>
 											<h4>Telefon:</h4>
-											<p>507-610-092</p>
+											<p> <a href="tel:507610092"> 507-610-092</a></p>
+										</div>
+                    <div class="col-md-6 col-lg-12">
+                    <i class="fab fa-linkedin"></i>										
+											<h4>LinkedIn:</h4>
+                      <p><a target="_blank" class="link" href="https://www.linkedin.com/in/pawe%C5%82-nowak-359079198/">Paweł Nowak</a></p>                      
 										</div>
 									</div>
 								</div>
