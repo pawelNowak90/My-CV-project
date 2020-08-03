@@ -1,49 +1,50 @@
-$(function () {
-    function after_form_submitted(data) {
-        if (data.result === "success") {
-            console.log(data);
+function reload_captcha() {
+  d = new Date();
+  var src = $("img#captcha_image").attr("src");
+  src = src.split(/[?#]/)[0];
 
-            $("#success_message").show();
-            $("#error_message").hide();
-            $("#btnContact").prop("type", "submit").text("Wyślij wiadomość");
-        } else {
-            for (var key in data.errors) {
-                $(`input[name=${key}]`).siblings('.error').show();
-            }
+  $("img#captcha_image").attr("src", src + "?" + d.getTime());
+}
 
-            $("#success_message").hide();
-            $("#error_message").show();
-            //reverse the response on the button
-            $("#btnContact").prop("type", "submit").text("Wyślij wiadomość");
-        }
+function after_form_submitted(data) {
+  if (data.result === "success") {
+    $("#success_message").show();
+    $("#error_message").hide();
+    $("#btnContact").prop("type", "submit").text("Wyślij wiadomość");
+    reload_captcha();
+  } else {
+    for (var key in data.errors) {
+      $(`input[name=${key}]`).siblings(".error").show();
     }
 
-    $("#reused_form").submit(function (e) {
-        e.preventDefault();
-        $('.error').hide();
+    $("#success_message").hide();
+    $("#error_message").show();
+    //reverse the response on the button
 
-        $form = $(this);
-        //show some response on the button
-        $("#btnContact").prop("type", "button").text("Wysyłanie...");
-
-        $.ajax({
-            type: "POST",
-            url: "handler.php",
-            data: $form.serialize(),
-            success: after_form_submitted,
-            dataType: "json",
-        });
-
-    });
-});
+    $("#btnContact").prop("type", "submit").text("Wyślij wiadomość");
+  }
+}
 
 $(function () {
-    $("#captcha_reload").on("click", function (e) {
-        e.preventDefault();
-        d = new Date();
-        var src = $("img#captcha_image").attr("src");
-        src = src.split(/[?#]/)[0];
+  $("#reused_form").submit(function (e) {
+    e.preventDefault();
+    $(".error").hide();
 
-        $("img#captcha_image").attr("src", src + "?" + d.getTime());
+    $form = $(this);
+    //show some response on the button
+    $("#btnContact").prop("type", "button").text("Wysyłanie...");
+
+    $.ajax({
+      type: "POST",
+      url: "handler.php",
+      data: $form.serialize(),
+      success: after_form_submitted,
+      dataType: "json",
     });
+  });
+
+  $("#captcha_reload").on("click", (e) => {
+    reload_captcha();
+    e.preventDefault();
+  });
 });
