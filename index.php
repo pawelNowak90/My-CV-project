@@ -322,7 +322,7 @@
                     <div class="col-md-6 col-lg-12">
                     <i class="fab fa-linkedin"></i>										
 											<h4>LinkedIn:</h4>
-                      <p><a target="_blank" class="link" href="https://www.linkedin.com/in/pawe%C5%82-nowak-359079198/">Paweł Nowak</a></p>                      
+                      <p><a target="_blank" class="link" href="https://www.linkedin.com/in/pawelNowak90/">Paweł Nowak</a></p>                      
 										</div>
 									</div>
 								</div>
