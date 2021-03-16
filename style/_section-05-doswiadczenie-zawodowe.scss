@@ -1,0 +1,31 @@
+section#doswiadczenie-zawodowe {
+    @media (max-width: 575px) {
+      & h1>span {
+        display: inline-block;
+        width: 240px;
+  
+        &::first-letter {
+          letter-spacing: 5px;
+          font-size: 175%;
+        }
+      }
+    }
+  
+    p {
+      opacity: 0;
+      transform: translateY(50%);
+      transition: opacity 0.5s linear, transform 0.5s linear;
+      transition-delay: 0.2s;
+  
+      &:nth-of-type(2) {
+        transition-delay: 0.4s;
+      }
+    }
+  
+    &.visited {
+      p {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  }  

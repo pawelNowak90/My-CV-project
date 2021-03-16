@@ -1,0 +1,99 @@
+section {
+    overflow: hidden;
+  
+    @media (max-width: 991px) {
+      margin-top: 0;
+    }
+  
+    p {
+      @media (max-width: 991px) {
+        padding: 0 5px 0 5px;
+      }
+  
+      @media (max-width: 575px) {
+        padding: 0 5px 0 5px;
+      }
+  
+      text-align: justify;
+    //   opacity: 0;
+      transform: translateY(50%);
+      transition: opacity 0.5s linear,
+      transform 0.5s linear;
+      transition-delay: 0.2s;
+    }
+    &>h1 {
+      margin: 10px 0 30px 0;
+      color: #000;
+      text-transform: uppercase;
+      font-style: 34px;
+      letter-spacing: 2px;
+      opacity: 0;
+      transform: scale(1.5);
+      transition: transform 0.5s linear, opacity 0.5s linear;
+      text-align: center;
+      font-size: 28px;
+  
+      @media (max-width: 991px) {
+        font-size: 24px;
+      }
+  
+      @media (max-width: 575px) {
+        font-size: 22px;
+      }
+  
+      span {
+        display: inline-block;
+        padding: 10px 20px;
+        border-bottom: 3px solid orangered;
+  
+        &::first-letter {
+          letter-spacing: 5px;
+          font-size: 150%;
+        }
+  
+        @media (max-width: 575px) {
+          width: 240px;
+        }
+      }
+    }
+  
+    div>p {
+      padding: 0 100px 20px 100px;
+      font-size: 24px;
+      text-align: justify;
+  
+      @media (max-width: 991px) {
+        padding: 0 20px 0 0;
+        font-size: 20px;
+      }
+  
+      @media (max-width: 575px) {
+        font-size: 18px;
+      }
+    }
+  
+    &.bg-gray {
+      background-color: #777;
+  
+      h1 {
+        color: white;
+      }
+  
+      h2 {
+        padding-top: 20px;
+        color: white;
+      }
+  
+      p,
+      span,
+      i {
+        color: white;
+      }
+    }
+  
+    &.visited>h1 {
+      opacity: 1;
+      transform: scale(1);
+    }
+}
+  

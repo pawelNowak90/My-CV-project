@@ -1,0 +1,58 @@
+
+section#my-baner {
+    position: relative;
+    margin: 0;
+    height: 100vh;
+    background: url("../img/pawel-gory.jpg");
+    background-size: cover;
+    background-position: 0 33%;
+    background-repeat: no-repeat;
+  //   background-position: center;
+  //   filter: grayscale(15%) sepia(15%);
+  
+    @media (max-width: 575px) {
+      background-position: 25% 0%;
+    }
+  
+    div.background-filter {
+      position: relative;
+      z-index: 2;
+      height: 100%;
+      background-color: rgba(20, 20, 20, 0.1);
+    }
+  
+    div.about-me {
+      position: absolute;
+      top: 25%;
+      left: 62%;
+  
+      @media (max-width: 575px) {
+        top: unset;
+        bottom: 10%;
+        left: 0%;
+        right: 0%;
+      }
+  
+      h1,
+      h2 {
+        padding: 20px 30px;
+        white-space: pre-line;
+        color: white;
+        text-shadow: -2px 0 10px black, 0 2px 10px black, 2px 0 10px black,
+          0 -2px 10px black;
+        text-align: center;
+        font-size: 54px;
+  
+        @media (max-width: 767px) {
+          padding: 20px 0;
+          font-size: 40px;
+        }
+  
+        @media (max-width: 575px) {
+          padding: 2px 0;
+          font-size: 42px;
+        }
+      }
+    }
+  }
+  

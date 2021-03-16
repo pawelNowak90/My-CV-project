@@ -1,0 +1,30 @@
+section#o-mnie {
+
+      &:nth-of-type(2) {
+        transition-delay: 0.4s;
+      }
+  
+      span {
+        font-weight: bold;
+        color: orangered;
+      }
+  
+      a {
+          position:relative;
+        color: #212529;
+        text-decoration: none;
+        border-bottom:dotted orangered 1px;
+      }
+      a:hover{
+          border-bottom:solid orangered 2px;
+      }
+  
+    
+  
+    &.visited {
+      p {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+}

@@ -1,3 +1,4 @@
+
 // GLOBAL VARIABLES
 
 const nav = document.getElementById("navigation");

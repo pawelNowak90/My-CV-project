@@ -59,7 +59,7 @@ class Slider {
 
   tryIndex(index) {
     if (typeof index !== "number") {
-      throw new TypeError("funkcja tryIndex - Slide musi byÄ liczbÄ: " + index);
+      throw new TypeError("funkcja tryIndex - Slide musi byc liczba: " + index);
     } else if (index < 0 || index > this.slider.length - 1) {
       throw new TypeError("funkcja tryIndex - Nie ma takiego slide'u: " + index);
     }
@@ -293,7 +293,7 @@ class Slider {
   }
 
   options(options) {
-    Object.assign(this.settings, this.slider.test(typeof options !== "object", "Do klasy slider zostaĹ przekazany argument niebÄdÄcy obiektem, przekazany argument to: " + options, options));
+    Object.assign(this.settings, this.slider.test(typeof options !== "object", "Do klasy slider zostal przekazany argument niebeacy obiektem, przekazany argument to: " + options, options));
     return this;
   }
 
