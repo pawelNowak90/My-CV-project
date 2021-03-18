@@ -16,4 +16,13 @@ function onScrollHandlers() {
   setNavItemActive();
   sectionAnimations();
   progressBarAnimation();
+  displaySocialMedia();
+}
+
+function displaySocialMedia(){
+    const socialMedia = document.getElementById('social-media');
+  
+    setTimeout(()=>{socialMedia.classList.add('showSocialMedia')},1000)
+  
+
 }

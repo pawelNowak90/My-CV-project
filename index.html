@@ -11,9 +11,9 @@
     <meta name="author" content="Paweł Nowak" />
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/css_bootstrap/bootstrap.min.css">
-	<link rel="stylesheet" href='./style/main.css'>
 	<link rel="stylesheet" href="css/css_slider.css">
 	<link rel="stylesheet" href="css/fontAwesome_all.css">
+    <link rel="stylesheet" href='./css/main.css'>
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 
     <script src="./js/email_js.js"></script>
@@ -66,10 +66,7 @@
 								<a class="nav-link" href="#technologie">Technologie</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="#inne-umiejetnosci">Inne umiejętności</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="#wyksztalcenie">Wykształcenie</a>
+								<a class="nav-link" href="#edukacja">Edukacja</a>
 							</li>
 							<li class="nav-item">
 								<a class="nav-link" href="#doswiadczenie-zawodowe">Doświadczenie zawodowe</a>
@@ -84,6 +81,24 @@
 					</div>
 				</nav>
 			</div>
+            
+            <div class="social-media" id="social-media">
+                <span class="linked_in">
+                  <a id="linked_in_a" href="https://www.linkedin.com/in/pawelNowak90/" target="_blank">
+                    <i class="fab fa-linkedin"></i>
+                  </a>
+                </span>
+                <span class="linked_in">
+                    <a id="linked_in_a" href="https://github.com/pawelNowak90/My-CV-project" target="_blank">
+                      <i class="fab fa-github"></i>
+                    </a>
+                </span>
+                <span class="instagram">
+                  <a id="instaA" href="https://www.instagram.com/pawelnowaklublin/" target="_blank">
+                    <i id="insta" class="fab fa-instagram"></i>
+                  </a>
+                </span>
+              </div>
 		</header>
 		<main id="main">
 			<article>
@@ -98,21 +113,46 @@
 				<section class="o-mnie" id="o-mnie">
 					<h1><span>O mnie</span></h1>
 					<div class="container">
-						<p>Nazywam się Paweł Nowak. Jestem inżynierem, który lubi pracę na froncie.
-                           Obecnie uczę&nbsp;się kilku technologii frontendowych, najwięcej czasu poświęcam na <span> React.js</span>. 
-                        </p>
-						<p>
-							Ukończyłem kilka kursów na platformie udemy.com:
-							HTML, CSS, JavaScript oraz GIT.
-              React.js uczyłem się w <a href="https://szkolareacta.pl/">szkołareacta.pl.</a> 
-            </p>
-            <p>
-              Na co dzień używam Visual&nbsp;Studio&nbsp;Code oraz github.
-							Link do moich projektów na <span>github</span>:
-							<a href="https://github.com/pawelNowak90" target="_blank"></i>www.github.com/pawelNowak90</a>.
+                        <div class="time-line-header">
+                            <h4>
+                                Nazywam się Paweł Nowak. Jestem inżynierem, który lubi pracę na froncie.
+                            </h4>
+                        </div>
+                        <div class="time-line-wrapper">
 
-						</p>
+                            <div class="time-line-baseline">
+                                <div class="time-line-branch">
+                                    <div class="branch branch-1st"></div>
+                                    <div class="branch branch-2nd"></div>
+                                    <div class="branch branch-3rd"></div>
+                                    <div class="branch branch-4th"></div>
+                                    <div class="branch branch-5th"></div>
+                                </div>
+                            </div>
+                            <div class="time-line-rectangle nr-1st">
+                                <p>                            
+                                    Ukończyłem kursy na udemy.com dotyczące HTML, CSS, JavaScript, React.js oraz GIT.
+                                </p>
+                            </div>
+                            <div class="time-line-rectangle nr-2nd">
+                                <p>Moje pierwsze Single Page Application:<br><a href="https://kroz.pl/" target="_blank"> kroz.pl </a><br><a href="https://katarzynazurek.com.pl/" target="_blank"> katarzynazurek.com.pl </a> </p>
+                            </div>
+                            <div class="time-line-rectangle nr-3rd">
+                                <p>
+                                    Doskonaliłem umiejętności dotyczące <span>React.js</span><br>w <a href="https://szkolareacta.pl/" target="_blank">szkołareacta.pl.</a>
+                                </p>
+                            </div>
+                            <div class="time-line-rectangle nr-4th">
+                                <p>
+                                    Używam github oraz Visual&nbsp;Studio&nbsp;Code.<br>
+                                    Moje projekty na  <a href="https://github.com/pawelNowak90" target="_blank"> <span>github</span> </a>
+                                </p>
+                            </div>
+                            <div class="time-line-rectangle nr-5th">
+                                <p>Obecnie tworzę sklep internetowy w React.js i&nbsp;uczę się React-Redux, TypeScript, Material UI i&nbsp;Cypress. </p>
 
+                            </div>
+                        </div>
 					</div>
 				</section>
 
@@ -120,6 +160,25 @@
 					<h1><span>Technologie</span> </h1>
 					<div class="skills-container container">
 						<div class="row">
+
+							<div class="one-skill col-6 col-sm-6 col-md-4 col-lg-4">
+								<div class="circle-gradient">
+									<div class="circle-inside"><i class="fab fa-js-square"></i>
+									</div>
+								</div>
+
+								<p>JavaScript</p>
+							</div>
+
+                            <div class="one-skill col-6 col-sm-6 col-md-4 col-lg-4">
+								<div class="circle-gradient">
+									<div class="circle-inside">
+										<i class="fab fa-react"></i>
+									</div>
+								</div>
+								<p>React.js</p>
+							</div>
+
 							<div class="one-skill col-6 col-sm-6 col-md-4 col-lg-4">
 								<div class="circle-gradient">
 									<div class="circle-inside"><i class="fab fa-html5"></i>
@@ -138,185 +197,224 @@
 
 							<div class="one-skill col-6 col-sm-6 col-md-4 col-lg-4">
 								<div class="circle-gradient">
-									<div class="circle-inside"><i class="fab fa-js-square"></i>
-									</div>
-								</div>
-
-								<p>JavaScript</p>
-							</div>
-
-
-							<div class="one-skill col-6 col-sm-6 col-md-4 col-lg-4">
-								<div class="circle-gradient">
-									<div class="circle-inside"><i class="fab fa-git-alt"></i>
-									</div>
-								</div>
-								<p>GIT</p>
-
-							</div>
-
-							<div class="one-skill col-6 col-sm-6 col-md-4 col-lg-4">
-								<div class="circle-gradient">
 									<div class="circle-inside"><i class="fab fa-sass"></i>
 									</div>
 								</div>
 								<p>LESS &amp; SCSS</p>
 							</div>
 
-							<div class="one-skill col-6 col-sm-6 col-md-4 col-lg-4">
+                            <div class="one-skill col-6 col-sm-6 col-md-4 col-lg-4">
 								<div class="circle-gradient">
-									<div class="circle-inside">
-										<i class="fab fa-react"></i>
+									<div class="circle-inside"><i class="fab fa-git-alt"></i>
 									</div>
 								</div>
-								<p>React.js</p>
-
+								<p>GIT</p>
 							</div>
+
 						</div>
 					</div>
 				</section>
 
-				<section class="inne-umiejetnosci" id="inne-umiejetnosci">
-					<h1><span>Inne umiejętności</span></h1>
+				<section class="" id="edukacja">
+					<h1><span>Edukacja</span></h1>
 					<div class="container">
-						<p><i class="fas fa-arrow-right"></i>Języki obce: Angielski B1/B2, Niemiecki A1</p>
-						<p><i class="fas fa-arrow-right"></i>Prawo jazdy kategorii A1 oraz B</p>
-						<p><i class="fas fa-arrow-right"></i>Duża dokładność i staranność</p> 
-						<p><i class="fas fa-arrow-right"></i>Dobra komunikatywność</p>
+
+                        <div class="logo first " id="education-szkolareacta">
+                            <div class="edu">
+                                <div class="row">
+                                    <div class="image offset-3 col-6 col-lg-3 offset-lg-0">
+                                        <img src="img/logo/szkolareacta.png" alt="">
+                                    </div>
+                                    <div class="education-description col-lg-9">
+                                        <p>2020r. <span> Szkoła reacta</span> - kurs internetowy z&nbsp;doświadczonym mentorem</p>
+                                        <p>React.js, Redux, JSS, SASS, StyledComponents, Material UI, REST API, Cypress, DevTools</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="logo first " id="education-udemy">
+                            <div class="edu">
+                                <div class="row">
+                                    <div class="image offset-3 col-6 col-lg-3 offset-lg-0">
+                                        <img class="udemy-img" src="img/logo/udemy.png" alt="">
+                                    </div>
+                                    <div class="education-description col-lg-9">
+                                        <p>2019r. <span>Udemy.com</span> - kursy internetowy</p>
+                                        <p>Kursy online: HTML, CSS/SCSS, JavaScript/ECMAScript 6, jQuery, GIT/github.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="logo first " id="education-POLLUB">
+                            <div class="edu">
+                                <div class="row">
+                                    <div class="image offset-3 col-6 col-lg-3 offset-lg-0">
+                                        <img src="img/logo/POLLUB-LOGO-300x300.png" alt="">
+                                    </div>
+                                    <div class="education-description col-lg-9">
+                                        <p>2014-2016r. Politechnika Lubelska, studia magisterskie - budownictwo</p>
+                                        <p>Rysunek techniczny, podstawy projektowania konstrukcji. Komputerowe wspomaganie projektowania-autocad, kosztorysowanie i&nbsp;planowanie inwestycji.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="logo first " id="education-AGH">
+                            <div class="edu">
+                                <div class="row">
+                                    <div class="image offset-3 col-6 col-lg-3 offset-lg-0">
+                                        <img src="img/logo/AGH-logo300x300.png" alt="">
+                                    </div>
+                                    <div class="education-description col-lg-9">
+                                        <p>2009-2013r. AGH w Krakowie, studia inżynierskie - budownictwo</p>
+                                        <p>Technologia wykonywania robót budowlanych. Programy do modelowania 3D.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 					</div>
 				</section>
 
-				<section class=" bg-gray" id="wyksztalcenie">
-					<h1><span>Wykształcenie</span></h1>
-					<div class="container">
-						<div class="row">
-              <div class="col-12 education-description">
-                <p>
-                  Jestem absolwentem kierunku budownictwo na AGH w Krakowie i Politechnice&nbsp;Lubelskiej.
-                  Przez pięć lata procowałem w branży budowlanej jako zbrojarz, inżynier budowy oraz kierownik budowy.
-                </p>
-              </div> 
-							<div class="logo first col-6" id="education-AGH">
-								<div class="AGH">
-									<img src="img/logo/AGH-logo300x300.png" alt="">
-									<div>
-										<p>Studia inżynierskie</p>
-										<p>Kierunek: <i>budownictwo</i></p>
-										<p>AGH w Krakowie</p>
-									</div>
-								</div>
-							</div>
-							<div class="logo second col-6" id="education-POLLUB">
-								<div class="POLLUB">
 
-									<div>
-										<p>Studia magisterskie</p>
-										<p>Kierunek: <i>budownictwo</i></p>
-										<p>Politechnika Lubelska</p>
-									</div>
-									<img src="img/logo/POLLUB-LOGO-300x300.png" alt="">
-								</div>
-							</div>
-						</div>
-					</div>
-				</section>
-
-
-				<section class=" " id="doswiadczenie-zawodowe">
+				<section class="bg-gray" id="doswiadczenie-zawodowe">
 
 					<h1><span>Doświadczenie zawodowe</span></h1>
 					<div class="container">
-						<p>06.2017 - 05.2018 Kierownik Budowy, P.W.Sanitex
-							Zakres obowiązków:
-							- Prowadzenie dokumentacji technicznej
-							- Pilnowanie harmonogramu prac i jakości robót
-							- Nadzorowanie grupą pracowników do 100 osób</p>
-						<p>
-							04.2013 - 05.2017 Inżynier Budowy, P.W.Sanitex
-							Zakres obowiązków:
-							- Nadzorowanie grupą pracowników do 25 osób
-							- Koordynacja prac na placu budowy</p>
+                        <div class="exp">
+                            <p>06.2020 - obecnie - Freelancer, Web Developer
+                            </p>
+                            <p>
+                                Wykonwanie stron internetowych korzystając z HTML 5, CSS korzystając z SCSS, JavaScript z ES6, font awesome, flat Icon, Bootstrap 4, EmailJS.
+                                Obsługa hostingu, transfer plików FTP.
+                            </p>
+                        </div>
+                        <div class="exp">
+                            <p>06.2017 - 05.2018 - Kierownik Budowy, P.W.Sanitex
+                            </p>
+                            <p>
+                                Zakres obowiązków:
+                                - Prowadzenie dokumentacji technicznej
+                                - Pilnowanie harmonogramu prac i jakości robót
+                                - Nadzorowanie grupą pracowników do 100 osób
+                            </p>
+						</div>
+                        <div class="exp">
+                            <p>
+                                04.2013 - 05.2017 - Inżynier Budowy, P.W.Sanitex
+                            </p>
+                            <p>
+                                Zakres obowiązków:
+                                - Koordynacja prac i&nbsp;dostaw materiałów na placu budowy
+                                - Odpowiedzialnosc za harmonogram, bezpieczeństwo ludzi i jakość prowadzonych robót
+                            </p>
+                        </div>
 					</div>
 				</section>
 
-				<section class=" bg-gray" id="moje-zainteresowania">
-					<h1><span>Moje Zainteresowania</span></h1>
-					<div class="container">
-						<div class="slider-wrapper">
-							<p><span> Stolarstwo</span> to zajęcie, które daje mi dużo radości.</p>
-							<div id="slider" class="slides show">
-								<div class="slide">
-									<figure>
-										<img class="hidden" src="img/stolarstwo1.jpg" alt="Pierwszy slide">
-									</figure>
-									<div class="slide-description">
-										<h3 class="slide-header">Klocki drewniane
-										</h3>
-									</div>
-								</div>
-								<div class="slide">
-									<figure>
-										<img class="hidden" src="img/stolarstwo2.jpg" alt="Drugi slide">
-									</figure>
-									<div class="slide-description">
-										<h3 class="slide-header">Huśtawka ogrodowa z daszkiem</h3>
-									</div>
-								</div>
-								<div class="slide">
-									<figure>
-										<img class="" src="img/stolarstwo3.jpg" alt="">
-									</figure>
-									<div class="slide-description">
-										<h3 class="slide-header">Rozkładany samolot z silnikiem</h3>
-									</div>
-								</div>
-								<nav role="pagination" class="arrows">
-									<button class="arrow-prev">❮</button>
-								</nav>
-								<nav role="pagination" class="arrows">
-									<button class="arrow-next">❯</button>
-								</nav>
-							</div>
-						</div>
-						<div class="slider-wrapper">
-							<p>
-                                <span> Góry</span> to miejsce, w którym lubię być.
-							</p>
-							<div id="slider_2nd" class="slides show">
-								<div class="slide">
-									<figure>
-										<img class="hidden" src="./img/gory1.jpg" alt="Pierwszy slide">
-									</figure>
-									<div class="slide-description">
-										<h3 class="slide-header">Bieszczady</h3>
-									</div>
-								</div>
-								<div class="slide">
-									<figure>
-										<img class="hidden" src="./img/gory2.jpg" alt="Drugi slide">
-									</figure>
-									<div class="slide-description">
-										<h3 class="slide-header">Pieniny</h3>
-									</div>
-								</div>
-								<div class="slide">
-									<figure>
-										<img class="" src="img/gory3.jpg" alt="">
-									</figure>
-									<div class="slide-description">
-										<h3 class="slide-header">Tatry</h3>
-									</div>
-								</div>
-								<nav role="pagination" class="arrows">
-									<button class="arrow-prev2">❮</button>
-								</nav>
-								<nav role="pagination" class="arrows">
-									<button class="arrow-next2">❯</button>
-								</nav>
-							</div>
-						</div>
-
-					</div>
+				<section class="" id="moje-zainteresowania">
+					<h1><span>Moje zainteresowania</span></h1>
+                    <div class="stolarstwo">
+                        <div class="container">
+                            <div class="slider-wrapper">
+                                <p><span> Stolarstwo</span> to zajęcie, które daje mi dużo radości.</p>
+                                <div id="slider" class="slides show">
+                                    <div class="slide">
+                                        <figure>
+                                            <img class="hidden" src="img/stolarstwo1.jpg" alt="Pierwszy slide">
+                                        </figure>
+                                        <div class="slide-description">
+                                            <h3 class="slide-header">Klocki drewniane
+                                            </h3>
+                                        </div>
+                                    </div>
+                                    <div class="slide">
+                                        <figure>
+                                            <img class="hidden" src="img/stolarstwo2.jpg" alt="Drugi slide">
+                                        </figure>
+                                        <div class="slide-description">
+                                            <h3 class="slide-header">Huśtawka ogrodowa z daszkiem</h3>
+                                        </div>
+                                    </div>
+                                    <div class="slide">
+                                        <figure>
+                                            <img class="" src="img/stolarstwo3.jpg" alt="">
+                                        </figure>
+                                        <div class="slide-description">
+                                            <h3 class="slide-header">Rozkładany samolot z silnikiem</h3>
+                                        </div>
+                                    </div>
+                                    <div class="slide">
+                                        <figure>
+                                            <img class="hidden" src="img/stolarstwo4.jpg" alt="Pierwszy slide">
+                                        </figure>
+                                        <div class="slide-description">
+                                            <h3 class="slide-header">Gra kółko i krzyżyk
+                                            </h3>
+                                        </div>
+                                    </div>
+                                    <div class="slide">
+                                        <figure>
+                                            <img class="hidden" src="img/stolarstwo5.jpg" alt="Pierwszy slide">
+                                        </figure>
+                                        <div class="slide-description">
+                                            <h3 class="slide-header">Ciężarówki
+                                            </h3>
+                                        </div>
+                                    </div>
+                                    <nav role="pagination" class="arrows">
+                                        <button class="arrow-prev">❮</button>
+                                    </nav>
+                                    <nav role="pagination" class="arrows">
+                                        <button class="arrow-next">❯</button>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gory">
+                        <div class="container">
+                            <div class="slider-wrapper">
+                                <p>
+                                    <span> Góry</span> to miejsce, w którym lubię być.
+                                </p>
+                                <div id="slider_2nd" class="slides show">
+                                    <div class="slide">
+                                        <figure>
+                                            <img class="hidden" src="./img/gory1.jpg" alt="Pierwszy slide">
+                                        </figure>
+                                        <div class="slide-description">
+                                            <h3 class="slide-header">Bieszczady</h3>
+                                        </div>
+                                    </div>
+                                    <div class="slide">
+                                        <figure>
+                                            <img class="hidden" src="./img/gory2.jpg" alt="Drugi slide">
+                                        </figure>
+                                        <div class="slide-description">
+                                            <h3 class="slide-header">Pieniny</h3>
+                                        </div>
+                                    </div>
+                                    <div class="slide">
+                                        <figure>
+                                            <img class="" src="img/gory3.jpg" alt="">
+                                        </figure>
+                                        <div class="slide-description">
+                                            <h3 class="slide-header">Tatry</h3>
+                                        </div>
+                                    </div>
+                                    <nav role="pagination" class="arrows">
+                                        <button class="arrow-prev2">❮</button>
+                                    </nav>
+                                    <nav role="pagination" class="arrows">
+                                        <button class="arrow-next2">❯</button>
+                                    </nav>
+                                </div>
+                            </div> 
+	    				</div>
+                    </div>
+                </div>
 				</section>
 
 				<section class="bg-gray" id="kontakt">
@@ -345,7 +443,7 @@
                     <div class="col-md-6 col-lg-12">
                     <i class="fab fa-linkedin"></i>										
 											<h4>LinkedIn:</h4>
-                      <p><a target="_blank" class="link" href="https://www.linkedin.com/in/pawelNowak90/">Paweł Nowak</a></p>                      
+                      <p><a target="_blank" class="link" href="https://www.linkedin.com/in/pawelNowak90/" target="_blank">Paweł Nowak</a></p>                      
 										</div>
 									</div>
 								</div>
@@ -379,26 +477,12 @@
 										</div>
 									</div>
 									<div class="form-group">
-										<textarea class="form-control" type="textarea" rows="4" name="message" id="message"
+										<textarea class="form-control" type="textarea" rows="6" name="message" id="message"
 											placeholder="Twoja wiadomość"></textarea>
 									</div>
 
-									<!-- <div class="row mb-3 mb-md-5 ">
-										<div class="col-sm-6 captcha mb-3 mb-md-0">
-											<img src="captcha.php" id="captcha_image" />
-											<a class="label ml-2" id="captcha_reload" href="#">
-                                                <i class="fas fa-redo-alt"> </i>
-                                            </a>
-										</div>
-										<div class="col-sm-6" id="codeFromThePicture">
-											<input type="text" class="form-control" required id="captcha" name="captcha"
-												placeholder="Przepisz kod z obrazka tutaj:">
-											<p class="error" id="error-captcha">Wpisano błędny kod z obrazka.</p>
-
-										</div>
-									</div> -->
 									<div class="text-center">
-										<!-- <button type="submit" id="btnContact">Wyślij wiadomość</button> -->
+
                                         <button onClick="sendMail()"> Wyślij wiadomość </button>
                                     </div>
 								</form>

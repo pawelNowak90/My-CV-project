@@ -1,5 +1,18 @@
 section#moje-zainteresowania {
-    div.slider-wrapper {
+    padding-bottom:0px;
+    .stolarstwo{
+        padding:30px;
+        background-image: url('../img/wood-br40.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .gory{
+        padding:30px;
+        background-image: url('../img/mountains-br40.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .slider-wrapper {
       margin-left: auto;
       margin-right: auto;
       padding-bottom: 30px;
@@ -11,12 +24,19 @@ section#moje-zainteresowania {
       }
   
       p {
+          padding:8px;
+          margin:10px 0;
+          background-color: rgba(255, 255, 255, 0.55);
+            color: black;
+            @media (max-width: 575px) {
+            font-size: 0.8em;
+            padding:4px;
+            }
         span {
-          color: black;
           text-transform: uppercase;
+          color:orangered;
         }
         text-align:center;
-        padding: 0 0 10px 0;
 
       }
   
@@ -84,7 +104,7 @@ section#moje-zainteresowania {
           }
   
           @media (max-width: 575px) {
-            font-size: 18px;
+            font-size: 14px;
             line-height: 22px;
             letter-spacing: 0;
           }

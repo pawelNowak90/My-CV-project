@@ -118,8 +118,62 @@ header div.navigation.navbar-fixed {
           animation: navigation 0.5s linear;
 }
 
+header .social-media {
+  position: fixed;
+  top: 88px;
+  right: -40px;
+  z-index: 20000;
+  -webkit-transition: right 2s, font-size 0.4s;
+  transition: right 2s, font-size 0.4s;
+  -webkit-transition-timing-function: linear;
+          transition-timing-function: linear;
+}
+
+header .social-media .linked_in, header .social-media .instagram {
+  display: block;
+  padding-bottom: 5px;
+  font-size: 20px;
+  font-weight: 300;
+  cursor: pointer;
+  text-align: right;
+}
+
+header .social-media .linked_in a, header .social-media .instagram a {
+  color: orangered;
+  text-decoration: none;
+}
+
+header .social-media .linked_in a i, header .social-media .instagram a i {
+  font-size: 1.4em;
+}
+
+header .social-media .linked_in a.a-turkus, header .social-media .instagram a.a-turkus {
+  color: red;
+}
+
+@media (max-width: 575px) {
+  header .social-media .linked_in a.a-turkus, header .social-media .instagram a.a-turkus {
+    font-size: 16px;
+  }
+}
+
+header .social-media.showSocialMedia {
+  right: 20px;
+  -webkit-transition: right 0.6s, font-size 0.4s;
+  transition: right 0.6s, font-size 0.4s;
+  -webkit-transition-timing-function: linear;
+          transition-timing-function: linear;
+}
+
+@media (max-width: 575px) {
+  header .social-media.showSocialMedia {
+    right: 5px;
+  }
+}
+
 section {
   overflow: hidden;
+  padding-bottom: 20px;
 }
 
 @media (max-width: 991px) {
@@ -130,14 +184,6 @@ section {
 
 section p {
   text-align: justify;
-  -webkit-transform: translateY(50%);
-          transform: translateY(50%);
-  -webkit-transition: opacity 0.5s linear, -webkit-transform 0.5s linear;
-  transition: opacity 0.5s linear, -webkit-transform 0.5s linear;
-  transition: opacity 0.5s linear, transform 0.5s linear;
-  transition: opacity 0.5s linear, transform 0.5s linear, -webkit-transform 0.5s linear;
-  -webkit-transition-delay: 0.2s;
-          transition-delay: 0.2s;
 }
 
 @media (max-width: 991px) {
@@ -177,7 +223,7 @@ section > h1 {
 
 @media (max-width: 575px) {
   section > h1 {
-    font-size: 22px;
+    font-size: 20px;
   }
 }
 
@@ -207,13 +253,13 @@ section div > p {
 @media (max-width: 991px) {
   section div > p {
     padding: 0 20px 0 0;
-    font-size: 20px;
+    font-size: 18px;
   }
 }
 
 @media (max-width: 575px) {
   section div > p {
-    font-size: 18px;
+    font-size: 16px;
   }
 }
 
@@ -254,7 +300,7 @@ section#my-baner {
 
 @media (max-width: 575px) {
   section#my-baner {
-    background-position: 25% 0%;
+    background-position: 31% 0%;
   }
 }
 
@@ -306,6 +352,268 @@ section#my-baner div.about-me h2 {
   }
 }
 
+section#o-mnie {
+  margin-bottom: 50px;
+}
+
+@media (max-width: 768px) {
+  section#o-mnie {
+    margin-bottom: 0;
+  }
+}
+
+section#o-mnie .time-line-header {
+  padding: 0;
+  margin: 10px;
+}
+
+section#o-mnie .time-line-header h4 {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+section#o-mnie .time-line-wrapper {
+  padding-top: 20px;
+  min-height: 72vh;
+  width: 100%;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  section#o-mnie .time-line-wrapper {
+    min-height: 90vh;
+  }
+}
+
+section#o-mnie .time-line-wrapper .time-line-baseline {
+  margin-left: 5%;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  height: 2px;
+  width: 90%;
+  border: solid orangered 1px;
+}
+
+@media (max-width: 768px) {
+  section#o-mnie .time-line-wrapper .time-line-baseline {
+    height: 90%;
+    width: 2px;
+    left: 50%;
+    top: 0;
+    margin-left: 0;
+    margin-top: 5%;
+  }
+}
+
+@media (max-width: 575px) {
+  section#o-mnie .time-line-wrapper .time-line-baseline {
+    left: 52%;
+  }
+}
+
+section#o-mnie .time-line-wrapper .time-line-baseline .time-line-branch {
+  position: relative;
+}
+
+section#o-mnie .time-line-wrapper .time-line-baseline .time-line-branch .branch {
+  position: absolute;
+  height: 35px;
+  width: 2px;
+  border: orangered dotted 1px;
+}
+
+@media (max-width: 768px) {
+  section#o-mnie .time-line-wrapper .time-line-baseline .time-line-branch .branch {
+    height: 2px;
+    width: 35px;
+  }
+}
+
+@media (max-width: 575px) {
+  section#o-mnie .time-line-wrapper .time-line-baseline .time-line-branch .branch {
+    width: 20px;
+  }
+}
+
+section#o-mnie .time-line-wrapper .time-line-baseline .time-line-branch .branch.branch-1st {
+  top: -35px;
+  left: calc(17% - 4%);
+}
+
+@media (max-width: 768px) {
+  section#o-mnie .time-line-wrapper .time-line-baseline .time-line-branch .branch.branch-1st {
+    top: 11vh;
+    left: -35px;
+  }
+}
+
+@media (max-width: 575px) {
+  section#o-mnie .time-line-wrapper .time-line-baseline .time-line-branch .branch.branch-1st {
+    left: -20px;
+  }
+}
+
+section#o-mnie .time-line-wrapper .time-line-baseline .time-line-branch .branch.branch-2nd {
+  top: 0;
+  left: calc(33% - 2%);
+}
+
+@media (max-width: 768px) {
+  section#o-mnie .time-line-wrapper .time-line-baseline .time-line-branch .branch.branch-2nd {
+    top: 25vh;
+    left: 0;
+  }
+}
+
+section#o-mnie .time-line-wrapper .time-line-baseline .time-line-branch .branch.branch-3rd {
+  top: -35px;
+  left: 50%;
+}
+
+@media (max-width: 768px) {
+  section#o-mnie .time-line-wrapper .time-line-baseline .time-line-branch .branch.branch-3rd {
+    top: 40vh;
+    left: -35px;
+  }
+}
+
+@media (max-width: 575px) {
+  section#o-mnie .time-line-wrapper .time-line-baseline .time-line-branch .branch.branch-3rd {
+    left: -20px;
+  }
+}
+
+section#o-mnie .time-line-wrapper .time-line-baseline .time-line-branch .branch.branch-4th {
+  top: 0;
+  left: calc(66% + 2%);
+}
+
+@media (max-width: 768px) {
+  section#o-mnie .time-line-wrapper .time-line-baseline .time-line-branch .branch.branch-4th {
+    top: 54vh;
+    left: 0;
+  }
+}
+
+section#o-mnie .time-line-wrapper .time-line-baseline .time-line-branch .branch.branch-5th {
+  top: -35px;
+  left: calc(82% + 4%);
+}
+
+@media (max-width: 768px) {
+  section#o-mnie .time-line-wrapper .time-line-baseline .time-line-branch .branch.branch-5th {
+    top: 70vh;
+    left: -35px;
+  }
+}
+
+@media (max-width: 575px) {
+  section#o-mnie .time-line-wrapper .time-line-baseline .time-line-branch .branch.branch-5th {
+    left: -20px;
+  }
+}
+
+section#o-mnie .time-line-wrapper .time-line-rectangle {
+  padding: 10px;
+  position: absolute;
+  width: 200px;
+  height: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: solid orangered 1px;
+  border-radius: 20px;
+}
+
+@media (max-width: 575px) {
+  section#o-mnie .time-line-wrapper .time-line-rectangle {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+section#o-mnie .time-line-wrapper .time-line-rectangle.nr-1st {
+  top: 10%;
+  left: calc(17% - 100px);
+}
+
+@media (max-width: 768px) {
+  section#o-mnie .time-line-wrapper .time-line-rectangle.nr-1st {
+    top: calc(17% - 75px);
+    left: 0;
+  }
+}
+
+section#o-mnie .time-line-wrapper .time-line-rectangle.nr-2nd {
+  top: 59%;
+  left: calc(33% - 100px);
+}
+
+@media (max-width: 768px) {
+  section#o-mnie .time-line-wrapper .time-line-rectangle.nr-2nd {
+    top: calc(33% - 75px);
+    left: 60%;
+  }
+}
+
+section#o-mnie .time-line-wrapper .time-line-rectangle.nr-3rd {
+  top: 10%;
+  left: calc(50% - 100px);
+}
+
+@media (max-width: 768px) {
+  section#o-mnie .time-line-wrapper .time-line-rectangle.nr-3rd {
+    top: calc(50% - 75px);
+    left: 0;
+  }
+}
+
+section#o-mnie .time-line-wrapper .time-line-rectangle.nr-4th {
+  top: 59%;
+  left: calc(66% - 100px);
+}
+
+@media (max-width: 768px) {
+  section#o-mnie .time-line-wrapper .time-line-rectangle.nr-4th {
+    top: calc(66% - 75px);
+    left: 60%;
+  }
+}
+
+section#o-mnie .time-line-wrapper .time-line-rectangle.nr-5th {
+  top: 10%;
+  left: calc(82% - 100px);
+}
+
+@media (max-width: 768px) {
+  section#o-mnie .time-line-wrapper .time-line-rectangle.nr-5th {
+    top: calc(82% - 75px);
+    left: 0;
+  }
+}
+
+section#o-mnie .time-line-wrapper .time-line-rectangle p {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 0;
+  margin: 0;
+  padding: 0;
+  font-size: 1em;
+  text-align: center;
+}
+
+@media (max-width: 575px) {
+  section#o-mnie .time-line-wrapper .time-line-rectangle p {
+    padding: 10px;
+    font-size: 0.8em;
+  }
+}
+
 section#o-mnie:nth-of-type(2) {
   -webkit-transition-delay: 0.4s;
           transition-delay: 0.4s;
@@ -327,10 +635,34 @@ section#o-mnie a:hover {
   border-bottom: solid orangered 2px;
 }
 
-section#o-mnie.visited p {
+section#o-mnie.visited .time-line-wrapper .time-line-rectangle.nr-1st p {
   opacity: 1;
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
+  -webkit-transition: opacity 1s linear;
+  transition: opacity 1s linear;
+}
+
+section#o-mnie.visited .time-line-wrapper .time-line-rectangle.nr-2nd p {
+  opacity: 1;
+  -webkit-transition: opacity 1.35s linear;
+  transition: opacity 1.35s linear;
+}
+
+section#o-mnie.visited .time-line-wrapper .time-line-rectangle.nr-3rd p {
+  opacity: 1;
+  -webkit-transition: opacity 1.7s linear;
+  transition: opacity 1.7s linear;
+}
+
+section#o-mnie.visited .time-line-wrapper .time-line-rectangle.nr-4th p {
+  opacity: 1;
+  -webkit-transition: opacity 2.05s linear;
+  transition: opacity 2.05s linear;
+}
+
+section#o-mnie.visited .time-line-wrapper .time-line-rectangle.nr-5th p {
+  opacity: 1;
+  -webkit-transition: opacity 2.2s linear;
+  transition: opacity 2.2s linear;
 }
 
 section#technologie {
@@ -345,6 +677,7 @@ section#technologie div.skills-container {
 
 section#technologie div.skills-container div.one-skill {
   opacity: 0;
+  padding-bottom: 15px;
 }
 
 section#technologie div.skills-container div.circle-gradient {
@@ -461,188 +794,70 @@ section#technologie.visited div.skills-container div.one-skill:nth-of-type(6) {
           transition-delay: 0.8s;
 }
 
-@media (max-width: 991px) {
-  section#inne-umiejetnosci {
-    margin-bottom: 20px;
-  }
-}
-
-section#inne-umiejetnosci div p {
-  padding-left: 160px;
-  opacity: 0;
-  -webkit-transform: translateY(50%);
-          transform: translateY(50%);
-  -webkit-transition: opacity 0.5s linear, -webkit-transform 0.5s linear;
-  transition: opacity 0.5s linear, -webkit-transform 0.5s linear;
-  transition: opacity 0.5s linear, transform 0.5s linear;
-  transition: opacity 0.5s linear, transform 0.5s linear, -webkit-transform 0.5s linear;
-  -webkit-transition-delay: 0.2s;
-          transition-delay: 0.2s;
-  position: relative;
-}
-
-@media (max-width: 991px) {
-  section#inne-umiejetnosci div p {
-    padding-left: 40px;
-    margin-bottom: 8px;
-    font-size: 20px;
-    top: 5px;
-  }
-}
-
-@media (max-width: 575px) {
-  section#inne-umiejetnosci div p {
-    padding-left: 30px;
-    margin-bottom: 5px;
-    font-size: 18px;
-    top: 3px;
-  }
-}
-
-section#inne-umiejetnosci div p:nth-of-type(2) {
-  -webkit-transition-delay: 0.4s;
-          transition-delay: 0.4s;
-}
-
-section#inne-umiejetnosci div p:nth-of-type(3) {
-  -webkit-transition-delay: 0.6s;
-          transition-delay: 0.6s;
-}
-
-section#inne-umiejetnosci div p:nth-of-type(4) {
-  -webkit-transition-delay: 0.8s;
-          transition-delay: 0.8s;
-}
-
-section#inne-umiejetnosci div p i {
-  font-size: 28px;
-  position: absolute;
-  top: 6px;
-  left: 100px;
-}
-
-@media (max-width: 991px) {
-  section#inne-umiejetnosci div p i {
-    font-size: 20px;
-    top: 5px;
-    left: 10px;
-  }
-}
-
-@media (max-width: 575px) {
-  section#inne-umiejetnosci div p i {
-    font-size: 18px;
-    top: 3px;
-  }
-}
-
-section#inne-umiejetnosci.visited div p {
-  opacity: 1;
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
-}
-
-section#wyksztalcenie {
+section#edukacja {
   padding-bottom: 20px;
 }
 
-section#wyksztalcenie .education-description {
-  color: #fff;
-}
-
-section#wyksztalcenie .education-description p {
-  opacity: 1;
-  margin: -60px 0 60px 0;
-}
-
-section#wyksztalcenie div.logo div.AGH,
-section#wyksztalcenie div.logo div.POLLUB {
-  padding: 15px 45px 35px 45px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+section#edukacja div.logo div.edu {
+  padding: 15px 25px 35px 25px;
 }
 
 @media (max-width: 991px) {
-  section#wyksztalcenie div.logo div.AGH,
-  section#wyksztalcenie div.logo div.POLLUB {
+  section#edukacja div.logo div.edu {
     padding: 0 0 35px 0;
   }
 }
 
-section#wyksztalcenie div.logo div.AGH img,
-section#wyksztalcenie div.logo div.POLLUB img {
+section#edukacja div.logo div.edu img {
   padding: 15px;
   width: 200px;
   height: 200px;
 }
 
-@media (max-width: 991px) {
-  section#wyksztalcenie div.logo div.AGH img,
-  section#wyksztalcenie div.logo div.POLLUB img {
-    width: 225px;
-    height: 225px;
-  }
+section#edukacja div.logo div.edu img.udemy-img {
+  width: 150px;
+  height: 150px;
 }
 
 @media (max-width: 575px) {
-  section#wyksztalcenie div.logo div.AGH img,
-  section#wyksztalcenie div.logo div.POLLUB img {
+  section#edukacja div.logo div.edu img {
     width: 175px;
     height: 175px;
   }
-}
-
-section#wyksztalcenie div.logo div.AGH div,
-section#wyksztalcenie div.logo div.POLLUB div {
-  display: block;
-  width: 300px;
-  height: 300px;
-  padding: 0;
-}
-
-section#wyksztalcenie div.logo div.AGH div p,
-section#wyksztalcenie div.logo div.POLLUB div p {
-  font-size: 18px;
-  padding: 0;
-}
-
-@media (max-width: 991px) {
-  section#wyksztalcenie div.logo div.AGH div,
-  section#wyksztalcenie div.logo div.POLLUB div {
-    width: 225px;
-    height: 225px;
+  section#edukacja div.logo div.edu img.udemy-img {
+    width: 120px;
+    height: 120px;
   }
-  section#wyksztalcenie div.logo div.AGH div p,
-  section#wyksztalcenie div.logo div.POLLUB div p {
-    font-size: 26px;
-  }
+}
+
+section#edukacja div.logo div.edu div.education-description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+section#edukacja div.logo div.edu div.education-description p {
+  margin: 0;
+  padding: 10px 10px 0 10px;
+  font-size: 1.1em;
 }
 
 @media (max-width: 575px) {
-  section#wyksztalcenie div.logo div.AGH div,
-  section#wyksztalcenie div.logo div.POLLUB div {
-    width: 150px;
-    height: 150px;
-  }
-  section#wyksztalcenie div.logo div.AGH div p,
-  section#wyksztalcenie div.logo div.POLLUB div p {
-    font-size: 18px;
+  section#edukacja div.logo div.edu div.education-description p {
+    font-size: 0.9em;
   }
 }
 
-section#wyksztalcenie.visited div.logo.first,
-section#wyksztalcenie.visited div.logo.second {
-  -webkit-transform: translateX(0);
-          transform: translateX(0);
-  opacity: 1;
-  -webkit-transition: opacity 1.5s 0.75s, -webkit-transform 1.5s;
-  transition: opacity 1.5s 0.75s, -webkit-transform 1.5s;
-  transition: transform 1.5s, opacity 1.5s 0.75s;
-  transition: transform 1.5s, opacity 1.5s 0.75s, -webkit-transform 1.5s;
+section#edukacja div.logo div.edu div.education-description p span {
+  color: orangered;
+  font-weight: 900;
 }
 
 @media (max-width: 575px) {
@@ -656,7 +871,13 @@ section#wyksztalcenie.visited div.logo.second {
   }
 }
 
-section#doswiadczenie-zawodowe p {
+section#doswiadczenie-zawodowe div.exp {
+  padding: 15px 0 15px 0;
+}
+
+section#doswiadczenie-zawodowe div.exp p {
+  padding: 10px 100px 0 100px;
+  margin: 0;
   opacity: 0;
   -webkit-transform: translateY(50%);
           transform: translateY(50%);
@@ -668,18 +889,37 @@ section#doswiadczenie-zawodowe p {
           transition-delay: 0.2s;
 }
 
-section#doswiadczenie-zawodowe p:nth-of-type(2) {
-  -webkit-transition-delay: 0.4s;
-          transition-delay: 0.4s;
+@media (max-width: 575px) {
+  section#doswiadczenie-zawodowe div.exp p {
+    padding: 3px 30px;
+  }
 }
 
-section#doswiadczenie-zawodowe.visited p {
+section#doswiadczenie-zawodowe.visited div.exp p {
   opacity: 1;
   -webkit-transform: translateY(0);
           transform: translateY(0);
 }
 
-section#moje-zainteresowania div.slider-wrapper {
+section#moje-zainteresowania {
+  padding-bottom: 0px;
+}
+
+section#moje-zainteresowania .stolarstwo {
+  padding: 30px;
+  background-image: url("../img/wood-br40.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+section#moje-zainteresowania .gory {
+  padding: 30px;
+  background-image: url("../img/mountains-br40.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+section#moje-zainteresowania .slider-wrapper {
   margin-left: auto;
   margin-right: auto;
   padding-bottom: 30px;
@@ -688,50 +928,60 @@ section#moje-zainteresowania div.slider-wrapper {
 }
 
 @media (max-width: 991px) {
-  section#moje-zainteresowania div.slider-wrapper {
+  section#moje-zainteresowania .slider-wrapper {
     width: 100%;
   }
 }
 
-section#moje-zainteresowania div.slider-wrapper p {
-  text-align: center;
-  padding: 0 0 10px 0;
-}
-
-section#moje-zainteresowania div.slider-wrapper p span {
+section#moje-zainteresowania .slider-wrapper p {
+  padding: 8px;
+  margin: 10px 0;
+  background-color: rgba(255, 255, 255, 0.55);
   color: black;
-  text-transform: uppercase;
+  text-align: center;
 }
 
-section#moje-zainteresowania div.slider-wrapper .slide {
+@media (max-width: 575px) {
+  section#moje-zainteresowania .slider-wrapper p {
+    font-size: 0.8em;
+    padding: 4px;
+  }
+}
+
+section#moje-zainteresowania .slider-wrapper p span {
+  text-transform: uppercase;
+  color: orangered;
+}
+
+section#moje-zainteresowania .slider-wrapper .slide {
   min-height: 450px;
 }
 
 @media (max-width: 1199px) {
-  section#moje-zainteresowania div.slider-wrapper .slide {
+  section#moje-zainteresowania .slider-wrapper .slide {
     min-height: 420px;
   }
 }
 
 @media (max-width: 991px) {
-  section#moje-zainteresowania div.slider-wrapper .slide {
+  section#moje-zainteresowania .slider-wrapper .slide {
     min-height: 380px;
   }
 }
 
 @media (max-width: 767px) {
-  section#moje-zainteresowania div.slider-wrapper .slide {
+  section#moje-zainteresowania .slider-wrapper .slide {
     min-height: 280px;
   }
 }
 
 @media (max-width: 575px) {
-  section#moje-zainteresowania div.slider-wrapper .slide {
+  section#moje-zainteresowania .slider-wrapper .slide {
     min-height: 250px;
   }
 }
 
-section#moje-zainteresowania div.slider-wrapper div.slide-description {
+section#moje-zainteresowania .slider-wrapper div.slide-description {
   width: 100%;
   max-width: 100%;
   height: auto;
@@ -744,12 +994,12 @@ section#moje-zainteresowania div.slider-wrapper div.slide-description {
   z-index: 0;
 }
 
-section#moje-zainteresowania div.slider-wrapper div.slide-description:after {
+section#moje-zainteresowania .slider-wrapper div.slide-description:after {
   content: "";
   background-color: transparent;
 }
 
-section#moje-zainteresowania div.slider-wrapper div.slide-description h3 {
+section#moje-zainteresowania .slider-wrapper div.slide-description h3 {
   width: 100%;
   margin: 0 auto 10px auto;
   position: absolute;
@@ -763,7 +1013,7 @@ section#moje-zainteresowania div.slider-wrapper div.slide-description h3 {
   line-height: 32px;
 }
 
-section#moje-zainteresowania div.slider-wrapper div.slide-description h3:after {
+section#moje-zainteresowania .slider-wrapper div.slide-description h3:after {
   content: "";
   background-color: rgba(0, 0, 0, 0.6);
   position: absolute;
@@ -775,15 +1025,15 @@ section#moje-zainteresowania div.slider-wrapper div.slide-description h3:after {
 }
 
 @media (max-width: 991px) {
-  section#moje-zainteresowania div.slider-wrapper div.slide-description h3 {
+  section#moje-zainteresowania .slider-wrapper div.slide-description h3 {
     font-size: 20px;
     line-height: 25px;
   }
 }
 
 @media (max-width: 575px) {
-  section#moje-zainteresowania div.slider-wrapper div.slide-description h3 {
-    font-size: 18px;
+  section#moje-zainteresowania .slider-wrapper div.slide-description h3 {
+    font-size: 14px;
     line-height: 22px;
     letter-spacing: 0;
   }
@@ -814,6 +1064,7 @@ section#kontakt div.kontakt-left {
   transition: opacity 0.5s linear, transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
   -webkit-transition-delay: 0.3s;
           transition-delay: 0.3s;
+  line-height: 1.2;
 }
 
 section#kontakt div.kontakt-left > div {

@@ -16,7 +16,7 @@ section#kontakt {
       opacity: 0;
       transition: opacity 0.5s linear, transform 0.5s ease-in-out;
       transition-delay: 0.3s;
-  
+      line-height: 1.2;
       &>div {
         clear: both;
       }

@@ -1,6 +1,7 @@
 section {
     overflow: hidden;
-  
+    padding-bottom:20px;
+
     @media (max-width: 991px) {
       margin-top: 0;
     }
@@ -15,11 +16,7 @@ section {
       }
   
       text-align: justify;
-    //   opacity: 0;
-      transform: translateY(50%);
-      transition: opacity 0.5s linear,
-      transform 0.5s linear;
-      transition-delay: 0.2s;
+
     }
     &>h1 {
       margin: 10px 0 30px 0;
@@ -38,7 +35,7 @@ section {
       }
   
       @media (max-width: 575px) {
-        font-size: 22px;
+        font-size: 20px;
       }
   
       span {
@@ -64,11 +61,11 @@ section {
   
       @media (max-width: 991px) {
         padding: 0 20px 0 0;
-        font-size: 20px;
+        font-size: 18px;
       }
   
       @media (max-width: 575px) {
-        font-size: 18px;
+        font-size: 16px;
       }
     }
   

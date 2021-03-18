@@ -9,7 +9,7 @@ function sendMail(params) {
     emailjs.send('gmail', 'template_iiz8eu5', tempParams)
     .then(function(res) {
                         console.log('SUCCESS!', res.status);
-                        alert("Wiadomość została wysłana");
+                        $("#success_message").show();
                     }, function(error) {
                         console.log('FAILED...', error);
                     });

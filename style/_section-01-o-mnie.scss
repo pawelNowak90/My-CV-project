@@ -1,4 +1,192 @@
+$rectangleWidth: 200px;
+
 section#o-mnie {
+    margin-bottom:50px;
+    @media (max-width:768px){
+        margin-bottom:0;
+    }
+
+    .time-line-header{
+        padding:0;
+        margin:10px;
+        h4{
+            margin:0;
+            padding:0;
+            text-align: center;
+        }
+    }
+
+    .time-line-wrapper{
+        padding-top:20px;
+        min-height:72vh;
+        width:100%;
+        position:relative;
+    
+        @media (max-width:768px){
+            min-height:90vh;
+        }
+
+        .time-line-baseline{
+            margin-left:5%;
+            position: absolute;
+            left:0;
+            top:50%;
+            height:2px;
+            width:90%;
+            border:solid orangered 1px;
+
+            @media (max-width:768px){
+                height:90%;
+                width:2px;
+                left:50%;
+                top:0;
+                margin-left:0;
+                margin-top:5%;
+            }
+            @media (max-width:575px){
+                left:52%;
+            }
+            .time-line-branch{
+                position:relative;
+                    .branch{
+                        position: absolute;
+                        height:35px;
+                        width:2px;
+                        border:orangered dotted 1px;
+
+                        @media (max-width:768px){
+                            height:2px;
+                            width:35px;
+                        }
+                        @media (max-width:575px){
+                            width:20px;
+                        }
+
+                        &.branch-1st{
+                            top:-35px;
+                            left:calc(17% - 4%);
+                        @media (max-width:768px){
+                            top:11vh;
+                            left:-35px;
+                        }
+                        @media (max-width:575px){
+                            left:-20px;
+                        }
+                        }
+                        &.branch-2nd{
+                            top:0;
+                            left:calc(33% - 2%);
+                        @media (max-width:768px){
+                            top:25vh;
+                            left:0;
+                        }
+                        }
+                        &.branch-3rd{
+                            top:-35px;
+                            left:50%;
+                        @media (max-width:768px){
+                            top:40vh;
+                            left:-35px;
+                        }
+                        @media (max-width:575px){
+                            left:-20px;
+                        }
+                        }
+                        &.branch-4th{
+                            top:0;
+                            left:calc(66% + 2%);
+                        @media (max-width:768px){
+                            top:54vh;
+                            left:0;
+                        }
+                        }
+                        &.branch-5th{
+                            top:-35px;
+                            left:calc(82% + 4%);
+                            @media (max-width:768px){
+                            top:70vh;
+                            left:-35px;
+                            }
+                            @media (max-width:575px){
+                            left:-20px;
+                            }
+                        }
+                    }
+            }
+        }
+        
+        .time-line-rectangle{
+            padding:10px;
+            position:absolute;
+            width:200px;
+            height:150px;
+            display:flex;
+            align-items: center;
+            border:solid orangered 1px;
+            border-radius:20px;
+
+            @media (max-width:575px){
+
+                width:150px;
+                height:150px;
+            }
+
+            &.nr-1st{
+                top:10%;
+                left:calc(17% - 100px);
+                @media (max-width:768px){
+                top:calc(17% - 75px);
+                left:0;
+                }
+            }
+            &.nr-2nd{
+                top:59%;
+                left:calc(33% - 100px);
+                @media (max-width:768px){
+                    top:calc(33% - 75px);
+                    left:60%;
+                    }
+            }
+            &.nr-3rd{
+                top:10%;
+                left:calc(50% - 100px);
+                @media (max-width:768px){
+                    top:calc(50% - 75px);
+                    left:0;
+                    }
+            }
+            &.nr-4th{
+                top:59%;
+                left:calc(66% - 100px);
+                @media (max-width:768px){
+                    top:calc(66% - 75px);
+                    left:60%;
+                    }
+            }
+            &.nr-5th{
+                top:10%;
+                left:calc(82% - 100px);
+                @media (max-width:768px){
+                    top:calc(82% - 75px);
+                    left:0;
+                    }
+            }
+            p{
+
+                transform:translateY(0);
+                opacity:0;
+                margin:0;
+                padding:0;
+                font-size:1em;
+                text-align:center;
+                @media (max-width:575px){
+                    padding:10px;
+                    font-size:0.8em;
+                }
+
+            }
+        }
+    }
 
       &:nth-of-type(2) {
         transition-delay: 0.4s;
@@ -18,13 +206,34 @@ section#o-mnie {
       a:hover{
           border-bottom:solid orangered 2px;
       }
-  
-    
+
   
     &.visited {
-      p {
-        opacity: 1;
-        transform: translateY(0);
-      }
+        .time-line-wrapper{
+            .time-line-rectangle{
+                &.nr-1st p {
+                    opacity: 1;
+                    transition: opacity 1s linear;
+                }
+                &.nr-2nd p {
+                    opacity: 1;
+                    transition: opacity 1.35s linear;
+                }
+                &.nr-3rd p {
+                    opacity: 1;
+                    transition: opacity 1.7s linear;
+                }
+                &.nr-4th p {
+                    opacity: 1;
+                    transition: opacity 2.05s linear;
+                }
+                &.nr-5th p {
+                    opacity: 1;
+                    transition: opacity 2.2s linear;
+                }
+            } 
+        }
+
+
     }
 }
