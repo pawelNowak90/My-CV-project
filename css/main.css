@@ -198,9 +198,8 @@ section p {
   }
 }
 
-section > h1 {
+section > h2 {
   margin: 10px 0 30px 0;
-  color: #000;
   text-transform: uppercase;
   font-style: 34px;
   letter-spacing: 2px;
@@ -213,33 +212,34 @@ section > h1 {
   transition: transform 0.5s linear, opacity 0.5s linear, -webkit-transform 0.5s linear;
   text-align: center;
   font-size: 28px;
+  color: orangered;
 }
 
 @media (max-width: 991px) {
-  section > h1 {
+  section > h2 {
     font-size: 24px;
   }
 }
 
 @media (max-width: 575px) {
-  section > h1 {
+  section > h2 {
     font-size: 20px;
   }
 }
 
-section > h1 span {
+section > h2 span {
   display: inline-block;
   padding: 10px 20px;
   border-bottom: 3px solid orangered;
 }
 
-section > h1 span::first-letter {
+section > h2 span::first-letter {
   letter-spacing: 5px;
   font-size: 150%;
 }
 
 @media (max-width: 575px) {
-  section > h1 span {
+  section > h2 span {
     width: 240px;
   }
 }
@@ -267,10 +267,6 @@ section.bg-gray {
   background-color: #777;
 }
 
-section.bg-gray h1 {
-  color: white;
-}
-
 section.bg-gray h2 {
   padding-top: 20px;
   color: white;
@@ -282,7 +278,7 @@ section.bg-gray i {
   color: white;
 }
 
-section.visited > h1 {
+section.visited > h2 {
   opacity: 1;
   -webkit-transform: scale(1);
           transform: scale(1);
@@ -619,11 +615,6 @@ section#o-mnie:nth-of-type(2) {
           transition-delay: 0.4s;
 }
 
-section#o-mnie span {
-  font-weight: bold;
-  color: orangered;
-}
-
 section#o-mnie a {
   position: relative;
   color: #212529;
@@ -887,6 +878,12 @@ section#doswiadczenie-zawodowe div.exp p {
   transition: opacity 0.5s linear, transform 0.5s linear, -webkit-transform 0.5s linear;
   -webkit-transition-delay: 0.2s;
           transition-delay: 0.2s;
+}
+
+@media (max-width: 768px) {
+  section#doswiadczenie-zawodowe div.exp p {
+    padding: 10px 10px;
+  }
 }
 
 @media (max-width: 575px) {

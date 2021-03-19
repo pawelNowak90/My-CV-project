@@ -17,15 +17,15 @@
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 
     <script src="./js/email_js.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
 
-<script type="text/javascript">
+<script>
         (function() {
         emailjs.init("user_JiWIMRP5WsioLH6rE0RGR");
         })();
         </script>
 
-    <script type="text/javascript">
+    <script>
         window.onload = function() {
             document.getElementById('contact-form').addEventListener('submit', function(event) {
                 event.preventDefault();
@@ -48,7 +48,7 @@
 				<div class="loading-bar"></div>
 			</div>
 
-			<div class="navigation" id="navigation">
+			<div class="navigation" id="navigation" role="navigation">
 				<nav id="menu" class="container-fluid navbar navbar-expand-lg">
 					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler"
 						aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
@@ -89,29 +89,29 @@
                   </a>
                 </span>
                 <span class="linked_in">
-                    <a id="linked_in_a" href="https://github.com/pawelNowak90/My-CV-project" target="_blank">
+                    <a id="github_a" href="https://github.com/pawelNowak90/My-CV-project" target="_blank">
                       <i class="fab fa-github"></i>
                     </a>
                 </span>
                 <span class="instagram">
-                  <a id="instaA" href="https://www.instagram.com/pawelnowaklublin/" target="_blank">
+                  <a id="instagram_a" href="https://www.instagram.com/pawelnowaklublin/" target="_blank">
                     <i id="insta" class="fab fa-instagram"></i>
                   </a>
                 </span>
-              </div>
+            </div>
 		</header>
 		<main id="main">
 			<article>
 				<section class="my-baner" id="my-baner">
 					<div class="background-filter"></div>
 					<div class="about-me">
-						<h2>Paweł Nowak</h2>
-						<h2>Front&#8209;end<br />Developer</h2>
+						<h1>Paweł Nowak</h1>
+						<h1>Front&#8209;end<br />Developer</h1>
 					</div>
 				</section>
 
 				<section class="o-mnie" id="o-mnie">
-					<h1><span>O mnie</span></h1>
+					<h2><span>O mnie</span></h2>
 					<div class="container">
                         <div class="time-line-header">
                             <h4>
@@ -157,7 +157,7 @@
 				</section>
 
 				<section class="technologie bg-gray" id="technologie">
-					<h1><span>Technologie</span> </h1>
+					<h2><span>Technologie</span> </h2>
 					<div class="skills-container container">
 						<div class="row">
 
@@ -216,7 +216,7 @@
 				</section>
 
 				<section class="" id="edukacja">
-					<h1><span>Edukacja</span></h1>
+					<h2><span>Edukacja</span></h2>
 					<div class="container">
 
                         <div class="logo first " id="education-szkolareacta">
@@ -277,10 +277,9 @@
 					</div>
 				</section>
 
-
 				<section class="bg-gray" id="doswiadczenie-zawodowe">
 
-					<h1><span>Doświadczenie zawodowe</span></h1>
+					<h2><span>Doświadczenie zawodowe</span></h2>
 					<div class="container">
                         <div class="exp">
                             <p>06.2020 - obecnie - Freelancer, Web Developer
@@ -314,7 +313,7 @@
 				</section>
 
 				<section class="" id="moje-zainteresowania">
-					<h1><span>Moje zainteresowania</span></h1>
+					<h2><span>Moje zainteresowania</span></h2>
                     <div class="stolarstwo">
                         <div class="container">
                             <div class="slider-wrapper">
@@ -414,11 +413,10 @@
                             </div> 
 	    				</div>
                     </div>
-                </div>
 				</section>
 
 				<section class="bg-gray" id="kontakt">
-					<h1><span> Kontakt</span></h1>
+					<h2><span> Kontakt</span></h2>
 					<div class="container">
 						<div class="row">
 							<div class="col-lg-4 mt-lg-4">
@@ -440,16 +438,16 @@
 											<h4>Telefon:</h4>
 											<p> <a href="tel:507610092"> 507-610-092</a></p>
 										</div>
-                    <div class="col-md-6 col-lg-12">
-                    <i class="fab fa-linkedin"></i>										
+                                        <div class="col-md-6 col-lg-12">
+                                            <i class="fab fa-linkedin"></i>										
 											<h4>LinkedIn:</h4>
-                      <p><a target="_blank" class="link" href="https://www.linkedin.com/in/pawelNowak90/" target="_blank">Paweł Nowak</a></p>                      
+                                            <p> <a target="_blank" class="link" href="https://www.linkedin.com/in/pawelNowak90/">Paweł Nowak</a></p>                      
 										</div>
 									</div>
 								</div>
 							</div>
 							<div class="col-lg-8 mt-4 mt-lg-4 kontakt-right">
-								<form role="form" id="contact-form">
+								<form id="contact-form">
 									<div class="alert alert-warning alert-dismissible fade show" id="success_message"
 										role="alert" style="display:none;">
 										Dziękuję za kontakt.
@@ -477,7 +475,7 @@
 										</div>
 									</div>
 									<div class="form-group">
-										<textarea class="form-control" type="textarea" rows="6" name="message" id="message"
+										<textarea class="form-control" rows="6" name="message" id="message"
 											placeholder="Twoja wiadomość"></textarea>
 									</div>
 
@@ -501,11 +499,9 @@
 		</main>
 	</div>
 
-	</main>
 	<a href="#" class="to-top"> <i class="fas fa-angle-up"></i> </a>
-	</div>
 
-	<script type="text/javascript" src="./js/jquery-3.4.1.min.js"></script>
+	<script src="./js/jquery-3.4.1.min.js"></script>
 	<script src="./js/js_bootstrap/popper.min.js"> </script>
 	<script src="./js/js_bootstrap/bootstrap.min.js"></script>
 	<script src="./js/functions.js"></script>

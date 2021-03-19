@@ -18,9 +18,8 @@ section {
       text-align: justify;
 
     }
-    &>h1 {
+    &>h2 {
       margin: 10px 0 30px 0;
-      color: #000;
       text-transform: uppercase;
       font-style: 34px;
       letter-spacing: 2px;
@@ -29,6 +28,7 @@ section {
       transition: transform 0.5s linear, opacity 0.5s linear;
       text-align: center;
       font-size: 28px;
+      color:orangered;
   
       @media (max-width: 991px) {
         font-size: 24px;
@@ -71,11 +71,7 @@ section {
   
     &.bg-gray {
       background-color: #777;
-  
-      h1 {
-        color: white;
-      }
-  
+    
       h2 {
         padding-top: 20px;
         color: white;
@@ -88,7 +84,7 @@ section {
       }
     }
   
-    &.visited>h1 {
+    &.visited>h2 {
       opacity: 1;
       transform: scale(1);
     }

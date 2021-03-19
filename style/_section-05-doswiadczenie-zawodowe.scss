@@ -20,6 +20,10 @@ section#doswiadczenie-zawodowe {
         transition: opacity 0.5s linear, transform 0.5s linear;
         transition-delay: 0.2s;   
         
+        @media (max-width: 768px) {
+            padding:10px 10px;
+            }
+
         @media (max-width: 575px) {
             padding:3px 30px;
             }
